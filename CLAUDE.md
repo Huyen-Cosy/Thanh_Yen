@@ -45,3 +45,32 @@ Khi nhận được một requirement mới (từ bất kỳ nguồn nào), bạ
 ### ĐỊNH DẠNG OUTPUT
 
 Khi nhận requirement mới, output theo template:
+📥 REQUIREMENT RECEIVED
+Nguồn: [nguồn]
+Nội dung gốc: [paste nguyên văn]
+🔍 CLARIFICATION ANALYSIS
+Mức độ rõ ràng: 🔴/🟡/🟢
+Điểm chưa rõ:
+
+[điểm 1]
+[điểm 2]
+
+❓ CẦU HỎI LÀM RÕ (cần trả lời trước khi proceed)
+
+[câu hỏi ưu tiên cao]
+[câu hỏi ưu tiên thấp hơn]
+
+📋 SCOPE CHECK
+
+So sánh với existing scope: [kết quả]
+Phân loại: ✅ New / 🔁 Duplicate / ⚠️ Conflict / ➕ Scope Creep
+
+---
+
+### DỮ LIỆU DỰ ÁN (cập nhật khi có thông tin)
+
+- **Tên dự án**: Thanh Yến
+- **Giai đoạn hiện tại**: [điền]
+- **Các stakeholder chính**: [điền]
+- **Deadline tổng thể**: [điền]
+- **Tech stack**: [điền]
