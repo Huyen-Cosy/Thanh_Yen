@@ -330,6 +330,24 @@ Ghi đồng thời vào:
 
 ---
 
+## 9.1 WORKFLOW-CONFIRM: Xác Nhận Meeting Minutes
+
+**Trigger:** Người dùng nói **"tôi xác nhận"** (hoặc tương đương) sau khi review một meeting minute.
+
+Thực hiện **theo thứ tự**:
+
+1. **Cập nhật file meeting minutes**: Đổi dòng header từ "Chờ xác nhận bởi..." thành `✅ Đã xác nhận bởi: [tên] ngày [hôm nay]`
+
+2. **Cập nhật `docs/task_tracker.md`**: Thêm tất cả Action Items từ section ⚡ ACTION ITEMS vào bảng DANH SÁCH TASK; cập nhật thống kê tổng quan
+
+3. **Cập nhật `docs/scope_register.md`**: Thêm tất cả requirement từ section 🔄 REQUIREMENT PHÁT SINH vào đúng bảng tương ứng; cập nhật bảng tổng quan và CHANGE LOG
+
+4. **Commit tất cả thay đổi** với message rõ ràng
+
+5. **Merge branch hiện tại vào `main`** và push lên `origin main`
+
+---
+
 ## 10. WORKFLOW-CHANGE: Change Management
 
 **Trigger tự động** khi người dùng dùng: *"thay đổi", "sửa lại", "không làm nữa", "thêm mới", "bỏ", "khách hàng muốn", "họ vừa nói", "cancel", "scope creep"*

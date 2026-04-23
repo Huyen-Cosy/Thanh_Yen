@@ -28,11 +28,11 @@
 
 | Loại | Tổng | 🟢 Clear | 🟡 Partial | 🔴 Unclear | ⛔ Out of Phase |
 |---|---|---|---|---|---|
-| Lark Base — Khoản vay | 0 | 0 | 0 | 0 | 0 |
-| BI — Dashboard Khoản vay | 0 | 0 | 0 | 0 | 0 |
-| Business Workflow | 0 | 0 | 0 | 0 | 0 |
+| Lark Base — Khoản vay | 7 | 3 | 0 | 0 | 4 |
+| BI — Dashboard Khoản vay | 1 | 0 | 1 | 0 | 0 |
+| Business Workflow | 4 | 2 | 2 | 0 | 0 |
 | UI/UX Mockup | 0 | 0 | 0 | 0 | 0 |
-| **Tổng** | **0** | | | | |
+| **Tổng** | **12** | **5** | **3** | **0** | **4** |
 
 ---
 
@@ -56,6 +56,17 @@
 |---|---|---|---|---|---|---|---|
 | LRK-CA-001 | — | — | — | — | — | — | — |
 
+### Thay đổi cấu trúc Lark Base (Architecture changes)
+| ID | Tên requirement | Thay đổi | Mô tả | Nguồn | Rõ ràng | Status | Ngày |
+|---|---|---|---|---|---|---|---|
+| LRK-DEL-001 | Xóa bảng Vốn góp nội bộ | Xóa bảng | Master data thay đổi rất ít, không cần bảng riêng; hiển thị trên dashboard từ nguồn khác | Meeting 22/04 | 🟢 Clear | ✅ Confirmed | 22/04/2026 |
+| LRK-DEL-002 | Xóa bảng Tồn quỹ nhập tay | Xóa/thay thế | Thay bằng auto bank-sync tool hoặc Excel import; không nhập tay | Meeting 22/04 | 🟢 Clear | ✅ Confirmed | 22/04/2026 |
+| LRK-DEL-003 | Xóa bảng Dự báo dòng tiền | Xóa/thay thế | Thay bằng Excel template + shared folder; auto-sync lên dashboard | Meeting 22/04 | 🟢 Clear | ✅ Confirmed | 22/04/2026 |
+| LRK-FLOW-001 | Giải ngân → Lark Base Flow | Chuyển thành Flow | Workflow có các bước phê duyệt; cần clarify approval steps trong họp 23/04 | Meeting 22/04 | 🟡 Partial | ⬜ Chờ clarify | 22/04/2026 |
+| LRK-FLOW-002 | Trả nợ & đóng khoản vay → Flow | Chuyển thành Flow | Workflow nhiều bước; cần clarify ai duyệt, điều kiện đóng khoản vay | Meeting 22/04 | 🟡 Partial | ⬜ Chờ clarify | 22/04/2026 |
+| LRK-FLOW-003 | Khoản vay gốc → Lark Base Flow | Chuyển thành Flow | Form phức tạp, có đính kèm hình ảnh; biến thành Flow cho dễ nhập | Meeting 22/04 | 🟢 Clear | ⬜ Todo | 22/04/2026 |
+| LRK-FLOW-004 | Tài sản thế chấp → Lark Base Flow | Chuyển thành Flow | Form có đính kèm hình ảnh/giấy tờ; biến thành Flow | Meeting 22/04 | 🟢 Clear | ⬜ Todo | 22/04/2026 |
+
 **Checklist clarify khi có req Lark Base:**
 - [ ] Field name & data type (text / number / date / dropdown / relation)
 - [ ] Required hay Optional
@@ -76,6 +87,7 @@
 | ID | Tên requirement | Thành phần | Mô tả | Nguồn | Rõ ràng | Status | Ngày |
 |---|---|---|---|---|---|---|---|
 | BI-T1-001 | — | KPI / Chart / Table / Filter | — | — | — | — | — |
+| BI-NEW-004 | Thêm dữ liệu cân đối thu chi vào biến động dòng tiền | Chart | Bổ sung tiền vào/ra vận hành từ Excel cân đối thu chi; hiện chỉ có dòng trả gốc & lãi | Meeting 22/04 | 🟡 Partial | ⬜ Chờ template | 22/04/2026 |
 
 ### Tab 2 — Lịch trả nợ
 > Table: Ngân hàng, Số HĐ, Loại vay, Lãi suất, Dư nợ, Gốc trả, Lãi trả, Đáo hạn, Còn lại (ngày)
@@ -142,10 +154,10 @@
 
 | ID | Tên workflow | Mô tả | Actor | Áp dụng | Nguồn | Rõ ràng | Status | Ngày |
 |---|---|---|---|---|---|---|---|---|
-| BW-001 | Tạo mới khoản vay | Quy trình nhập Loan Master mới | Kế toán / CFO | 14 cty | — | — | — | — |
-| BW-002 | Ghi nhận giao dịch | Nhập Loan Activity (trả gốc/lãi/rút vốn) | Kế toán | 14 cty | — | — | — | — |
-| BW-003 | Cập nhật TSDB | Thêm / sửa tài sản đảm bảo | Kế toán | 14 cty | — | — | — | — |
-| BW-004 | Alert đáo hạn | Cảnh báo khoản vay sắp đến hạn | Tự động → CFO | 14 cty | — | — | — | — |
+| BW-001 | Tạo mới khoản vay | Quy trình nhập Loan Master mới | Kế toán / CFO | 14 cty | Meeting 22/04 | 🟢 Clear | ⬜ Todo (Flow) | 22/04/2026 |
+| BW-002 | Ghi nhận giao dịch / Giải ngân | Workflow giải ngân có bước phê duyệt nhiều người | Kế toán / CFO | 14 cty | Meeting 22/04 | 🟡 Partial | ⬜ Chờ clarify 23/04 | 22/04/2026 |
+| BW-003 | Trả nợ & đóng khoản vay | Workflow trả nợ, xác nhận và đóng khoản vay | Kế toán / CFO | 14 cty | Meeting 22/04 | 🟡 Partial | ⬜ Chờ clarify 23/04 | 22/04/2026 |
+| BW-004 | Cập nhật Tài sản thế chấp | Quy trình thêm/sửa tài sản đảm bảo kèm giấy tờ | Kế toán | 14 cty | Meeting 22/04 | 🟢 Clear | ⬜ Todo (Flow) | 22/04/2026 |
 
 **Checklist clarify khi có req Workflow:**
 - [ ] Trigger (điều gì bắt đầu)
@@ -196,7 +208,9 @@
 | Ngày | ID | Loại | Nội dung thay đổi | Người yêu cầu | Người confirm |
 |---|---|---|---|---|---|
 | 22/04/2026 | BI-T3, BI-T5 | Thêm mới | Tab 3 & 5 đưa vào scope — Basic version (nhập kết quả thủ công, không raw data) | Huyen-Cosy | Chờ confirm |
-| — | — | Thêm / Sửa / Deprecated / Out of Phase | — | — | — |
+| 22/04/2026 | LRK-DEL-001,002,003 | Xóa | Xóa 3 bảng: Vốn góp nội bộ, Tồn quỹ nhập tay, Dự báo dòng tiền khỏi Lark Base | Anh Trung | ✅ Confirmed |
+| 22/04/2026 | LRK-FLOW-001,002,003,004 | Thêm mới | 4 bảng chuyển thành Lark Base Flow (Khoản vay gốc, Tài sản thế chấp, Giải ngân, Trả nợ) | Anh Trung | ⬜ Chờ clarify 23/04 |
+| 22/04/2026 | BI-NEW-004 | Thêm mới | Thêm dữ liệu cân đối thu chi vào chart biến động dòng tiền | Chị Yến | ⬜ Chờ template |
 
 ---
 *Cập nhật lần cuối: —*
