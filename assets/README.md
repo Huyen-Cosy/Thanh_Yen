@@ -40,9 +40,9 @@ Agent sẽ tóm tắt tất cả những gì bạn cần biết theo đúng role
 | Hiếu | Mockup Designer | UI/UX, mockup |
 | Tài | Data Engineering | Data model, schema |
 | Dõng | Lark Admin | Setup Lark Base |
-| Anh Trung | Product Owner (Thanh Yến) | Confirm BR |
-| Nhàn | Finance Assistant (Thanh Yến) | Clarify finance logic |
-
+| Anh Trung | Product Owner (ideaLAB) | Confirm BR |
+| Nhàn | Finance Assistant (ideaLAB) | Clarify finance logic |
+| Chị Yến | Business lead (Thanh Yến) | Confirm BR |
 ---
 
 ## ⚡ Slash Commands hay dùng
