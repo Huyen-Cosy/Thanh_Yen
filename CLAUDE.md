@@ -67,6 +67,22 @@ Phân loại: ✅ New / 🔁 Duplicate / ⚠️ Conflict / ➕ Scope Creep
 
 ---
 
+### WORKFLOW: XÁC NHẬN MEETING MINUTES
+
+Khi người dùng nói **"tôi xác nhận"** (hoặc tương đương) sau khi review một meeting minute, thực hiện **theo thứ tự**:
+
+1. **Cập nhật file meeting minutes**: Đổi dòng header từ "Chờ xác nhận bởi..." thành "✅ Đã xác nhận bởi: [tên] ngày [hôm nay]"
+
+2. **Cập nhật `docs/task_tracker.md`**: Thêm tất cả Action Items từ section ⚡ ACTION ITEMS của meeting minutes vào bảng DANH SÁCH TASK; cập nhật thống kê tổng quan
+
+3. **Cập nhật `docs/scope_register.md`**: Thêm tất cả requirement từ section 🔄 REQUIREMENT PHÁT SINH vào đúng bảng tương ứng (Lark Base / BI / Workflow); cập nhật bảng tổng quan và CHANGE LOG
+
+4. **Commit tất cả thay đổi** với message rõ ràng
+
+5. **Merge branch hiện tại vào `main`** và push
+
+---
+
 ### DỮ LIỆU DỰ ÁN (cập nhật khi có thông tin)
 
 - **Tên dự án**: Thanh Yến

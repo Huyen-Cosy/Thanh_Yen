@@ -1,6 +1,6 @@
 # Meeting Minutes — 2026-04-22 Lark Base: Thống Nhất Kiến Trúc Hệ Thống
 
-> Tạo bởi AI Agent từ transcript. Chờ xác nhận bởi: **Huyên** trước **2026-04-23**
+> ✅ Đã xác nhận bởi: **Huyên** ngày **2026-04-22**
 
 ---
 
