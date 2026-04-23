@@ -47,123 +47,31 @@
 
 ## 🔴 CONFLICT & ĐIỂM CHƯA THỐNG NHẤT
 
-### CONFLICT-001: Dự Báo Dòng Tiền — Cần Tập Trung Dữ Liệu Ở Đâu?
-
-| | |
-|---|---|
-| **Vấn đề** | Chị Yến cần một nơi tập trung để xem dự báo dòng tiền / cân đối thu chi của tất cả công ty con (hiện đang nhận qua email/Zalo riêng lẻ). Lark Base không phù hợp để chứa dữ liệu phức tạp này |
-| **Quan điểm ideaLAB** | Dùng Excel template chuẩn + shared folder → tự động đẩy lên dashboard. Phase 2 mới automate toàn bộ |
-| **Quan điểm Thanh Yến** | Đồng ý dùng Excel, nhưng cần rõ quy trình: các công ty con gửi vào folder nào, theo template nào, bao giờ |
-| **Tác động** | Nếu không có quy trình rõ → tiếp tục nhận báo cáo rải rác, không tập trung được |
-| **Người quyết định** | Anh Trung + Huyên (ideaLAB) — thiết kế template & folder |
-| **Deadline** | Clarify trong buổi họp 23/04 |
-| **Status** | 🟡 Đang giải quyết |
+| # | Vấn đề | Quan điểm ideaLAB | Quan điểm Thanh Yến | Người quyết định | Deadline | Status |
+|---|---|---|---|---|---|---|
+| C-001 | Cân đối thu chi cần tập trung ở đâu — Lark Base không phù hợp cho dữ liệu phức tạp này | Dùng Excel template + shared folder → auto-sync dashboard; Phase 2 mới automate toàn bộ | Đồng ý dùng Excel, nhưng cần rõ: công ty con gửi vào folder nào, theo template nào, bao giờ | Anh Trung + Huyên (ideaLAB) | 23/04 | 🟡 Đang giải quyết |
 
 ---
 
 ## ⚡ ACTION ITEMS
 
-### ACTION-001: ideaLAB Redesign Tồn Quỹ — Bỏ Nhập Tay Lark Base
-
-| | |
-|---|---|
-| **Mô tả** | Xóa/ẩn bảng Tồn quỹ khỏi Lark Base. Nghiên cứu auto bank-sync tool; nếu chưa có thì thiết kế luồng import Excel |
-| **Kết quả kỳ vọng** | Số dư tồn quỹ cập nhật tự động lên dashboard, không cần nhập tay hàng ngày |
-| **Owner** | Anh Trung / Vân (ideaLAB) |
-| **Deadline** | 25/04/2026 |
-| **Priority** | P0 🔴 |
-| **Status** | ⬜ Todo |
-
----
-
-### ACTION-002: ideaLAB Xóa Bảng Vốn Góp Nội Bộ
-
-| | |
-|---|---|
-| **Mô tả** | Remove bảng Vốn góp nội bộ khỏi Lark Base. Đảm bảo dữ liệu vốn góp vẫn hiển thị được trên dashboard từ nguồn khác |
-| **Kết quả kỳ vọng** | Lark Base gọn hơn, không có bảng thừa |
-| **Owner** | ideaLAB |
-| **Deadline** | 24/04/2026 |
-| **Priority** | P1 🟡 |
-| **Status** | ⬜ Todo |
-
----
-
-### ACTION-003: ideaLAB Convert Giải Ngân + Trả Nợ + Khoản Vay Gốc + Tài Sản Thế Chấp → Flow
-
-| | |
-|---|---|
-| **Mô tả** | Thiết kế lại 4 bảng thành Lark Base Flow (workflow): (1) Khoản vay gốc, (2) Tài sản thế chấp, (3) Hoạt động giải ngân, (4) Trả nợ & đóng khoản vay |
-| **Thay đổi cụ thể** | Mỗi flow cần xác định: người khởi tạo (initiator), các bước phê duyệt, người duyệt, điều kiện auto-fill |
-| **Kết quả kỳ vọng** | Người dùng không phải tự điền form trắng — flow dẫn dắt từng bước, auto-fill những gì có thể |
-| **Owner** | Anh Trung (thiết kế) + ideaLAB team (build) |
-| **Deadline** | Clarify approval logic trong họp 23/04; build sau đó |
-| **Priority** | P0 🔴 |
-| **Status** | ⬜ Chờ họp 23/04 để clarify |
-
----
-
-### ACTION-004: ideaLAB Tạo Excel Template + Shared Folder Cho Cân Đối Thu Chi
-
-| | |
-|---|---|
-| **Mô tả** | Thiết kế Excel template chuẩn cho báo cáo cân đối thu chi hàng tháng. Set up shared folder để các công ty con upload vào; hệ thống tự sync lên dashboard |
-| **Kết quả kỳ vọng** | Chị Yến xem được cân đối thu chi tổng hợp trên dashboard mà không cần nhận từng file Excel qua email |
-| **Owner** | Vân + Huyên (ideaLAB) |
-| **Deadline** | 28/04/2026 |
-| **Priority** | P1 🟡 |
-| **Status** | ⬜ Todo |
-
----
-
-### ACTION-005: Huyên Confirm Lịch Họp Chiều 23/04
-
-| | |
-|---|---|
-| **Mô tả** | Check lịch nội bộ và confirm với chị Yến lịch họp chiều 23/04 (~1–2 tiếng) để clarify approval flow chi tiết cho các quy trình Giải ngân, Trả nợ |
-| **Kết quả kỳ vọng** | Lịch họp được gửi lên group trước tối 22/04 |
-| **Owner** | Huyên (ideaLAB) |
-| **Deadline** | 22/04/2026 (hôm nay) |
-| **Priority** | P0 🔴 |
-| **Status** | ⬜ Todo |
+| # | Mô tả | Kết quả kỳ vọng | Owner | Deadline | Priority | Status |
+|---|---|---|---|---|---|---|
+| A-001 | Xóa/ẩn bảng Tồn quỹ khỏi Lark Base; nghiên cứu auto bank-sync tool hoặc thiết kế luồng import Excel | Số dư tồn quỹ cập nhật tự động lên dashboard, không nhập tay hàng ngày | Anh Trung / Vân | 25/04 | P0 🔴 | ⬜ Todo |
+| A-002 | Xóa bảng Vốn góp nội bộ khỏi Lark Base | Lark Base gọn hơn; dữ liệu vốn góp vẫn hiển thị trên dashboard từ nguồn khác | ideaLAB | 24/04 | P1 🟡 | ⬜ Todo |
+| A-003 | Thiết kế lại 4 bảng thành Lark Base Flow: (1) Khoản vay gốc, (2) Tài sản thế chấp, (3) Giải ngân, (4) Trả nợ & đóng khoản vay — xác định initiator, bước phê duyệt, auto-fill | Flow dẫn dắt từng bước; người dùng không phải tự điền form trắng | Anh Trung (thiết kế) + ideaLAB (build) | Sau họp 23/04 | P0 🔴 | ⬜ Chờ họp |
+| A-004 | Thiết kế Excel template chuẩn cho báo cáo cân đối thu chi; set up shared folder để công ty con upload; hệ thống tự sync lên dashboard | Chị Yến xem tổng hợp thu chi trên dashboard, không nhận từng file qua email | Vân + Huyên | 28/04 | P1 🟡 | ⬜ Todo |
+| A-005 | Confirm lịch họp chiều 23/04 (~1–2 tiếng) với chị Yến để clarify approval flow | Lịch gửi lên group trước tối 22/04 | Huyên | 22/04 | P0 🔴 | ⬜ Todo |
 
 ---
 
 ## 📝 TODO — CẦN LÀM RÕ TRONG HỌP 23/04
 
-### TODO-001: Approval Flow Chi Tiết Cho Giải Ngân
-
-| | |
-|---|---|
-| **Câu hỏi cụ thể** | Quy trình giải ngân một khoản vay gồm mấy bước? Ai là người tạo yêu cầu? Ai duyệt bước 1, bước 2? Điều kiện để chuyển bước là gì? Có bước nào cần chữ ký số/giấy tờ không? |
-| **Người trả lời** | Chị Yến (Thanh Yến) |
-| **Cần để làm gì** | ideaLAB thiết kế Flow trong Lark Base |
-| **Deadline trả lời** | Trong buổi họp 23/04 |
-| **Status** | ⬜ Chờ họp |
-
----
-
-### TODO-002: Approval Flow Chi Tiết Cho Trả Nợ & Đóng Khoản Vay
-
-| | |
-|---|---|
-| **Câu hỏi cụ thể** | Khi trả nợ một khoản: ai xác nhận đã trả? Ai duyệt đóng khoản vay? Có cần upload chứng từ không? |
-| **Người trả lời** | Chị Yến (Thanh Yến) |
-| **Cần để làm gì** | ideaLAB thiết kế Flow trả nợ |
-| **Deadline trả lời** | Trong buổi họp 23/04 |
-| **Status** | ⬜ Chờ họp |
-
----
-
-### TODO-003: Template & Folder Cân Đối Thu Chi
-
-| | |
-|---|---|
-| **Câu hỏi cụ thể** | Template cân đối thu chi hiện tại của Thanh Yến có cấu trúc cố định không? Các công ty con có đang dùng cùng một template không? Tần suất gửi là hàng ngày hay hàng tháng? |
-| **Người trả lời** | Chị Yến / Huyên (đã có file mẫu trong Zoom chat) |
-| **Cần để làm gì** | Thiết kế shared folder + data pipeline lên dashboard |
-| **Deadline trả lời** | 23/04/2026 |
-| **Status** | ⬜ Chờ xác nhận |
+| # | Câu hỏi cụ thể | Hỏi ai | Cần để làm gì | Deadline | Status |
+|---|---|---|---|---|---|
+| T-001 | Quy trình giải ngân gồm mấy bước? Ai tạo yêu cầu? Ai duyệt từng bước? Điều kiện chuyển bước? Cần chữ ký số/giấy tờ không? | Chị Yến | ideaLAB thiết kế Flow giải ngân trong Lark Base | Họp 23/04 | ⬜ Chờ họp |
+| T-002 | Khi trả nợ: ai xác nhận đã trả? Ai duyệt đóng khoản vay? Cần upload chứng từ không? | Chị Yến | ideaLAB thiết kế Flow trả nợ | Họp 23/04 | ⬜ Chờ họp |
+| T-003 | Template cân đối thu chi có cấu trúc cố định không? Các công ty con đang dùng cùng một template không? Tần suất gửi là hàng ngày hay hàng tháng? | Chị Yến / Huyên (đã có file mẫu trong Zoom chat) | Thiết kế shared folder + data pipeline lên dashboard | 23/04 | ⬜ Chờ xác nhận |
 
 ---
 
