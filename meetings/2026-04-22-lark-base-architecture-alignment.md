@@ -41,6 +41,8 @@
 | 9 | **Phase hiện tại chỉ build cho một công ty pilot** — chưa build dashboard tổng holding | Anh Trung |
 | 10 | Họp tiếp theo **chiều 23/04** (~1–2 tiếng) để clarify chi tiết approval flow của Giải ngân và các quy trình khác | Anh Trung + Chị Yến |
 
+<img width="563" height="843" alt="image" src="https://github.com/user-attachments/assets/d59169d2-9b01-4219-8162-66fbcb79fed8" />
+
 ---
 
 ## 🔴 CONFLICT & ĐIỂM CHƯA THỐNG NHẤT
