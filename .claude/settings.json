@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lark-thanh-yen": {
+      "command": "python3",
+      "args": ["/home/user/Thanh_Yen/lark_mcp_server.py"]
+    }
+  }
+}
