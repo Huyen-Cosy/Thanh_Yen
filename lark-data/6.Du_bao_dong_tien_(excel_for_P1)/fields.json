@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fldGoxVmPx",
+          "field_name": "STT",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          },
+          "type": 1005,
+          "ui_type": "AutoNumber"
+        },
+        {
+          "field_id": "fldLdUUBU4",
+          "field_name": "Ngay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy/MM/dd"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldOe6GVjv",
+          "field_name": "Ma cong ty",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblSWPWVjrWYcKNw",
+            "table_name": "0.Danh muc cong ty (MD - form)"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fld177yGZq",
+          "field_name": "Danh muc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optYXIK0wy",
+                "name": "loan_repayment"
+              },
+              {
+                "color": 1,
+                "id": "optxxi2fdU",
+                "name": "revenue"
+              },
+              {
+                "color": 2,
+                "id": "opt8QdZe0L",
+                "name": "salary"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldhEcHe9i",
+          "field_name": "Chieu",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optV1VmNFP",
+                "name": "outflow"
+              },
+              {
+                "color": 1,
+                "id": "optfMggpVF",
+                "name": "inflow"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldyC6PLr9",
+          "field_name": "So tien du kien (VND)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld37uOCkp",
+          "field_name": "So tien thuc te (VND)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldryMA0eQ",
+          "field_name": "Ma khoan vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblZnLShVEFPq2GH",
+            "table_name": "2.Khoan vay goc (Flow)"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fldjLiIcP7",
+          "field_name": "Ghi chu",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        }
+      ],
+      "page_token": "fldjLiIcP7",
+      "total": 9
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

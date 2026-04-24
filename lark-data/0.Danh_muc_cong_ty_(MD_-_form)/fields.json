@@ -1,0 +1,263 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fldmEnGlMK",
+          "field_name": "Ma cong ty",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fld6romfm4",
+          "field_name": "STT",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          },
+          "type": 1005,
+          "ui_type": "AutoNumber"
+        },
+        {
+          "field_id": "fld4mqQIU8",
+          "field_name": "Ten cong ty",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldNyi9Rzp",
+          "field_name": "Ten viet tat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldvb7FuYz",
+          "field_name": "Loai hinh",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optFRj8cjG",
+                "name": "CÔNG TY CP"
+              },
+              {
+                "color": 1,
+                "id": "optcYlG54f",
+                "name": "CÁ NHÂN"
+              },
+              {
+                "color": 2,
+                "id": "opti6srWTd",
+                "name": "CÔNG TY TNHH"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldakbM2sQ",
+          "field_name": "MST",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "0"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldFy8jTse",
+          "field_name": "Cong ty me",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldUTKXXcx",
+          "field_name": "Ty le so huu",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "%"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldY9DfMX1",
+          "field_name": "Dang hoat dong",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 26,
+                "id": "optM28ju00",
+                "name": "TRUE"
+              },
+              {
+                "color": 33,
+                "id": "optkhLCFuL",
+                "name": "FALSE"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldz0U0e24",
+          "field_name": "Ngay thanh lap",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy/MM/dd"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldrJCT3QF",
+          "field_name": "Dia chi",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fld7i34rA7",
+          "field_name": "Nguoi lien he",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldwIHWkHC",
+          "field_name": "SDT",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldrHMVEYY",
+          "field_name": "Von dieu le (VND)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldMPRiNkl",
+          "field_name": "Von chu so huu (VND)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldzQYrvHH",
+          "field_name": "Von gop cong ty khac (VND)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldaZzem0P",
+          "field_name": "Co dong gop von",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldWBxyYgY",
+          "field_name": "Nguoi dai dien phap luat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fld47Sj3kY",
+          "field_name": "Ke toan truong",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldLjlYVKF",
+          "field_name": "Tong giam doc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        }
+      ],
+      "page_token": "fldLjlYVKF",
+      "total": 20
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

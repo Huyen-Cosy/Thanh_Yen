@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "app": {
+        "app_token": "L4s5bXSMiaJCxxsFuTCjZnDnpgh",
+        "formula_type": 2,
+        "is_advanced": false,
+        "name": "TREASURY MANAGEMENT SYSTEM",
+        "revision": 106
+      }
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

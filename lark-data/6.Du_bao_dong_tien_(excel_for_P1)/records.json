@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Ma cong ty": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "STT": "6"
+        },
+        "id": "recvgKq3xxejsW",
+        "record_id": "recvgKq3xxejsW"
+      }
+    ],
+    "total": 1
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

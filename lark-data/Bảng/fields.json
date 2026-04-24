@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fldDQxHmw8",
+          "field_name": "Văn bản",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        }
+      ],
+      "page_token": "fldDQxHmw8",
+      "total": 1
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

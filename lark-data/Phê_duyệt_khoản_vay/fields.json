@@ -1,0 +1,1075 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fldnNUwM35",
+          "field_name": "Request No.",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": true,
+          "property": null,
+          "type": 15,
+          "ui_type": "Url"
+        },
+        {
+          "field_id": "fldamAspZC",
+          "field_name": "Status",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optrniQytP",
+                "name": "Approved"
+              },
+              {
+                "color": 1,
+                "id": "optfTKR3jA",
+                "name": "Deleted"
+              },
+              {
+                "color": 2,
+                "id": "optNcO93kA",
+                "name": "Processing"
+              },
+              {
+                "color": 3,
+                "id": "optYdT4itd",
+                "name": "Rejected"
+              },
+              {
+                "color": 4,
+                "id": "optCKajozr",
+                "name": "Canceled"
+              },
+              {
+                "color": 5,
+                "id": "optpzxgvaJ",
+                "name": "Terminated"
+              },
+              {
+                "color": 6,
+                "id": "opt5LKeASG",
+                "name": "Recalled"
+              },
+              {
+                "color": 7,
+                "id": "opt1124004855",
+                "name": "Under Review"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldffN5UpV",
+          "field_name": "Approval process",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optXKxgxke",
+                "name": "Phê duyệt khoản vay"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld9bo7VQq",
+          "field_name": "Submitted at",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "dd/MM/yyyy"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldwbbnW1f",
+          "field_name": "Completed at",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "dd/MM/yyyy"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldxh36E5r",
+          "field_name": "Requester",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "multiple": true
+          },
+          "type": 11,
+          "ui_type": "User"
+        },
+        {
+          "description": "The department the user was in when the request was submitted",
+          "field_id": "fldyM8OoyR",
+          "field_name": "Initiator department",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldaX5wpNH",
+          "field_name": "Current assignee",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "multiple": true
+          },
+          "type": 11,
+          "ui_type": "User"
+        },
+        {
+          "field_id": "fldp68or9B",
+          "field_name": "Approval steps",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldobjfAnn",
+          "field_name": "Mục đích",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldcvXhJR7",
+          "field_name": "Single select",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optvssIF9N",
+                "name": "Ngắn hạn"
+              },
+              {
+                "color": 1,
+                "id": "optIFusyck",
+                "name": "Trung Hạn"
+              },
+              {
+                "color": 2,
+                "id": "opt0gYDvlB",
+                "name": "Dài Hạn"
+              },
+              {
+                "color": 3,
+                "id": "optAKw8mLP",
+                "name": "LC"
+              },
+              {
+                "color": 4,
+                "id": "opt3x5MtWZ",
+                "name": "BL"
+              },
+              {
+                "color": 5,
+                "id": "optM7LBCfx",
+                "name": "Hạn mức luân chuyển"
+              },
+              {
+                "color": 6,
+                "id": "optyihwSVC",
+                "name": "Thuê tài chính"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldrdkSUpt",
+          "field_name": "Loại bên cho vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optPyX4EjY",
+                "name": "Doanh nghiệp nội bộ"
+              },
+              {
+                "color": 1,
+                "id": "optZfQ0aI0",
+                "name": "Ngân hàng"
+              },
+              {
+                "color": 2,
+                "id": "opte7Y9ixS",
+                "name": "Cá nhân"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldtaWZtBK",
+          "field_name": "Ngân hàng cho vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldykxUHjw",
+          "field_name": "Ma cong ty",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt553373359",
+                "name": "TY23"
+              },
+              {
+                "color": 1,
+                "id": "opt553373298",
+                "name": "TY04"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldbonHUqU",
+          "field_name": "Số HĐ",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fld3SfRUck",
+          "field_name": "Ngày ký HĐ",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy-MM-dd"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldntKQU00",
+          "field_name": "Hạn mức quy đổi",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldcKJrVjF",
+          "field_name": "Hạn mức quy đổi-Currency",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt0Y1gSLj",
+                "name": "VND"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldqqwu4s9",
+          "field_name": "Hạn mức tối đa được phép giải ngân",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "flda6lMmJM",
+          "field_name": "Hạn mức tối đa được phép giải ngân-Currency",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optIgFoaFu",
+                "name": "VND"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld4MSeGZJ",
+          "field_name": "Hạn mức trên HĐ",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld2t5N76W",
+          "field_name": "Hạn mức trên HĐ-Currency",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt1sS08jW",
+                "name": "VND"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldshggNh1",
+          "field_name": "Loại tiền tệ",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optOA0ypX9",
+                "name": "VND"
+              },
+              {
+                "color": 1,
+                "id": "opt7amm28N",
+                "name": "USE"
+              },
+              {
+                "color": 2,
+                "id": "optG0Ka45s",
+                "name": "EU"
+              },
+              {
+                "color": 3,
+                "id": "optE0NNEsY",
+                "name": "JPY"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldqe9e8Br",
+          "field_name": "Loại lãi suất",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optncHBEfh",
+                "name": "Cố định"
+              },
+              {
+                "color": 1,
+                "id": "optBU3npGL",
+                "name": "Thả nổi"
+              },
+              {
+                "color": 2,
+                "id": "optd1BGchk",
+                "name": "Hỗn hợp"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldtwmm8fE",
+          "field_name": "Lãi suất tại thời điểm ký HĐ",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld8nWkhYa",
+          "field_name": "Lãi suất tham chiếu",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldtOkF7Fh",
+          "field_name": "Biên độ lãi suất",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld1bxoVlf",
+          "field_name": "Kỳ điều chỉnh lãi suất",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opthaszDZ4",
+                "name": "Tháng"
+              },
+              {
+                "color": 1,
+                "id": "optm02MTli",
+                "name": "Quý"
+              },
+              {
+                "color": 2,
+                "id": "optx575QJF",
+                "name": "6 Tháng"
+              },
+              {
+                "color": 3,
+                "id": "optUk5WSNd",
+                "name": "Năm"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "flduICsodO",
+          "field_name": "Lãi suất phạt quá hạn",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld1QOtNXs",
+          "field_name": "Phí cam kết",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldoWlldKo",
+          "field_name": "Ngày bắt đầu vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy-MM-dd"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldqdFOL8z",
+          "field_name": "Ngày đáo hạn",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "yyyy-MM-dd"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fld7xbmb7W",
+          "field_name": "Phương thức tra gốc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optlwxvMVz",
+                "name": "Tháng"
+              },
+              {
+                "color": 1,
+                "id": "optAcMcxFA",
+                "name": "Quý"
+              },
+              {
+                "color": 2,
+                "id": "optaYYNcrP",
+                "name": "Năm"
+              },
+              {
+                "color": 3,
+                "id": "optdu2ZpwG",
+                "name": "Cuối kỳ"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldl1pXHta",
+          "field_name": "Kỳ hạn trả lãi vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optgtDAsLN",
+                "name": "Tháng"
+              },
+              {
+                "color": 1,
+                "id": "optWLNzJHa",
+                "name": "Quý"
+              },
+              {
+                "color": 2,
+                "id": "optfVnW4aL",
+                "name": "Năm"
+              },
+              {
+                "color": 3,
+                "id": "optnbTemAf",
+                "name": "Cuối kỳ"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldliLZaWP",
+          "field_name": "Ma tren giay to phap ly",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt1721321211",
+                "name": "CT 766392"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld8DwyZnW",
+          "field_name": "Trang thai",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt1548668242",
+                "name": "Đang thế chấp"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldflR3oGM",
+          "field_name": "Người ký bên vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "multiple": true
+          },
+          "type": 11,
+          "ui_type": "User"
+        },
+        {
+          "field_id": "fldgb9ZLZT",
+          "field_name": "Các điều kiện đặc biệt",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldmYSbvze",
+          "field_name": "Ma khoan vay tai ngan hang hoac cong ty",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld9vTPkte",
+          "field_name": "Muc dich",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldowoZW1K",
+          "field_name": "Loai vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldbwJAHcS",
+          "field_name": "Loai ben cho vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldhkfhoeJ",
+          "field_name": "Ngan hang cho vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldbhUknRw",
+          "field_name": "Chi nhanh ngan hang cho vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld15QtRl8",
+          "field_name": "So HD",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldfdzFw5W",
+          "field_name": "Han muc quy doi (VND)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldaeZcARR",
+          "field_name": "Han muc toi da duoc phep giai ngan",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldx7xrGfn",
+          "field_name": "Han muc tren HD",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldnw3MINJ",
+          "field_name": "Loai tien te",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld7SpKkXP",
+          "field_name": "Loai lai suat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldhxb2Qjp",
+          "field_name": "Lai suat tai thoi diem ky HD",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldutuDJ4f",
+          "field_name": "Lai suat tham chieu",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld8tDAlC8",
+          "field_name": "Bien do lai suat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldf49sCho",
+          "field_name": "Ky dieu chinh lai suat",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld9vh3J31",
+          "field_name": "Lai suat phat qua han",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld7wr4TI1",
+          "field_name": "Phi cam ket",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldjpI19VZ",
+          "field_name": "Phuong thuc tra no goc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld83014jy",
+          "field_name": "Ky han tra lai vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldasUzr8h",
+          "field_name": "Du no goc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldmb2DhWJ",
+          "field_name": "So tien da giai ngan",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fld4ZebEbH",
+          "field_name": "Han muc con lai sau giai ngan",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "formatter": "0.00"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldv6wKS5d",
+          "field_name": "Trang thai1",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldyf4MPX9",
+          "field_name": "So quyet dinh phe duyet noi bo",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldzKpjlH1",
+          "field_name": "Nguoi ky ben vay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldcbQMl1W",
+          "field_name": "Cac dieu kien dac biet (Covenants)",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": []
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldedqla6F",
+          "field_name": "Short answer",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldxR7EXZq",
+          "field_name": "SourceID",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldczLdprW",
+          "field_name": "Ten cong ty",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt111930652",
+                "name": "CÔNG TY CP CẢNG QUỐC TẾ NAM VÂN PHONG"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldlzZe8K2",
+          "field_name": "Serial no.",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": true,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        }
+      ],
+      "page_token": "fldlzZe8K2",
+      "total": 69
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

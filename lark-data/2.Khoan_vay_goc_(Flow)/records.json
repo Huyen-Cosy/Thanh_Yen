@@ -1,0 +1,930 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Sài Gòn",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "7560718481",
+          "Han muc quy doi (VND)": "20000000000",
+          "Han muc toi da duoc phep giai ngan": "7568600000",
+          "Han muc tren HD": "20000000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat tai thoi diem ky HD": "0.09",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Ngắn hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgJOb3NFUUi"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL-TY13-000019",
+              "text_arr": [
+                "COL-TY13-000019"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000586",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay tai ngan hang hoac cong ty": "tesst",
+          "Muc dich": "Vay ngắn hạn",
+          "Ngan hang cho vay": "VTB",
+          "Ngay bat dau vay": 1762790400000,
+          "Ngay dao han": 1791216000000,
+          "Ngay dao han sau khi gia han": 1790179200000,
+          "Ngay ky HD": 1762790400000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "586",
+          "So HD": "01/2025/HĐCVHM/NHCT912-CPIBS",
+          "So tien da giai ngan": "5012180816",
+          "Thoi han vay": 317,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvgV3wqKdpmX",
+        "record_id": "recvgV3wqKdpmX"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Quận 4",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Han muc quy doi (VND)": "400000000000",
+          "Han muc toi da duoc phep giai ngan": "352089000000",
+          "Han muc tren HD": "400000000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat phat qua han": "0.1",
+          "Lai suat tai thoi diem ky HD": "0.0925",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Ngắn hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgKg6cZkWAZ",
+                "recvgKhk0sRZw9",
+                "recvgKif6Zl2Id",
+                "recvgKiWUxc1cp",
+                "recvgKjRXcvQiP"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL-TY23-000020,COL-TY23-000021,COL-TY23-000022,COL-TY23-000023,COL-TY23-000024",
+              "text_arr": [
+                "COL-TY23-000020",
+                "COL-TY23-000021",
+                "COL-TY23-000022",
+                "COL-TY23-000023",
+                "COL-TY23-000024"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000587",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay ngắn hạn",
+          "Ngan hang cho vay": "OCB",
+          "Ngay bat dau vay": 1737561600000,
+          "Ngay dao han": 1769011200000,
+          "Ngay ky HD": 1769011200000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "587",
+          "So HD": "0012/2025/HĐCTC/OCB-DN",
+          "So tien da giai ngan": "416265902574",
+          "Thoi han vay": 364,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvgV4rYy176G",
+        "record_id": "recvgV4rYy176G"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Quận 4",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "295338685668",
+          "Han muc quy doi (VND)": "300000000000",
+          "Han muc toi da duoc phep giai ngan": "300000000000",
+          "Han muc tren HD": "300000000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat phat qua han": "0.1",
+          "Lai suat tai thoi diem ky HD": "0.1055",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Ngắn hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgKg6cZkWAZ",
+                "recvgKhk0sRZw9",
+                "recvgKif6Zl2Id",
+                "recvgKiWUxc1cp",
+                "recvgKjRXcvQiP"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL-TY23-000020,COL-TY23-000021,COL-TY23-000022,COL-TY23-000023,COL-TY23-000024",
+              "text_arr": [
+                "COL-TY23-000020",
+                "COL-TY23-000021",
+                "COL-TY23-000022",
+                "COL-TY23-000023",
+                "COL-TY23-000024"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000588",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay ngắn hạn",
+          "Ngan hang cho vay": "OCB",
+          "Ngay bat dau vay": 1770912000000,
+          "Ngay dao han": 1802361600000,
+          "Ngay ky HD": 1770825600000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "588",
+          "So HD": "0137/2026/HĐCTC/OCB-DN",
+          "So tien da giai ngan": "46011365186",
+          "Thoi han vay": 364,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvgV52KUaOdG",
+        "record_id": "recvgV52KUaOdG"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Bình Tân",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Han muc quy doi (VND)": "230000000000",
+          "Han muc toi da duoc phep giai ngan": "216718780000",
+          "Han muc tren HD": "230000000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat tai thoi diem ky HD": "0.078",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Ngắn hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgEi9WIBbUB",
+                "recvgEo6vUE278",
+                "recvgEpDwJVwE5",
+                "recvgEqnVCVPbf",
+                "recvgErtGn5yzl",
+                "recvgErD9cJVyu",
+                "recvgEtIhUGp0u",
+                "recvgEuraK6RJR",
+                "recvgEuMKMGlTN",
+                "recvgEwxvCAGr3"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL--000009,COL--000010,COL--000011,COL--000012,COL--000013,COL--000014,COL-TY05-000015,COL-TY05-000016,COL-TY23-000017,COL-TY23-000018",
+              "text_arr": [
+                "COL--000009",
+                "COL--000010",
+                "COL--000011",
+                "COL--000012",
+                "COL--000013",
+                "COL--000014",
+                "COL-TY05-000015",
+                "COL-TY05-000016",
+                "COL-TY23-000017",
+                "COL-TY23-000018"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000589",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay ngắn hạn",
+          "Ngan hang cho vay": "BIDV",
+          "Ngay bat dau vay": 1723046400000,
+          "Ngay dao han": 1753891200000,
+          "Ngay ky HD": 1723046400000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "589",
+          "So HD": "01/2024/4483870/HĐTD",
+          "So tien da giai ngan": "390745859643",
+          "Thoi han vay": 357,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvgV6Eq1YwuM",
+        "record_id": "recvgV6Eq1YwuM"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Bình Tân",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "216226428036",
+          "Han muc quy doi (VND)": "223619000000",
+          "Han muc toi da duoc phep giai ngan": "216718780000",
+          "Han muc tren HD": "223619000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat tai thoi diem ky HD": "0.081",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Ngắn hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgEi9WIBbUB",
+                "recvgEo6vUE278",
+                "recvgEpDwJVwE5",
+                "recvgEqnVCVPbf",
+                "recvgErtGn5yzl",
+                "recvgErD9cJVyu",
+                "recvgEtIhUGp0u",
+                "recvgEuraK6RJR",
+                "recvgEuMKMGlTN",
+                "recvgEwxvCAGr3"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL--000009,COL--000010,COL--000011,COL--000012,COL--000013,COL--000014,COL-TY05-000015,COL-TY05-000016,COL-TY23-000017,COL-TY23-000018",
+              "text_arr": [
+                "COL--000009",
+                "COL--000010",
+                "COL--000011",
+                "COL--000012",
+                "COL--000013",
+                "COL--000014",
+                "COL-TY05-000015",
+                "COL-TY05-000016",
+                "COL-TY23-000017",
+                "COL-TY23-000018"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000590",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay ngắn hạn",
+          "Ngan hang cho vay": "BIDV",
+          "Ngay bat dau vay": 1758470400000,
+          "Ngay dao han": 1790006400000,
+          "Ngay ky HD": 1758470400000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "590",
+          "So HD": "01/2025/4483870/HĐTD",
+          "So tien da giai ngan": "177724762064",
+          "Thoi han vay": 365,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvgV6UVgjRp9",
+        "record_id": "recvgV6UVgjRp9"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "HCM",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "13184834280",
+          "Han muc quy doi (VND)": "20000000000",
+          "Han muc toi da duoc phep giai ngan": "13185200000",
+          "Han muc tren HD": "20000000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat phat qua han": "0.1",
+          "Lai suat tai thoi diem ky HD": "0.0906",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Ngắn hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgJOb3NFUUi"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL-TY13-000019",
+              "text_arr": [
+                "COL-TY13-000019"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000593",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay ngắn hạn",
+          "Ngan hang cho vay": "sea",
+          "Ngay bat dau vay": 1758470400000,
+          "Ngay dao han": 1790006400000,
+          "Ngay ky HD": 1758470400000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "593",
+          "So HD": "139/25/HĐTD-HM/HCM",
+          "So tien da giai ngan": "13184834280",
+          "Thoi han vay": 365,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvh7LhhaYrJY",
+        "record_id": "recvh7LhhaYrJY"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "HCM",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "701000000",
+          "Han muc quy doi (VND)": "701000000",
+          "Han muc toi da duoc phep giai ngan": "701000000",
+          "Han muc tren HD": "701000000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat phat qua han": "0.1",
+          "Lai suat tai thoi diem ky HD": "0.075",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Trung hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgVS7PONaEl"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL-TY23-000026",
+              "text_arr": [
+                "COL-TY23-000026"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000598",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay trung hạn",
+          "Ngan hang cho vay": "VPB",
+          "Ngay bat dau vay": 1758470400000,
+          "Ngay dao han": 1916496000000,
+          "Ngay ky HD": 1758729600000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "598",
+          "So HD": "250925-6935394-Auto-HĐ",
+          "So tien da giai ngan": "701000000",
+          "Thoi han vay": 1829,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvhi0misWI5m",
+        "record_id": "recvhi0misWI5m"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Quận 8",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "520100000",
+          "Han muc quy doi (VND)": "520100000",
+          "Han muc toi da duoc phep giai ngan": "520100000",
+          "Han muc tren HD": "520100000",
+          "Ky dieu chinh lai suat": "Thang",
+          "Ky han tra lai vay": "Tháng",
+          "Lai suat tai thoi diem ky HD": "0.1",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai lai suat": "Thả nổi",
+          "Loai tien te": "VND",
+          "Loai vay": "Trung hạn",
+          "Ma TSDB": [
+            {
+              "record_ids": [
+                "recvgVQl8LQMvp"
+              ],
+              "table_id": "tblDtR0OeoexfOYv",
+              "text": "COL-TY23-000025",
+              "text_arr": [
+                "COL-TY23-000025"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000599",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Vay trung hạn",
+          "Ngan hang cho vay": "MB",
+          "Ngay bat dau vay": 1650988800000,
+          "Ngay dao han": 1808668800000,
+          "Ngay ky HD": 1650902400000,
+          "Nguoi ky ben vay": "Lê Đình Trương",
+          "Phuong thuc tra no goc": "Tháng",
+          "STT": "599",
+          "So HD": "18178.22.702.2272137.BÐ",
+          "So tien da giai ngan": "520100000",
+          "Thoi han vay": 1825,
+          "Trang thai": "Đang vay"
+        },
+        "id": "recvhjjNzm21Nx",
+        "record_id": "recvhjjNzm21Nx"
+      },
+      {
+        "fields": {
+          "Cong ty cho vay": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "800000000",
+          "Loai ben cho vay": "Doanh nghiệp nội bộ",
+          "Loai tien te": "VND",
+          "Ma TSDB": [
+            {
+              "table_id": "tblDtR0OeoexfOYv",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NB-000600",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "mượn nội bộ",
+          "STT": "600",
+          "Thoi han vay": 0
+        },
+        "id": "recvhjtNgHJxuG",
+        "record_id": "recvhjtNgHJxuG"
+      },
+      {
+        "fields": {
+          "Cong ty cho vay": [
+            {
+              "record_ids": [
+                "recvgKG3wC5vhi"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY20",
+              "text_arr": [
+                "TY20"
+              ],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "17990409146",
+          "Loai ben cho vay": "Doanh nghiệp nội bộ",
+          "Loai tien te": "VND",
+          "Ma TSDB": [
+            {
+              "table_id": "tblDtR0OeoexfOYv",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NB-000601",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "mượn nội bộ",
+          "STT": "601",
+          "Thoi han vay": 0
+        },
+        "id": "recvhkfC9WmB9P",
+        "record_id": "recvhkfC9WmB9P"
+      },
+      {
+        "fields": {
+          "Cong ty cho vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCLRjF"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY04",
+              "text_arr": [
+                "TY04"
+              ],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "0",
+          "Loai ben cho vay": "Doanh nghiệp nội bộ",
+          "Loai tien te": "VND",
+          "Ma TSDB": [
+            {
+              "table_id": "tblDtR0OeoexfOYv",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NB-000602",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "mượn nội bộ",
+          "STT": "602",
+          "Thoi han vay": 0
+        },
+        "id": "recvhkjw0r72hO",
+        "record_id": "recvhkjw0r72hO"
+      },
+      {
+        "fields": {
+          "Cong ty cho vay": [
+            {
+              "record_ids": [
+                "recvh16xxWlaNJ"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY98",
+              "text_arr": [
+                "TY98"
+              ],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Loai ben cho vay": "Cá nhân",
+          "Loai tien te": "VND",
+          "Ma TSDB": [
+            {
+              "table_id": "tblDtR0OeoexfOYv",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-CN-000603",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "mượn nội bộ",
+          "STT": "603",
+          "Thoi han vay": 0
+        },
+        "id": "recvhprdtZFtSl",
+        "record_id": "recvhprdtZFtSl"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Quận 4",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "909125204",
+          "Han muc quy doi (VND)": "40000000000",
+          "Han muc toi da duoc phep giai ngan": "26044500000",
+          "Han muc tren HD": "40000000000",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai tien te": "VND",
+          "Loai vay": "LC",
+          "Ma TSDB": [
+            {
+              "table_id": "tblDtR0OeoexfOYv",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000607",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Bảo lãnh LC",
+          "Ngan hang cho vay": "OCB",
+          "Ngay bat dau vay": 1770912000000,
+          "Ngay dao han": 1802361600000,
+          "Ngay ky HD": 1796140800000,
+          "STT": "607",
+          "So HD": "0137/2026/HĐCTC/OCB-DN",
+          "Thoi han vay": 364
+        },
+        "id": "recvhzGqGPdHEJ",
+        "record_id": "recvhzGqGPdHEJ"
+      },
+      {
+        "fields": {
+          "Chi nhanh ngan hang cho vay": "Quận 4",
+          "Cong ty cho vay": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty vay": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Du no goc": "1639324891",
+          "Han muc quy doi (VND)": "40000000000",
+          "Han muc toi da duoc phep giai ngan": "26044500000",
+          "Han muc tren HD": "40000000000",
+          "Loai ben cho vay": "Ngân hàng",
+          "Loai tien te": "VND",
+          "Loai vay": "BL",
+          "Ma TSDB": [
+            {
+              "table_id": "tblDtR0OeoexfOYv",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "text": "VAY-TY23-NH-000610",
+              "type": "text"
+            }
+          ],
+          "Muc dich": "Bảo lãnh công trình",
+          "Ngan hang cho vay": "OCB",
+          "Ngay bat dau vay": 1770912000000,
+          "Ngay dao han": 1802361600000,
+          "Ngay ky HD": 1796140800000,
+          "STT": "610",
+          "So HD": "0137/2026/HĐCTC/OCB-DN",
+          "Thoi han vay": 364
+        },
+        "id": "recvhAiTnJijN1",
+        "record_id": "recvhAiTnJijN1"
+      }
+    ],
+    "total": 14
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

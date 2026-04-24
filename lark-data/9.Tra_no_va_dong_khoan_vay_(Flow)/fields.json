@@ -1,0 +1,387 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fld2IqPyoD",
+          "field_name": "Ma ky tra no",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": {
+            "formatter": "",
+            "formula_expression": "\"TN\"&\"-\"&\"-\"&TEXT(bitable::$table[tblwaUsFJLmDrxF8].$field[fldtN4SM1g],\"YYMM\")&\"-\"&RIGHT(\"000000\" & bitable::$table[tblwaUsFJLmDrxF8].$field[fld829S6TY], 6)"
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fld829S6TY",
+          "field_name": "STT",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          },
+          "type": 1005,
+          "ui_type": "AutoNumber"
+        },
+        {
+          "field_id": "fld3IdS64q",
+          "field_name": "Ma giai ngan",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblh22GKNXUOKMkP",
+            "table_name": "5.Hoat dong giai ngan khoan vay (Flow)"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fldl7gaA0f",
+          "field_name": "Ky tra no so",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldHtDnKbs",
+          "field_name": "Ma khoan vay goc",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "filter_info": {
+              "conditions": {
+                "children": [
+                  {
+                    "field_id": "fldXhR8peI",
+                    "field_type": 20,
+                    "operator": "is",
+                    "value": null
+                  }
+                ],
+                "conjunction": "and"
+              },
+              "target_table": "tblh22GKNXUOKMkP"
+            },
+            "formatter": "",
+            "formula": "bitable::$table[tblh22GKNXUOKMkP].FILTER(CurrentValue.$column[fldXhR8peI]=bitable::$table[tblwaUsFJLmDrxF8].$field[fld3IdS64q]).$column[fldRgFk3vt].LISTCOMBINE()",
+            "roll_up": 0,
+            "target_field": "fldRgFk3vt"
+          },
+          "type": 19,
+          "ui_type": "Lookup"
+        },
+        {
+          "field_id": "fldz0iopaJ",
+          "field_name": "So tien goc phai tra",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "filter_info": {
+              "conditions": {
+                "children": [
+                  {
+                    "field_id": "fldXhR8peI",
+                    "field_type": 20,
+                    "operator": "is",
+                    "value": null
+                  }
+                ],
+                "conjunction": "and"
+              },
+              "target_table": "tblh22GKNXUOKMkP"
+            },
+            "formatter": "#,##0",
+            "formula": "bitable::$table[tblh22GKNXUOKMkP].FILTER(CurrentValue.$column[fldXhR8peI]=bitable::$table[tblwaUsFJLmDrxF8].$field[fld3IdS64q]).$column[fld3WvM2eX].LISTCOMBINE()",
+            "roll_up": 0,
+            "target_field": "fld3WvM2eX"
+          },
+          "type": 19,
+          "ui_type": "Lookup"
+        },
+        {
+          "field_id": "fldw44ZCdm",
+          "field_name": "Ngay tra du kien",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "dd/MM/yyyy"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldtN4SM1g",
+          "field_name": "Ngay tra thuc te",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "dd/MM/yyyy"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        },
+        {
+          "field_id": "fldoKnb9XW",
+          "field_name": "Du no dau ky",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "filter_info": {
+              "conditions": {
+                "children": [
+                  {
+                    "field_id": "fld8CoU7IS",
+                    "field_type": 2,
+                    "operator": "contains",
+                    "value": null
+                  }
+                ],
+                "conjunction": "and"
+              },
+              "target_table": "tblh22GKNXUOKMkP"
+            },
+            "formatter": "#,##0",
+            "formula": "bitable::$table[tblh22GKNXUOKMkP].FILTER(CurrentValue.$column[fld8CoU7IS].CONTAIN(bitable::$table[tblwaUsFJLmDrxF8].$field[fld3IdS64q])).$column[fld3WvM2eX].LISTCOMBINE().SUM()",
+            "roll_up": 1,
+            "target_field": "fld3WvM2eX"
+          },
+          "type": 19,
+          "ui_type": "Lookup"
+        },
+        {
+          "field_id": "fld3hfoLP0",
+          "field_name": "Lai suat ap dung",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "%"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldlVndJ5I",
+          "field_name": "So ngay tinh lai",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldtJLRRR2",
+          "field_name": "So tien lai phai tra",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "",
+            "formula_expression": "(bitable::$table[tblwaUsFJLmDrxF8].$field[fldoKnb9XW]*bitable::$table[tblwaUsFJLmDrxF8].$field[fld3hfoLP0]*bitable::$table[tblwaUsFJLmDrxF8].$field[fldlVndJ5I])/365"
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fldhGBX9Y3",
+          "field_name": "Lai da tra thuc te",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldwWryRmY",
+          "field_name": "Phi khac",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldegs7O0r",
+          "field_name": "Tong phai tra ky nay",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000",
+            "formula_expression": "bitable::$table[tblwaUsFJLmDrxF8].$field[fldz0iopaJ]+bitable::$table[tblwaUsFJLmDrxF8].$field[fldtJLRRR2]",
+            "type": {
+              "data_type": 2,
+              "ui_property": {
+                "formatter": "1,000"
+              },
+              "ui_type": "Number"
+            }
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fld8xQ6EDk",
+          "field_name": "So tien goc da tra thuc te",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000"
+          },
+          "type": 2,
+          "ui_type": "Number"
+        },
+        {
+          "field_id": "fldeH11G60",
+          "field_name": "Du no cuoi ky",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000",
+            "formula_expression": "bitable::$table[tblwaUsFJLmDrxF8].$field[fldoKnb9XW]-bitable::$table[tblwaUsFJLmDrxF8].$field[fld8xQ6EDk]",
+            "type": {
+              "data_type": 2,
+              "ui_property": {
+                "formatter": "1,000"
+              },
+              "ui_type": "Number"
+            }
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fld7zkIpu0",
+          "field_name": "So ngay qua han",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "1,000",
+            "formula_expression": "bitable::$table[tblwaUsFJLmDrxF8].$field[fldtN4SM1g]-bitable::$table[tblwaUsFJLmDrxF8].$field[fldw44ZCdm]",
+            "type": {
+              "data_type": 2,
+              "ui_property": {
+                "formatter": "1,000"
+              },
+              "ui_type": "Number"
+            }
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fldv8b42xw",
+          "field_name": "Lai phat qua han",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "formatter": "",
+            "formula_expression": "bitable::$table[tblwaUsFJLmDrxF8].$field[fld3hfoLP0]*bitable::$table[tblwaUsFJLmDrxF8].$field[fld7zkIpu0]*150/100"
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fld2xbhjZU",
+          "field_name": "Trang thai ky tra no",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optFFoGcT8",
+                "name": "Chưa đến hạn"
+              },
+              {
+                "color": 1,
+                "id": "optkpXn8WQ",
+                "name": "Đến hạn"
+              },
+              {
+                "color": 2,
+                "id": "opt0p0Fsyq",
+                "name": "Đã trả"
+              },
+              {
+                "color": 3,
+                "id": "optN2b01lZ",
+                "name": "Quá hạn"
+              },
+              {
+                "color": 4,
+                "id": "optopTQy5S",
+                "name": "Đã trả 1 phần"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldpfDJigt",
+          "field_name": "So chung tu thanh toan",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldztOjyvv",
+          "field_name": "Tk tra no",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblJ6ZMsq2x0oNyT",
+            "table_name": "1.TK ngan hang (MD - form)"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        }
+      ],
+      "page_token": "fldztOjyvv",
+      "total": 22
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

@@ -1,0 +1,515 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Chi nhanh": "Trường Chinh",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000009",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Nam Á",
+          "STT": "9",
+          "So TK": "915000287900010",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdnRnfAE5",
+        "record_id": "rec27bdnRnfAE5"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "HCM",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000011",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Ngoại Thương VN ",
+          "STT": "11",
+          "So TK": "0071000612869",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdwb7kI2S",
+        "record_id": "rec27bdwb7kI2S"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Quận 4 ",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000012",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Phương Đông",
+          "STT": "12",
+          "So TK": "0065100005599007",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdyCDlPim",
+        "record_id": "rec27bdyCDlPim"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Quận 4",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000013",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Phương Đông",
+          "STT": "13",
+          "So TK": "818479",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdAMDpCSS",
+        "record_id": "rec27bdAMDpCSS"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Quận 5",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000014",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Quân Đội",
+          "STT": "14",
+          "So TK": "1051100512006",
+          "Tien te": "VND"
+        },
+        "id": "recvgnbjiiDJfu",
+        "record_id": "recvgnbjiiDJfu"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Sài Gòn",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000015",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Công Thương",
+          "STT": "15",
+          "So TK": "117002671122",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdCpwUFzN",
+        "record_id": "rec27bdCpwUFzN"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Bình tân",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000016",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Đầu Tư và Phát Triển Việt Nam",
+          "STT": "16",
+          "So TK": "1490180181",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdIxvGq9L",
+        "record_id": "rec27bdIxvGq9L"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Cao Thắng",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000017",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Việt Nam Thương Tín",
+          "STT": "17",
+          "So TK": "10184757",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdLbdlRiZ",
+        "record_id": "rec27bdLbdlRiZ"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "HCM",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000018",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Đông Nam Á",
+          "STT": "18",
+          "So TK": "888000589999",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdOvJ4mFb",
+        "record_id": "rec27bdOvJ4mFb"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Phú Mỹ Hưng",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000019",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Kỹ thương Việt Nam ",
+          "STT": "19",
+          "So TK": "19037114191010",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdQ4B9rkC",
+        "record_id": "rec27bdQ4B9rkC"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Sài Gòn",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000020",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Việt Nam Thịnh Vượng",
+          "STT": "20",
+          "So TK": "241193489",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdUB2Rs75",
+        "record_id": "rec27bdUB2Rs75"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Bến Thành",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000021",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Hàng Hải Việt Nam",
+          "STT": "21",
+          "So TK": "4066014696879",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdXjw5Apx",
+        "record_id": "rec27bdXjw5Apx"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Đông Đô",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000022",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Lộc Phát Việt Nam",
+          "STT": "22",
+          "So TK": "899999686868",
+          "Tien te": "VND"
+        },
+        "id": "rec27bdZEk1nNq",
+        "record_id": "rec27bdZEk1nNq"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "Quận 4",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000023",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Phương Đông ",
+          "STT": "23",
+          "So TK": "547379",
+          "Tien te": "USD"
+        },
+        "id": "rec27be1sSg1Bf",
+        "record_id": "rec27be1sSg1Bf"
+      },
+      {
+        "fields": {
+          "Chi nhanh": "HCM",
+          "Dang hoat dong": "TRUE",
+          "Loai TK": "TKTT",
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000024",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngan hang": "TMCP Ngoại thương VN",
+          "STT": "24",
+          "So TK": "0071370622217",
+          "Tien te": "USD"
+        },
+        "id": "rec27beeSvWGea",
+        "record_id": "rec27beeSvWGea"
+      },
+      {
+        "fields": {
+          "Ma TK": [
+            {
+              "text": "TK-TY23-000025",
+              "type": "text"
+            }
+          ],
+          "Ma cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "STT": "25"
+        },
+        "id": "recvgve6c9t3qV",
+        "record_id": "recvgve6c9t3qV"
+      }
+    ],
+    "total": 16
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

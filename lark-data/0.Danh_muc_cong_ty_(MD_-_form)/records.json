@@ -1,0 +1,592 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Quốc lộ 19, KV Tân Hòa, Phường An Nhơn, Gia Lai",
+          "Ke toan truong": "Nguyễn Thị Hồ Mụi",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4100440643",
+          "Ma cong ty": "TY01",
+          "Ngay thanh lap": 1038931200000,
+          "Nguoi dai dien phap luat": "Lê Anh Tuấn ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "10",
+          "Ten cong ty": "CÔNG TY CP HOÀN CẦU GRANITE",
+          "Ten viet tat": "HCG",
+          "Von dieu le (VND)": "150000000000"
+        },
+        "id": "recvgKxUissH4h",
+        "record_id": "recvgKxUissH4h"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Cụm CN An Trường, Quốc lộ 19, Phường An Nhơn, Gia Lai",
+          "Ke toan truong": "Nguyễn Thị Hồ Mụi",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4101393989",
+          "Ma cong ty": "TY02",
+          "Ngay thanh lap": 1339430400000,
+          "Nguoi dai dien phap luat": "Lê Anh Tuấn ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "11",
+          "Ten cong ty": "CÔNG TY CP CHẾ BIẾN ĐÁ VIỆT",
+          "Ten viet tat": "ĐV",
+          "Von dieu le (VND)": "70000000000"
+        },
+        "id": "recvgKzDaPxOxW",
+        "record_id": "recvgKzDaPxOxW"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Cụm CN An Trường, Quốc lộ 19, Phường An Nhơn, Gia Lai",
+          "Ke toan truong": "Diệp Chi Minh Thi",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4100638386",
+          "Ma cong ty": "TY03",
+          "Ngay thanh lap": 1175011200000,
+          "Nguoi dai dien phap luat": "Diệp Chi Minh Thi",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "12",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN DU LỊCH HOÀN CẦU",
+          "Ten viet tat": "DLHC",
+          "Von dieu le (VND)": "50000000000"
+        },
+        "id": "recvgKG3wCKfbD",
+        "record_id": "recvgKG3wCKfbD"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Số 9, quốc lộ 26b, phường ..., tỉnh Khánh Hòa",
+          "Ke toan truong": "Nguyễn Ngọc Khuê",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4200733876",
+          "Ma cong ty": "TY04",
+          "Ngay thanh lap": 1200067200000,
+          "Nguoi dai dien phap luat": "Huỳnh Vĩnh Phước ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "13",
+          "Ten cong ty": "CÔNG TY CP CẢNG QUỐC TẾ NAM VÂN PHONG",
+          "Ten viet tat": "SVP",
+          "Von dieu le (VND)": "600000000000"
+        },
+        "id": "recvgKG3wCLRjF",
+        "record_id": "recvgKG3wCLRjF"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Số 9, quốc lộ 26b, phường ..., tỉnh Khánh Hòa",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4200881183",
+          "Ma cong ty": "TY05",
+          "Ngay thanh lap": 1232553600000,
+          "Nguoi dai dien phap luat": "Nguyễn Hữu Nghĩa",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "14",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN HOÀN CẦU VÂN PHONG",
+          "Ten viet tat": "HCVP",
+          "Von dieu le (VND)": "175000000000"
+        },
+        "id": "recvgKG3wCwMRk",
+        "record_id": "recvgKG3wCwMRk"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô CN5, KCN Ninh Thủy, phường .., tỉnh Khánh Hòa",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4201675105",
+          "Ma cong ty": "TY06",
+          "Ngay thanh lap": 1453392000000,
+          "Nguoi dai dien phap luat": "Trần Ngọc Phú",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "15",
+          "Ten cong ty": "CÔNG TY CP BÊ TÔNG IBS VÂN PHONG",
+          "Ten viet tat": "IBSVP",
+          "Von dieu le (VND)": "40000000000"
+        },
+        "id": "recvgKG3wCvV3b",
+        "record_id": "recvgKG3wCvV3b"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô CN23, KCN Ninh Thủy, phường .., tỉnh Khánh Hòa",
+          "Ke toan truong": "Nguyễn Ngọc Khuê",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4201901428",
+          "Ma cong ty": "TY07",
+          "Ngay thanh lap": 965404800000,
+          "Nguoi dai dien phap luat": "Lê Ngọc Thảo Trang",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "16",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN THANH LÊ",
+          "Ten viet tat": "THANHLE",
+          "Von dieu le (VND)": "20500000000"
+        },
+        "id": "recvgKG3wCKCBR",
+        "record_id": "recvgKG3wCKCBR"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": " ",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4202001733",
+          "Ma cong ty": "TY08",
+          "Ngay thanh lap": 1709654400000,
+          "Nguoi dai dien phap luat": " Trần Ngọc Phú ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "17",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN VICT",
+          "Ten viet tat": "VICT",
+          "Von dieu le (VND)": "40000000000"
+        },
+        "id": "recvgKG3wCgD5B",
+        "record_id": "recvgKG3wCgD5B"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô CN5, KCN Ninh Thủy, phường .., tỉnh Khánh Hòa",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4202001733",
+          "Ma cong ty": "TY09",
+          "Ngay thanh lap": 1717344000000,
+          "Nguoi dai dien phap luat": "Nguyễn Hữu Nghĩa",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "18",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN IOW",
+          "Ten viet tat": "IOW",
+          "Von dieu le (VND)": "400000000000"
+        },
+        "id": "recvgKG3wCzvpR",
+        "record_id": "recvgKG3wCzvpR"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô CN22, KCN Ninh Thủy, phường .., tỉnh Khánh Hòa",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4202012319",
+          "Ma cong ty": "TY10",
+          "Ngay thanh lap": 1732550400000,
+          "Nguoi dai dien phap luat": "Nguyễn Hữu Nghĩa",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "19",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN VEB",
+          "Ten viet tat": "VEB",
+          "Von dieu le (VND)": "70000000000"
+        },
+        "id": "recvgKG3wCJBp0",
+        "record_id": "recvgKG3wCJBp0"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô CN20, KCN Ninh Thủy, phường .., tỉnh Khánh Hòa",
+          "Ke toan truong": "Nguyễn Ngọc Khuê",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4202013351",
+          "Ma cong ty": "TY11",
+          "Ngay thanh lap": 1734364800000,
+          "Nguoi dai dien phap luat": "Lê Đình Trí ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "20",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN VWC",
+          "Ten viet tat": "VWC",
+          "Von dieu le (VND)": "30000000000"
+        },
+        "id": "recvgKG3wCbNI1",
+        "record_id": "recvgKG3wCbNI1"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô CN24, KCN Ninh Thủy, phường .., tỉnh Khánh Hòa",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4202023494",
+          "Ma cong ty": "TY12",
+          "Ngay thanh lap": 1747843200000,
+          "Nguoi dai dien phap luat": "Trần Ngọc Phú",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "21",
+          "Ten cong ty": "CÔNG TY CP SẢN XUẤT VẬT LIỆU XÂY DỰNG IBS",
+          "Ten viet tat": "VLXDIBS",
+          "Von dieu le (VND)": "30000000000"
+        },
+        "id": "recvgKG3wC9BWr",
+        "record_id": "recvgKG3wC9BWr"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "07 Thanh Đa, phường Bình Quới, TP HCM",
+          "Ke toan truong": "Đào Thị Duy Huyền",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "303791583",
+          "Ma cong ty": "TY13",
+          "Ngay thanh lap": 1284566400000,
+          "Nguoi dai dien phap luat": "Nguyễn Thị Hoàng Yến ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "22",
+          "Ten cong ty": "CÔNG TY CP THANH YẾN  ( Hồ Chí Minh)",
+          "Ten viet tat": "TYHCM",
+          "Von dieu le (VND)": "600000000000"
+        },
+        "id": "recvgKG3wC24kE",
+        "record_id": "recvgKG3wC24kE"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "07 Thanh Đa, phường Bình Quới, TP HCM",
+          "Ke toan truong": "Nguyễn Mai Thượng Uyển",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "316947044",
+          "Ma cong ty": "TY14",
+          "Ngay thanh lap": 1627401600000,
+          "Nguoi dai dien phap luat": "Lê Ngọc Thảo Trang ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "23",
+          "Ten cong ty": "CÔNG TY CP ĐT VÀ PT GIÁO DỤC THANH YẾN",
+          "Ten viet tat": "TYE",
+          "Tong giam doc": " ",
+          "Von dieu le (VND)": "20000000000"
+        },
+        "id": "recvgKG3wCGbsl",
+        "record_id": "recvgKG3wCGbsl"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Tầng 2, cao ốc Căn hộ Văn Phòng Thanh Yến, 07 Thanh Đa, phường Bình Quới, TP HCM",
+          "Ke toan truong": "Nguyễn Na Tra",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "317413334",
+          "Ma cong ty": "TY15",
+          "Ngay thanh lap": 1644249600000,
+          "Nguoi dai dien phap luat": "Nguyễn Thị Hoàng Yến ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "24",
+          "Ten cong ty": "CÔNG TY CP SẢN XUẤT THƯƠNG MẠI DỊCH VỤ THANH YẾN",
+          "Ten viet tat": "DVTY",
+          "Von dieu le (VND)": "3000000000"
+        },
+        "id": "recvgKG3wCWreu",
+        "record_id": "recvgKG3wCWreu"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Tầng 2, cao ốc Căn hộ Văn Phòng Thanh Yến, 07 Thanh Đa, phường Bình Quới, TP HCM",
+          "Ke toan truong": "Nguyễn Mai Thượng Uyển",
+          "Loai hinh": "CÔNG TY TNHH",
+          "MST": "313496308",
+          "Ma cong ty": "TY16",
+          "Ngay thanh lap": 1667491200000,
+          "Nguoi dai dien phap luat": "Lê Ngọc Thảo Trang ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "25",
+          "Ten cong ty": "CÔNG TY TNHH DU LỊCH CÂY CỌ VIỆT NAM",
+          "Ten viet tat": "CAYCO",
+          "Von dieu le (VND)": "40000000000"
+        },
+        "id": "recvgKG3wCYmww",
+        "record_id": "recvgKG3wCYmww"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "09 Duy Tân, Phường Quy Nhơn, Gia Lai",
+          "Ke toan truong": " ",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4101617879",
+          "Ma cong ty": "TY17",
+          "Ngay thanh lap": 1667491200000,
+          "Nguoi dai dien phap luat": "Âu Ban Đán",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "26",
+          "Ten cong ty": "CÔNG TY CP GIÁO DỤC THANH YẾN BÌNH ĐỊNH",
+          "Ten viet tat": "TYEBĐ",
+          "Von dieu le (VND)": "15000000000"
+        },
+        "id": "recvgKG3wCnpoe",
+        "record_id": "recvgKG3wCnpoe"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "09 Duy Tân, Phường Quy Nhơn, Gia Lai",
+          "Ke toan truong": "Nguyễn Mai Thượng Uyển",
+          "Loai hinh": "CÔNG TY TNHH",
+          "MST": "4101575072",
+          "Ma cong ty": "TY18",
+          "Ngay thanh lap": 1600876800000,
+          "Nguoi dai dien phap luat": "Lê Ngọc Thảo Trang",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "27",
+          "Ten cong ty": "CÔNG TY TNHH TM DV HÀ THƯ",
+          "Ten viet tat": "HATHU",
+          "Von dieu le (VND)": "16000000000"
+        },
+        "id": "recvgKG3wCukE1",
+        "record_id": "recvgKG3wCukE1"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "07 Thanh Đa, phường Bình Quới, TP HCM",
+          "Ke toan truong": "Nguyễn Na Tra",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "312949516",
+          "Ma cong ty": "TY19",
+          "Ngay thanh lap": 1412006400000,
+          "Nguoi dai dien phap luat": "Nguyễn Thị Hoàng Yến ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "28",
+          "Ten cong ty": "CÔNG TY CP ĐT-KD BẤT ĐỘNG SẢN THANH YẾN ",
+          "Ten viet tat": "TYLAND",
+          "Von dieu le (VND)": "50000000000"
+        },
+        "id": "recvgKG3wCFJxL",
+        "record_id": "recvgKG3wCFJxL"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Ấp 5, Xã Bình Đức, Tỉnh Tây Ninh",
+          "Ke toan truong": "Nguyễn Thị Thương",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "1100672286",
+          "Ma cong ty": "TY20",
+          "Ngay thanh lap": 1117382400000,
+          "Nguoi dai dien phap luat": "Lưu Quốc Dũng",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "29",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN THANH YẾN ( Long An )",
+          "Ten viet tat": "TYLA",
+          "Von dieu le (VND)": "300000000000"
+        },
+        "id": "recvgKG3wC5vhi",
+        "record_id": "recvgKG3wC5vhi"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Số 1, Trần Hưng Đạo, phường Nha Trang, tỉnh Khánh HOà",
+          "Ke toan truong": "Trần Thị Như Ý",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "4201829147",
+          "Ma cong ty": "TY21",
+          "Ngay thanh lap": 1547740800000,
+          "Nguoi dai dien phap luat": "Bae Kang Woo",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "30",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN RSM",
+          "Ten viet tat": "RSM",
+          "Tong giam doc": " ",
+          "Von dieu le (VND)": "20000000000"
+        },
+        "id": "recvgKG3wCnZA1",
+        "record_id": "recvgKG3wCnZA1"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô F, đường số 1, KCN Nhựt Chánh, Xã Bình Đức, Tỉnh Tây Ninh",
+          "Ke toan truong": "Trần Thị Cẩm Tú",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "1100840389",
+          "Ma cong ty": "TY22",
+          "Ngay thanh lap": 1208966400000,
+          "Nguoi dai dien phap luat": "Lê Đình Trí ",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "31",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN BÊ TÔNG IBS",
+          "Ten viet tat": "BTIBS",
+          "Tong giam doc": " ",
+          "Von dieu le (VND)": "150000000000"
+        },
+        "id": "recvgKG3wCgGCN",
+        "record_id": "recvgKG3wCgGCN"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô A1, đường số 2, KCN Nhựt Chánh, Xã Bình Đức, Tỉnh Tây Ninh",
+          "Ke toan truong": "Phạm Thị Tuyết Hoa",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "1100903649",
+          "Ma cong ty": "TY23",
+          "Ngay thanh lap": 1258646400000,
+          "Nguoi dai dien phap luat": "Lê Đình Trương",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "32",
+          "Ten cong ty": "CÔNG TY CỔ PHẦN IBS",
+          "Ten viet tat": "IBS",
+          "Von dieu le (VND)": "600000000000"
+        },
+        "id": "recvgKG3wCStin",
+        "record_id": "recvgKG3wCStin"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "Lô 23 NP1, Khu Dân cư Nhựt Chánh, xã Bình Đức, tỉnh Tây Ninh",
+          "Ke toan truong": "Nguyễn Thị Thương",
+          "Loai hinh": "CÔNG TY CP",
+          "MST": "1102146722",
+          "Ma cong ty": "TY24",
+          "Ngay thanh lap": 1769702400000,
+          "Nguoi dai dien phap luat": "Lưu Quốc Dũng",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "33",
+          "Ten cong ty": "CÔNG TY CP VẬT LIỆU XÂY DỰNG IBS",
+          "Ten viet tat": "IBSTAYNINH",
+          "Von dieu le (VND)": "100000000000"
+        },
+        "id": "recvgKG3wCILjp",
+        "record_id": "recvgKG3wCILjp"
+      },
+      {
+        "fields": {
+          "Co dong gop von": " ",
+          "Cong ty me": " ",
+          "Dang hoat dong": "TRUE",
+          "Dia chi": "số 209 đường 23/10, phường Nha Trang, tỉnh Khánh Hòa",
+          "Ke toan truong": " ",
+          "Loai hinh": "CÔNG TY TNHH",
+          "MST": "4201639315",
+          "Ma cong ty": "TY25",
+          "Ngay thanh lap": 1427990400000,
+          "Nguoi dai dien phap luat": "Nguyễn Hữu Nghĩa",
+          "Nguoi lien he": " ",
+          "SDT": " ",
+          "STT": "34",
+          "Ten cong ty": " CÔNG TY TNHH HOA BIỂN NHA TRANG",
+          "Ten viet tat": "HOABIEN",
+          "Von dieu le (VND)": "4000000000"
+        },
+        "id": "recvgKG3wCAzvE",
+        "record_id": "recvgKG3wCAzvE"
+      },
+      {
+        "fields": {
+          "Dang hoat dong": "TRUE",
+          "Loai hinh": "CÁ NHÂN",
+          "Ma cong ty": "TY98",
+          "STT": "64",
+          "Ten cong ty": "NGUYỄN THỊ XUÂN LOAN",
+          "Ten viet tat": "NTXL"
+        },
+        "id": "recvh16xxWlaNJ",
+        "record_id": "recvh16xxWlaNJ"
+      },
+      {
+        "fields": {
+          "Dang hoat dong": "TRUE",
+          "Loai hinh": "CÁ NHÂN",
+          "Ma cong ty": "TY99",
+          "STT": "65",
+          "Ten cong ty": "LÊ ĐÌNH TRÍ",
+          "Ten viet tat": "LDT"
+        },
+        "id": "recvhio1cfO4QZ",
+        "record_id": "recvhio1cfO4QZ"
+      },
+      {
+        "fields": {
+          "STT": "66"
+        },
+        "id": "recvhio1LnE1Jy",
+        "record_id": "recvhio1LnE1Jy"
+      }
+    ],
+    "total": 28
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

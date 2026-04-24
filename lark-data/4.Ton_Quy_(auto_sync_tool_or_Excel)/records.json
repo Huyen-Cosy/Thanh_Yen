@@ -1,0 +1,497 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-000001",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bcZ45NW0o"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "1",
+          "So du cuoi ngay": 7069119,
+          "So du dau ngay": "7069119"
+        },
+        "id": "recvg7H9t4l7oR",
+        "record_id": "recvg7H9t4l7oR"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000009000002",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdnRnfAE5"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000009",
+              "text_arr": [
+                "TK-TY23-000009"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "2",
+          "So du cuoi ngay": 1717121,
+          "So du dau ngay": "1717121"
+        },
+        "id": "recvg7H9t4KU6S",
+        "record_id": "recvg7H9t4KU6S"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000011000003",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdwb7kI2S"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000011",
+              "text_arr": [
+                "TK-TY23-000011"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "3",
+          "So du cuoi ngay": 501777,
+          "So du dau ngay": "501777"
+        },
+        "id": "recvg7H9t4g8S0",
+        "record_id": "recvg7H9t4g8S0"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000012000004",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdyCDlPim"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000012",
+              "text_arr": [
+                "TK-TY23-000012"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "4",
+          "So du cuoi ngay": 216734078,
+          "So du dau ngay": "1237182",
+          "Tien ra": "4868786224",
+          "Tien vao": "5084283120"
+        },
+        "id": "recvg7H9t40OiY",
+        "record_id": "recvg7H9t40OiY"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000013000005",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdAMDpCSS"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000013",
+              "text_arr": [
+                "TK-TY23-000013"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "5",
+          "So du cuoi ngay": 980977,
+          "So du dau ngay": "980977"
+        },
+        "id": "recvg7H9t4Ud8Q",
+        "record_id": "recvg7H9t4Ud8Q"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000014000006",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "recvgnbjiiDJfu"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000014",
+              "text_arr": [
+                "TK-TY23-000014"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "6",
+          "So du cuoi ngay": 2377095,
+          "So du dau ngay": "2377095"
+        },
+        "id": "recvgnol7spuoQ",
+        "record_id": "recvgnol7spuoQ"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000015000007",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdCpwUFzN"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000015",
+              "text_arr": [
+                "TK-TY23-000015"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "7",
+          "So du cuoi ngay": 12885740,
+          "So du dau ngay": "12885740"
+        },
+        "id": "recvgnotH1vlAs",
+        "record_id": "recvgnotH1vlAs"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000016000008",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdIxvGq9L"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000016",
+              "text_arr": [
+                "TK-TY23-000016"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "8",
+          "So du cuoi ngay": 1000000,
+          "So du dau ngay": "1000000",
+          "Tien ra": "35762163368",
+          "Tien vao": "35762163368"
+        },
+        "id": "recvgnoBCCVQz2",
+        "record_id": "recvgnoBCCVQz2"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000017000009",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdLbdlRiZ"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000017",
+              "text_arr": [
+                "TK-TY23-000017"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "9",
+          "So du cuoi ngay": 7758563,
+          "So du dau ngay": "7758563"
+        },
+        "id": "recvgnp8232BTs",
+        "record_id": "recvgnp8232BTs"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000018000010",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdOvJ4mFb"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000018",
+              "text_arr": [
+                "TK-TY23-000018"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "10",
+          "So du cuoi ngay": 3316421,
+          "So du dau ngay": "3316421"
+        },
+        "id": "recvgnpgdpQYl7",
+        "record_id": "recvgnpgdpQYl7"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000019000011",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdQ4B9rkC"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000019",
+              "text_arr": [
+                "TK-TY23-000019"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "11",
+          "So du cuoi ngay": 2079313520,
+          "So du dau ngay": "5795921",
+          "Tien vao": "2073517599"
+        },
+        "id": "recvgnpooD9YSk",
+        "record_id": "recvgnpooD9YSk"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000020000012",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdUB2Rs75"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000020",
+              "text_arr": [
+                "TK-TY23-000020"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "12",
+          "So du cuoi ngay": 1625988,
+          "So du dau ngay": "1625988"
+        },
+        "id": "recvgnpvdXc9Zt",
+        "record_id": "recvgnpvdXc9Zt"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000021000013",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdXjw5Apx"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000021",
+              "text_arr": [
+                "TK-TY23-000021"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "13",
+          "So du cuoi ngay": 2889206,
+          "So du dau ngay": "2889206"
+        },
+        "id": "recvgnpDlbyO8P",
+        "record_id": "recvgnpDlbyO8P"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000022000014",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27bdZEk1nNq"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000022",
+              "text_arr": [
+                "TK-TY23-000022"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "14",
+          "So du cuoi ngay": 4062585,
+          "So du dau ngay": "4062585"
+        },
+        "id": "recvgnpX799laE",
+        "record_id": "recvgnpX799laE"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000023000015",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27be1sSg1Bf"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000023",
+              "text_arr": [
+                "TK-TY23-000023"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "15",
+          "So du cuoi ngay": 100,
+          "So du dau ngay": "100"
+        },
+        "id": "recvgnqbsKvrzX",
+        "record_id": "recvgnqbsKvrzX"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-TK-TY23-000024000016",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "record_ids": [
+                "rec27beeSvWGea"
+              ],
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text": "TK-TY23-000024",
+              "text_arr": [
+                "TK-TY23-000024"
+              ],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775750400000,
+          "STT": "16",
+          "So du cuoi ngay": 29.73,
+          "So du dau ngay": "29.73"
+        },
+        "id": "recvgnqfMVokhn",
+        "record_id": "recvgnqfMVokhn"
+      },
+      {
+        "fields": {
+          "Key": [
+            {
+              "text": "TQ-2604-000017",
+              "type": "text"
+            }
+          ],
+          "Ma TK": [
+            {
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ngay": 1775836800000,
+          "STT": "17",
+          "So du cuoi ngay": 0
+        },
+        "id": "recvgKoHiZ4QJt",
+        "record_id": "recvgKoHiZ4QJt"
+      }
+    ],
+    "total": 17
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

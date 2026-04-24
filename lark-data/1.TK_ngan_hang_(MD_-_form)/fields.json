@@ -1,0 +1,173 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "field_id": "fldGpUnApE",
+          "field_name": "Ma TK",
+          "is_extend": false,
+          "is_primary": true,
+          "is_synced": false,
+          "property": {
+            "formatter": "",
+            "formula_expression": "\"TK\"&\"-\"&bitable::$table[tblJ6ZMsq2x0oNyT].$field[fldCORpUTg]&\"-\"&RIGHT(\"000000\" & bitable::$table[tblJ6ZMsq2x0oNyT].$field[fldbtiNmEc], 6)"
+          },
+          "type": 20,
+          "ui_type": "Formula"
+        },
+        {
+          "field_id": "fldbtiNmEc",
+          "field_name": "STT",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_serial": {
+              "type": "auto_increment_number"
+            }
+          },
+          "type": 1005,
+          "ui_type": "AutoNumber"
+        },
+        {
+          "field_id": "fldCORpUTg",
+          "field_name": "Ma cong ty",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "multiple": true,
+            "table_id": "tblSWPWVjrWYcKNw",
+            "table_name": "0.Danh muc cong ty (MD - form)"
+          },
+          "type": 18,
+          "ui_type": "SingleLink"
+        },
+        {
+          "field_id": "fldHoy6PkJ",
+          "field_name": "Ngan hang",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldYGMhBkF",
+          "field_name": "Chi nhanh",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldCEUUSRt",
+          "field_name": "So TK",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": null,
+          "type": 1,
+          "ui_type": "Text"
+        },
+        {
+          "field_id": "fldG8MC6AW",
+          "field_name": "Loai TK",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "opt4Vua90O",
+                "name": "TKTT"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldIUWN9w5",
+          "field_name": "Tien te",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 0,
+                "id": "optuPNdEQv",
+                "name": "VND"
+              },
+              {
+                "color": 1,
+                "id": "optzV4fkZf",
+                "name": "USD"
+              },
+              {
+                "color": 2,
+                "id": "opteeTP67q",
+                "name": "EU"
+              },
+              {
+                "color": 3,
+                "id": "optnKX76Z2",
+                "name": "JPY"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fld1a8ujxB",
+          "field_name": "Dang hoat dong",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "options": [
+              {
+                "color": 26,
+                "id": "optpvVmkbh",
+                "name": "TRUE"
+              },
+              {
+                "color": 33,
+                "id": "optfmfVt7O",
+                "name": "FALSE"
+              }
+            ]
+          },
+          "type": 3,
+          "ui_type": "SingleSelect"
+        },
+        {
+          "field_id": "fldSaOmbe3",
+          "field_name": "Ngay mo TK",
+          "is_extend": false,
+          "is_primary": false,
+          "is_synced": false,
+          "property": {
+            "auto_fill": false,
+            "date_formatter": "dd/MM/yyyy"
+          },
+          "type": 5,
+          "ui_type": "DateTime"
+        }
+      ],
+      "page_token": "fldSaOmbe3",
+      "total": 10
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

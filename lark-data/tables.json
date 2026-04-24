@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "has_more": false,
+      "items": [
+        {
+          "name": "0.Danh muc cong ty (MD - form)",
+          "revision": 304,
+          "table_id": "tblSWPWVjrWYcKNw"
+        },
+        {
+          "name": "1.TK ngan hang (MD - form)",
+          "revision": 105,
+          "table_id": "tblJ6ZMsq2x0oNyT"
+        },
+        {
+          "name": "2.Khoan vay goc (Flow)",
+          "revision": 735,
+          "table_id": "tblZnLShVEFPq2GH"
+        },
+        {
+          "name": "3.Tai San The Chap (Flow)",
+          "revision": 760,
+          "table_id": "tblDtR0OeoexfOYv"
+        },
+        {
+          "name": "5.Hoat dong giai ngan khoan vay (Flow)",
+          "revision": 535,
+          "table_id": "tblh22GKNXUOKMkP"
+        },
+        {
+          "name": "9.Tra no va dong khoan vay (Flow)",
+          "revision": 629,
+          "table_id": "tblwaUsFJLmDrxF8"
+        },
+        {
+          "name": "4.Ton Quy (auto sync tool or Excel)",
+          "revision": 127,
+          "table_id": "tbl8YO7ViouWV0nX"
+        },
+        {
+          "name": "8.Cong no noi bo (excel for P1)",
+          "revision": 246,
+          "table_id": "tbl2ZcyB3nzkhZxD"
+        },
+        {
+          "name": "6.Du bao dong tien (excel for P1)",
+          "revision": 30,
+          "table_id": "tblOa9ho1iRE2AiR"
+        },
+        {
+          "name": "Test",
+          "revision": 0,
+          "table_id": "tblR9SvMXsZUqT0z"
+        },
+        {
+          "name": "Phê duyệt khoản vay",
+          "revision": 60,
+          "table_id": "tblYXgAN6BrCeCF8"
+        },
+        {
+          "name": "Bảng",
+          "revision": 0,
+          "table_id": "tbltuG917qHUf4t6"
+        }
+      ],
+      "page_token": "tbltuG917qHUf4t6",
+      "total": 12
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

@@ -1,0 +1,1819 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000001",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "record_ids": [
+                "recvhkjw0r72hO"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NB-000602",
+              "text_arr": [
+                "VAY-TY23-NB-000602"
+              ],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 1168413062,
+          "No Dau ky": "1168413062",
+          "STT": "1",
+          "TK": "Bán hàng - 131"
+        },
+        "id": "recvgvgQGyHkAH",
+        "record_id": "recvgvgQGyHkAH"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 13019114980,
+          "Co Dau ky": "13019114980",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000002",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "2"
+        },
+        "id": "recvgW1btZr9wG",
+        "record_id": "recvgW1btZr9wG"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 7322692718,
+          "Co Dau ky": "3955472741",
+          "Co Phat sinh trong ky": "3367219977",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000003",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 1409000000,
+          "No Phat sinh trong ky": "1409000000",
+          "STT": "3"
+        },
+        "id": "recvgW1q0FT1G4",
+        "record_id": "recvgW1q0FT1G4"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000004",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "4"
+        },
+        "id": "recvgW1MSu0l5U",
+        "record_id": "recvgW1MSu0l5U"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 800000000,
+          "Co Dau ky": "800000000",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000005",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "5"
+        },
+        "id": "recvgW1RiN59zz",
+        "record_id": "recvgW1RiN59zz"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 19237000000,
+          "Co Dau ky": "13185000000",
+          "Co Phat sinh trong ky": "6052000000",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC5vhi"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY20",
+              "text_arr": [
+                "TY20"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000006",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "6"
+        },
+        "id": "recvgW2N7GvXFS",
+        "record_id": "recvgW2N7GvXFS"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 114737024,
+          "Co Dau ky": "114737024",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC5vhi"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY20",
+              "text_arr": [
+                "TY20"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000007",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "7"
+        },
+        "id": "recvgW2NIHyhSX",
+        "record_id": "recvgW2NIHyhSX"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC5vhi"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY20",
+              "text_arr": [
+                "TY20"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000008",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "8"
+        },
+        "id": "recvgW2NIHgqBk",
+        "record_id": "recvgW2NIHgqBk"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 17990409146,
+          "Co Dau ky": "17990409146",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC5vhi"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY20",
+              "text_arr": [
+                "TY20"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000009",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "9"
+        },
+        "id": "recvgW2NIH3awu",
+        "record_id": "recvgW2NIH3awu"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKxUissH4h"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY01",
+              "text_arr": [
+                "TY01"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000010",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 3493637568,
+          "No Dau ky": "3493637568",
+          "STT": "10"
+        },
+        "id": "recvgW3hDNnLof",
+        "record_id": "recvgW3hDNnLof"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 48128378399,
+          "Co Dau ky": "32443539792",
+          "Co Phat sinh trong ky": "15684838607",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKxUissH4h"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY01",
+              "text_arr": [
+                "TY01"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000011",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 22660886452,
+          "No Phat sinh trong ky": "22660886452",
+          "STT": "11"
+        },
+        "id": "recvgW3kyTBiAW",
+        "record_id": "recvgW3kyTBiAW"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 53105893598,
+          "Co Dau ky": "40054835729",
+          "Co Phat sinh trong ky": "13051057869",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKxUissH4h"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY01",
+              "text_arr": [
+                "TY01"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000012",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 23342778458,
+          "No Phat sinh trong ky": "23342778458",
+          "STT": "12"
+        },
+        "id": "recvgW3pfwGluH",
+        "record_id": "recvgW3pfwGluH"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKxUissH4h"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY01",
+              "text_arr": [
+                "TY01"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000013",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "13"
+        },
+        "id": "recvgW3qUVubd7",
+        "record_id": "recvgW3qUVubd7"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKxUissH4h"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY01",
+              "text_arr": [
+                "TY01"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000014",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "14"
+        },
+        "id": "recvgW3BuQovBt",
+        "record_id": "recvgW3BuQovBt"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 20496364974,
+          "Co Dau ky": "20496364974",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKzDaPxOxW"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY02",
+              "text_arr": [
+                "TY02"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000015",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 3522141447,
+          "No Phat sinh trong ky": "3522141447",
+          "STT": "15"
+        },
+        "id": "recvgW3LsEJMeF",
+        "record_id": "recvgW3LsEJMeF"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 58299427358,
+          "Co Dau ky": "25203511482",
+          "Co Phat sinh trong ky": "33095915876",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKzDaPxOxW"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY02",
+              "text_arr": [
+                "TY02"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000016",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 16817472170,
+          "No Phat sinh trong ky": "16817472170",
+          "STT": "16"
+        },
+        "id": "recvgW3M5iByqr",
+        "record_id": "recvgW3M5iByqr"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKzDaPxOxW"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY02",
+              "text_arr": [
+                "TY02"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000017",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "17"
+        },
+        "id": "recvgW3QebJtCs",
+        "record_id": "recvgW3QebJtCs"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKzDaPxOxW"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY02",
+              "text_arr": [
+                "TY02"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000018",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "18"
+        },
+        "id": "recvgW3SbEF5dU",
+        "record_id": "recvgW3SbEF5dU"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 4000000000,
+          "Co Phat sinh trong ky": "4000000000",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCgGCN"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY22",
+              "text_arr": [
+                "TY22"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000019",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 90205836933,
+          "No Dau ky": "88168277211",
+          "No Phat sinh trong ky": "2037559722",
+          "STT": "19"
+        },
+        "id": "recvgW4crGJNKi",
+        "record_id": "recvgW4crGJNKi"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 32402114943,
+          "Co Dau ky": "30373623338",
+          "Co Phat sinh trong ky": "2028491605",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCgGCN"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY22",
+              "text_arr": [
+                "TY22"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000020",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 5700000000,
+          "No Phat sinh trong ky": "5700000000",
+          "STT": "20"
+        },
+        "id": "recvgW4d9VARFl",
+        "record_id": "recvgW4d9VARFl"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCgGCN"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY22",
+              "text_arr": [
+                "TY22"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000021",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "21"
+        },
+        "id": "recvgW4lafbT88",
+        "record_id": "recvgW4lafbT88"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCgGCN"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY22",
+              "text_arr": [
+                "TY22"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000022",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "22"
+        },
+        "id": "recvgW4n78niRN",
+        "record_id": "recvgW4n78niRN"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCvV3b"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY06",
+              "text_arr": [
+                "TY06"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000023",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 60022929,
+          "No Dau ky": "60022929",
+          "STT": "23"
+        },
+        "id": "recvgW4yJ7A3fo",
+        "record_id": "recvgW4yJ7A3fo"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCvV3b"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY06",
+              "text_arr": [
+                "TY06"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000024",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "24"
+        },
+        "id": "recvgW4D9err7P",
+        "record_id": "recvgW4D9err7P"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCvV3b"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY06",
+              "text_arr": [
+                "TY06"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000025",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "25"
+        },
+        "id": "recvgW4EQA2nKp",
+        "record_id": "recvgW4EQA2nKp"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCvV3b"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY06",
+              "text_arr": [
+                "TY06"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000026",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "26"
+        },
+        "id": "recvgW4GiR8G8X",
+        "record_id": "recvgW4GiR8G8X"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCLRjF"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY04",
+              "text_arr": [
+                "TY04"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000027",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 259800000,
+          "No Dau ky": "259800000",
+          "STT": "27"
+        },
+        "id": "recvgW53G038Uc",
+        "record_id": "recvgW53G038Uc"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 14388407690,
+          "Co Dau ky": "5259800000",
+          "Co Phat sinh trong ky": "9128607690",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCLRjF"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY04",
+              "text_arr": [
+                "TY04"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000028",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 17519068677,
+          "No Phat sinh trong ky": "17519068677",
+          "STT": "28"
+        },
+        "id": "recvgW5iNcIVND",
+        "record_id": "recvgW5iNcIVND"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCLRjF"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY04",
+              "text_arr": [
+                "TY04"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000029",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "29"
+        },
+        "id": "recvgW5nLQJyjS",
+        "record_id": "recvgW5nLQJyjS"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCLRjF"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY04",
+              "text_arr": [
+                "TY04"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000030",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "30"
+        },
+        "id": "recvgW5pUEgRGj",
+        "record_id": "recvgW5pUEgRGj"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 36795000000,
+          "Co Dau ky": "36795000000",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCLRjF"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY04",
+              "text_arr": [
+                "TY04"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000031",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "31"
+        },
+        "id": "recvgW5smg09x7",
+        "record_id": "recvgW5smg09x7"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCKCBR"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY07",
+              "text_arr": [
+                "TY07"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000032",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 25707296463,
+          "No Dau ky": "25707296463",
+          "STT": "32"
+        },
+        "id": "recvgW5UQuuS0t",
+        "record_id": "recvgW5UQuuS0t"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCKCBR"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY07",
+              "text_arr": [
+                "TY07"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000033",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "33"
+        },
+        "id": "recvgW5XZofohL",
+        "record_id": "recvgW5XZofohL"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCKCBR"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY07",
+              "text_arr": [
+                "TY07"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000034",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "34"
+        },
+        "id": "recvgW5ZDiBHew",
+        "record_id": "recvgW5ZDiBHew"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wCKCBR"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY07",
+              "text_arr": [
+                "TY07"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000035",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "35"
+        },
+        "id": "recvgW61cXunJq",
+        "record_id": "recvgW61cXunJq"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 99590000000,
+          "Co Phat sinh trong ky": "99590000000",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC9BWr"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY12",
+              "text_arr": [
+                "TY12"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000036",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 385000000,
+          "No Phat sinh trong ky": "385000000",
+          "STT": "36"
+        },
+        "id": "recvgW6cv3X42L",
+        "record_id": "recvgW6cv3X42L"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC9BWr"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY12",
+              "text_arr": [
+                "TY12"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000037",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "37"
+        },
+        "id": "recvgW6gPM7zwh",
+        "record_id": "recvgW6gPM7zwh"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC9BWr"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY12",
+              "text_arr": [
+                "TY12"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000038",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "38"
+        },
+        "id": "recvgW6mKkOckU",
+        "record_id": "recvgW6mKkOckU"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvgKG3wC9BWr"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY12",
+              "text_arr": [
+                "TY12"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000039",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "39"
+        },
+        "id": "recvgW6oQsGl7z",
+        "record_id": "recvgW6oQsGl7z"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvh16xxWlaNJ"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY98",
+              "text_arr": [
+                "TY98"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000040",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "40"
+        },
+        "id": "recvhjrmQflHF3",
+        "record_id": "recvhjrmQflHF3"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 0,
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvhio1cfO4QZ"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY99",
+              "text_arr": [
+                "TY99"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000044",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 0,
+          "STT": "44"
+        },
+        "id": "recvhjspJVPrN1",
+        "record_id": "recvhjspJVPrN1"
+      },
+      {
+        "fields": {
+          "Co Cuoi ky": 11335821,
+          "Co Dau ky": "11335821",
+          "Cong ty cho vay/ban hang": [
+            {
+              "record_ids": [
+                "recvhio1cfO4QZ"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY99",
+              "text_arr": [
+                "TY99"
+              ],
+              "type": "text"
+            }
+          ],
+          "Các mục mẹ 3": [
+            {
+              "table_id": "tbl2ZcyB3nzkhZxD",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma KVNB": [
+            {
+              "text": "CNNB-000045",
+              "type": "text"
+            }
+          ],
+          "Ma khoan vay": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "No Cuoi ky": 31195000000,
+          "No Phat sinh trong ky": "31195000000",
+          "STT": "45"
+        },
+        "id": "recvhjsyazCwYI",
+        "record_id": "recvhjsyazCwYI"
+      }
+    ],
+    "total": 42
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

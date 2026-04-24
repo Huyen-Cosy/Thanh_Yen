@@ -1,0 +1,128 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "Approval process": "Phê duyệt khoản vay",
+          "Biên độ lãi suất": "2",
+          "Completed at": 1776871966150,
+          "Hạn mức quy đổi": "312412412",
+          "Hạn mức quy đổi-Currency": "VND",
+          "Hạn mức trên HĐ": "12412412412",
+          "Hạn mức trên HĐ-Currency": "VND",
+          "Hạn mức tối đa được phép giải ngân": "12421421",
+          "Hạn mức tối đa được phép giải ngân-Currency": "VND",
+          "Initiator department": "Treasury Management System",
+          "Kỳ điều chỉnh lãi suất": "6 Tháng",
+          "Loại bên cho vay": "Ngân hàng",
+          "Loại lãi suất": "Thả nổi",
+          "Loại tiền tệ": "EU",
+          "Lãi suất phạt quá hạn": "2",
+          "Lãi suất tham chiếu": "2",
+          "Lãi suất tại thời điểm ký HĐ": "2",
+          "Ma cong ty": "TY23",
+          "Mục đích": "đá",
+          "Ngày ký HĐ": 1776790800000,
+          "Ngân hàng cho vay": "bidv",
+          "Request No.": {
+            "link": "https://applink.larksuite.com/client/mini_program/open?appId=cli_9c7cc8a9a9edd105&mode=appCenter&path_pc=pc/pages/in-process/index?instanceId=7631606724983066135&source=bitable&path=pages/detail/index?instanceId=7631606724983066135&source=bitable",
+            "text": "202604220001"
+          },
+          "Requester": [
+            {
+              "email": "hatmua121@gmail.com",
+              "en_name": "Dõng Trần (Lark admin - ideaLAB)",
+              "id": "ou_5b3a6604dfebc13e54f16a6a934ebd98",
+              "name": "Dõng Trần (Lark admin - ideaLAB)"
+            }
+          ],
+          "Single select": "Trung Hạn",
+          "SourceID": "NzYzMTU3MzQyMzYwMDI1ODU4NjpDRjU3RTk3Ri1DQTcxLTQ4OUUtODQwQi1BNTlCQTZDRTE1OUUtMTpjNTQ3NGY5OTZiNmI4MTllYmJiY2I1NWU2NDBmYzIyZjox",
+          "Status": "Rejected",
+          "Submitted at": 1776871905978,
+          "Số HĐ": "2312312"
+        },
+        "id": "recvhxeEDqgTYD",
+        "record_id": "recvhxeEDqgTYD"
+      },
+      {
+        "fields": {
+          "Approval process": "Phê duyệt khoản vay",
+          "Approval steps": "Approval",
+          "Biên độ lãi suất": "2",
+          "Current assignee": [
+            {
+              "email": "lethuhuyen215@gmail.com",
+              "en_name": "Thanh Yen Holding Admin",
+              "id": "ou_08ec942b34785bfe371d393ff2fe0ed4",
+              "name": "Thanh Yen Holding Admin"
+            },
+            {
+              "email": "hatmua121@gmail.com",
+              "en_name": "Dõng Trần (Lark admin - ideaLAB)",
+              "id": "ou_5b3a6604dfebc13e54f16a6a934ebd98",
+              "name": "Dõng Trần (Lark admin - ideaLAB)"
+            }
+          ],
+          "Các điều kiện đặc biệt": "không",
+          "Hạn mức quy đổi": "123113131",
+          "Hạn mức quy đổi-Currency": "VND",
+          "Hạn mức trên HĐ": "1232131",
+          "Hạn mức trên HĐ-Currency": "VND",
+          "Hạn mức tối đa được phép giải ngân": "11312312",
+          "Hạn mức tối đa được phép giải ngân-Currency": "VND",
+          "Initiator department": "Treasury Management System",
+          "Kỳ hạn trả lãi vay": "Năm",
+          "Kỳ điều chỉnh lãi suất": "6 Tháng",
+          "Loại bên cho vay": "Ngân hàng",
+          "Loại lãi suất": "Thả nổi",
+          "Loại tiền tệ": "VND",
+          "Lãi suất phạt quá hạn": "22",
+          "Lãi suất tham chiếu": "2",
+          "Lãi suất tại thời điểm ký HĐ": "3",
+          "Ma cong ty": "TY04",
+          "Ma tren giay to phap ly": "CT 766392",
+          "Mục đích": "Test chức năng",
+          "Ngày bắt đầu vay": 1776790800000,
+          "Ngày ký HĐ": 1776790800000,
+          "Ngày đáo hạn": 1776790800000,
+          "Ngân hàng cho vay": "BIDV",
+          "Người ký bên vay": [
+            {
+              "email": "hatmua121@gmail.com",
+              "en_name": "Dõng Trần (Lark admin - ideaLAB)",
+              "id": "ou_5b3a6604dfebc13e54f16a6a934ebd98",
+              "name": "Dõng Trần (Lark admin - ideaLAB)"
+            }
+          ],
+          "Phí cam kết": "12321321321321",
+          "Phương thức tra gốc": "Năm",
+          "Request No.": {
+            "link": "https://applink.larksuite.com/client/mini_program/open?appId=cli_9c7cc8a9a9edd105&mode=appCenter&path_pc=pc/pages/in-process/index?instanceId=7631611673828167191&source=bitable&path=pages/detail/index?instanceId=7631611673828167191&source=bitable",
+            "text": "202604220006"
+          },
+          "Requester": [
+            {
+              "email": "hatmua121@gmail.com",
+              "en_name": "Dõng Trần (Lark admin - ideaLAB)",
+              "id": "ou_5b3a6604dfebc13e54f16a6a934ebd98",
+              "name": "Dõng Trần (Lark admin - ideaLAB)"
+            }
+          ],
+          "Single select": "LC",
+          "SourceID": "NzYzMTU3MzQyMzYwMDI1ODU4NjpFRUE1RTZEMi1ERENGLTQ0RkEtODRFNC02REJGODQ5MkQ1RTQtMTpmZDc3OGJjMzczZWQyZGY5ZjQyZGY0OGRjYzk3YzU5Yzox",
+          "Status": "Under Review",
+          "Submitted at": 1776873058201,
+          "Số HĐ": "sd13ed",
+          "Ten cong ty": "CÔNG TY CP CẢNG QUỐC TẾ NAM VÂN PHONG",
+          "Trang thai": "Đang thế chấp"
+        },
+        "id": "recvhxglD6KEAZ",
+        "record_id": "recvhxglD6KEAZ"
+      }
+    ],
+    "total": 2
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

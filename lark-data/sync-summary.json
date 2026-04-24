@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "data": {
+    "synced_at": "2026-04-24T10:40:27.579345+00:00",
+    "tables": {
+      "0.Danh muc cong ty (MD - form)": {
+        "records": 28,
+        "table_id": "tblSWPWVjrWYcKNw"
+      },
+      "1.TK ngan hang (MD - form)": {
+        "records": 16,
+        "table_id": "tblJ6ZMsq2x0oNyT"
+      },
+      "2.Khoan vay goc (Flow)": {
+        "records": 14,
+        "table_id": "tblZnLShVEFPq2GH"
+      },
+      "3.Tai San The Chap (Flow)": {
+        "records": 22,
+        "table_id": "tblDtR0OeoexfOYv"
+      },
+      "5.Hoat dong giai ngan khoan vay (Flow)": {
+        "records": 638,
+        "table_id": "tblh22GKNXUOKMkP"
+      },
+      "9.Tra no va dong khoan vay (Flow)": {
+        "records": 329,
+        "table_id": "tblwaUsFJLmDrxF8"
+      },
+      "4.Ton Quy (auto sync tool or Excel)": {
+        "records": 17,
+        "table_id": "tbl8YO7ViouWV0nX"
+      },
+      "8.Cong no noi bo (excel for P1)": {
+        "records": 42,
+        "table_id": "tbl2ZcyB3nzkhZxD"
+      },
+      "6.Du bao dong tien (excel for P1)": {
+        "records": 1,
+        "table_id": "tblOa9ho1iRE2AiR"
+      },
+      "Test": {
+        "records": 5,
+        "table_id": "tblR9SvMXsZUqT0z"
+      },
+      "Phê duyệt khoản vay": {
+        "records": 2,
+        "table_id": "tblYXgAN6BrCeCF8"
+      },
+      "Bảng": {
+        "records": 5,
+        "table_id": "tbltuG917qHUf4t6"
+      }
+    },
+    "total_tables": 12
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

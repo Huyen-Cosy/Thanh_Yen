@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {},
+        "id": "recvhxeyYUKiXe",
+        "record_id": "recvhxeyYUKiXe"
+      },
+      {
+        "fields": {},
+        "id": "recvhxeyYU2jja",
+        "record_id": "recvhxeyYU2jja"
+      },
+      {
+        "fields": {},
+        "id": "recvhxeyYU9rBT",
+        "record_id": "recvhxeyYU9rBT"
+      },
+      {
+        "fields": {},
+        "id": "recvhxeyYUwfMJ",
+        "record_id": "recvhxeyYUwfMJ"
+      },
+      {
+        "fields": {},
+        "id": "recvhxeyYU0uWy",
+        "record_id": "recvhxeyYU0uWy"
+      }
+    ],
+    "total": 5
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}

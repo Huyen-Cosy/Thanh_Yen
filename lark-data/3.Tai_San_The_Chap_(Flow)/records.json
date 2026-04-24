@@ -1,0 +1,1525 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgFjKDjmM8x"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 33684000000,
+          "Gia tri dam bao (theo NH)": "42105000000",
+          "Gia tri dinh gia": "42105000000",
+          "Han muc TSDB theo HMTD": "33684000000",
+          "Loai chu so huu": "INDIVIDUAL",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL--000009",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "BX 724206\n",
+          "Mo ta": "GCN QSDĐ BX 724206, QSD nhà ở và TS gắn liền với đất BX 724206;Tại 40/6 Xuân Thủy, P. Thảo Điền, Q. 2, TP. HCM",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1781020800000,
+          "Ngay dang ky GDBD": 1652716800000,
+          "Ngay dinh gia": 1749484800000,
+          "STT": "9",
+          "So DK GDBD": "6083",
+          "So GCN/Giay to so huu": "BX 724206",
+          "Ten chu so huu TSCN": "Nguyễn Thi Xuân Loan",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgEi9WIBbUB",
+        "record_id": "recvgEi9WIBbUB"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 22348800000,
+          "Gia tri dam bao (theo NH)": "27936000000",
+          "Gia tri dinh gia": "27936000000",
+          "Han muc TSDB theo HMTD": "22348800000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL--000010",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 766395",
+          "Mo ta": "GCN : CT21314 Thửa đất số 16 tờ bản đồ số 2 ( KCN Minh Hưng -SiKiCo), xã Đồng Nơ, huyện Hớn Quản tỉnh bình phước",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790179200000,
+          "Ngay dang ky GDBD": 1700409600000,
+          "Ngay dinh gia": 1700409600000,
+          "STT": "10",
+          "So DK GDBD": "6640",
+          "So GCN/Giay to so huu": "CT21314",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Công Nghiệp Minh Hưng -SIKICO",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgEo6vUE278",
+        "record_id": "recvgEo6vUE278"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 21143280000,
+          "Gia tri dam bao (theo NH)": "26429100000",
+          "Gia tri dinh gia": "26429100000",
+          "Han muc TSDB theo HMTD": "21143280000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL--000011",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 766396",
+          "Mo ta": "GCN : CT21315 Thửa đất số 20 tờ bản đồ số 2 ( KCN Minh Hưng -SiKiCo), xã Đồng Nơ, huyện Hớn Quản tỉnh bình phước",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790179200000,
+          "Ngay dang ky GDBD": 1700409600000,
+          "Ngay dinh gia": 1700409600000,
+          "STT": "11",
+          "So DK GDBD": "6640",
+          "So GCN/Giay to so huu": "CT21315",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Công Nghiệp Minh Hưng -SIKICO",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgEpDwJVwE5",
+        "record_id": "recvgEpDwJVwE5"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 47365680000,
+          "Gia tri dam bao (theo NH)": "59207100000",
+          "Gia tri dinh gia": "59207100000",
+          "Han muc TSDB theo HMTD": "47365680000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL--000012",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 766386",
+          "Mo ta": "GCN : CT21155 Thửa đất số 133 tờ bản đồ số 1 ( KCN Minh Hưng -SiKiCo), xã Đồng Nơ, huyện Hớn Quản tỉnh bình phước",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790179200000,
+          "Ngay dang ky GDBD": 1700409600000,
+          "Ngay dinh gia": 1700409600000,
+          "STT": "12",
+          "So DK GDBD": "6640",
+          "So GCN/Giay to so huu": "CT21155",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Công Nghiệp Minh Hưng -SIKICO",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgEqnVCVPbf",
+        "record_id": "recvgEqnVCVPbf"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 42802200000,
+          "Gia tri dam bao (theo NH)": "53502750000",
+          "Gia tri dinh gia": "53502750000",
+          "Han muc TSDB theo HMTD": "42802200000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL--000013",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 766387",
+          "Mo ta": "GCN : CT21156 Thửa đất số 157 tờ bản đồ số 1 ( KCN Minh Hưng -SiKiCo), xã Đồng Nơ, huyện Hớn Quản tỉnh bình phước",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790179200000,
+          "Ngay dang ky GDBD": 1700409600000,
+          "Ngay dinh gia": 1700409600000,
+          "STT": "13",
+          "So DK GDBD": "6640",
+          "So GCN/Giay to so huu": "CT21156",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Công Nghiệp Minh Hưng -SIKICO",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgErtGn5yzl",
+        "record_id": "recvgErtGn5yzl"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 31535520000,
+          "Gia tri dam bao (theo NH)": "39419400000",
+          "Gia tri dinh gia": "39419400000",
+          "Han muc TSDB theo HMTD": "31535520000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL--000014",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 766392",
+          "Mo ta": "GCN : CT21161 Thửa đất số 242 tờ bản đồ số 1 ( KCN Minh Hưng -SiKiCo), xã Đồng Nơ, huyện Hớn Quản tỉnh bình phước",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790179200000,
+          "Ngay dang ky GDBD": 1700409600000,
+          "Ngay dinh gia": 1700409600000,
+          "STT": "14",
+          "So DK GDBD": "6640",
+          "So GCN/Giay to so huu": "CT21161",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Công Nghiệp Minh Hưng -SIKICO",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgErD9cJVyu",
+        "record_id": "recvgErD9cJVyu"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCwMRk"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY05",
+              "text_arr": [
+                "TY05"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 12168800000,
+          "Gia tri dam bao (theo NH)": "15211000000",
+          "Gia tri dinh gia": "15211000000",
+          "Han muc TSDB theo HMTD": "12168800000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY05-000015",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": " DA299166",
+          "Mo ta": "GCN QSDĐ, Quyền sở hữu nhà ở và tài sản gắn liền với đất  số DA299166 , số vào sổ cấp GCN CT -19675 do UBND tỉnh Khánh hòa cấp ngày 08/04/2021 thửa đất số 147, tờ bản đồ số 20. Địa chỉ: Khu CN4 (1 phần) KCN Ninh Thủy phường Ninh Thủy thị xã Ninh Hòa , tỉnh Khánh Hòa",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790611200000,
+          "Ngay dang ky GDBD": 1662652800000,
+          "Ngay dinh gia": 1662652800000,
+          "STT": "15",
+          "So DK GDBD": "3257",
+          "So GCN/Giay to so huu": " CT19675",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Hoàn Cầu Vân Phong",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgEtIhUGp0u",
+        "record_id": "recvgEtIhUGp0u"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCwMRk"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY05",
+              "text_arr": [
+                "TY05"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 5195200000,
+          "Gia tri dam bao (theo NH)": "6494000000",
+          "Gia tri dinh gia": "6494000000",
+          "Han muc TSDB theo HMTD": "5195200000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY05-000016",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": " DA299167",
+          "Mo ta": "GCN QSDĐ, Quyền sở hữu nhà ở và tài sản gắn liền với đất  số DA299167 , số vào sổ cấp GCN CT -19676 do UBND tỉnh Khánh hòa cấp ngày 08/04/2021 thửa đất số 148, tờ bản đồ số 20. Địa chỉ: Khu CN4 (1 phần) KCN Ninh Thủy phường Ninh Thủy thị xã Ninh Hòa , tỉnh Khánh Hòa",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1790611200000,
+          "Ngay dang ky GDBD": 1662652800000,
+          "Ngay dinh gia": 1662652800000,
+          "STT": "16",
+          "So DK GDBD": "3257",
+          "So GCN/Giay to so huu": "CT 19676",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Hoàn Cầu Vân Phong",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgEuraK6RJR",
+        "record_id": "recvgEuraK6RJR"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 332500000,
+          "Gia tri dam bao (theo NH)": "475000000",
+          "Gia tri dinh gia": "475000000",
+          "Han muc TSDB theo HMTD": "332500000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "May moc thiet bi",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000017",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": " QSQJ-2500-12",
+          "Mo ta": "3 Máy Cắt đá (Automatic Stone Cutting Machine) model QSQJ-2500-12_Hóa đơn số 1049 , Biên bản giao nhận, Hợp đồng số 03-0716/HĐKT.TY-IBS",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1778774400000,
+          "Ngay dinh gia": 1763136000000,
+          "STT": "17",
+          "So GCN/Giay to so huu": "Hóa đơn số 1049",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.7"
+        },
+        "id": "recvgEuMKMGlTN",
+        "record_id": "recvgEuMKMGlTN"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV6Eq1YwuM",
+                "recvgV6UVgjRp9"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000589,VAY-TY23-NH-000590",
+              "text_arr": [
+                "VAY-TY23-NH-000589",
+                "VAY-TY23-NH-000590"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 142800000,
+          "Gia tri dam bao (theo NH)": "204000000",
+          "Gia tri dinh gia": "204000000",
+          "Han muc TSDB theo HMTD": "142800000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "May moc thiet bi",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000018",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": " QSDQ-2500",
+          "Mo ta": "2 Máy công cụ (Máy cắt cầu) model QSDQ-2500_Sale Contract số 170417/IBSJSC-KAIDA , Commercial Invoice số KD20170908, Profroma Invoice, Packing List, Tờ khai hải quan số 101625174120 và 101625206320",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1778774400000,
+          "Ngay dinh gia": 1763136000000,
+          "STT": "18",
+          "So GCN/Giay to so huu": "Hợp đồng số: 170414/IBSJSC-KAIDA",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.7"
+        },
+        "id": "recvgEwxvCAGr3",
+        "record_id": "recvgEwxvCAGr3"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV3wqKdpmX",
+                "recvh7LhhaYrJY"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000586,VAY-TY23-NH-000593",
+              "text_arr": [
+                "VAY-TY23-NH-000586",
+                "VAY-TY23-NH-000593"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wC24kE"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY13",
+              "text_arr": [
+                "TY13"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "OCB",
+          "Gia tri cho vay toi da": 7568600000,
+          "Gia tri dam bao (theo NH)": "11644000000",
+          "Gia tri dinh gia": "11644000000",
+          "Han muc TSDB theo HMTD": "7568600000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY13-000019",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT05348",
+          "Mo ta": "Căn hộ du lịch số 1803 tầng 18, GCN số BU 223160, số vào sổ cấp GCN số CT-05348",
+          "NH dang giu TSBD": "VTB",
+          "NH khoan vay bao lanh": "VTB",
+          "Ngay can dinh gia lai": 1807891200000,
+          "Ngay dang ky GDBD": 1539014400000,
+          "Ngay dinh gia": 1539014400000,
+          "STT": "19",
+          "So DK GDBD": "18732",
+          "So GCN/Giay to so huu": "BU 223160",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần Thanh Yến",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.65"
+        },
+        "id": "recvgJOb3NFUUi",
+        "record_id": "recvgJOb3NFUUi"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV4rYy176G",
+                "recvgV52KUaOdG"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000587,VAY-TY23-NH-000588",
+              "text_arr": [
+                "VAY-TY23-NH-000587",
+                "VAY-TY23-NH-000588"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "OCB",
+          "Gia tri cho vay toi da": 66727602710,
+          "Gia tri dam bao (theo NH)": "70239581800",
+          "Gia tri dinh gia": "70239581800",
+          "Han muc TSDB theo HMTD": "54174072784",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000020",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 56054",
+          "Mo ta": " Số GCN số CV 586936; số vào sổ cấp GCN : CT 56054 do UBND tình L.An cấp ngày 20/05/2020 có cập nhập hạng mục công trình  nhà xưởng 7,8 (tức là xưởng 8 cưa đĩa và xưởng 9 cơ khí)  và Công trình xây dựng trên GCN 3745,3747 ",
+          "NH dang giu TSBD": "OCB",
+          "NH khoan vay bao lanh": "OCB",
+          "Ngay can dinh gia lai": 1802361600000,
+          "Ngay dang ky GDBD": 1706025600000,
+          "Ngay dinh gia": 1706025600000,
+          "STT": "20",
+          "So DK GDBD": "708",
+          "So GCN/Giay to so huu": "CV 586936",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.95"
+        },
+        "id": "recvgKg6cZkWAZ",
+        "record_id": "recvgKg6cZkWAZ"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV4rYy176G",
+                "recvgV52KUaOdG"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000587,VAY-TY23-NH-000588",
+              "text_arr": [
+                "VAY-TY23-NH-000587",
+                "VAY-TY23-NH-000588"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "OCB",
+          "Gia tri cho vay toi da": 168352350000,
+          "Gia tri dam bao (theo NH)": "177213000000",
+          "Gia tri dinh gia": "177213000000",
+          "Han muc TSDB theo HMTD": "136680055807",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000021",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT 56054",
+          "Mo ta": " Số GCN số CV 586936; số vào sổ cấp GCN : CT 56054 do UBND tình L.An cấp ngày 20/05/2020 có cập nhập hạng mục công trình  nhà xưởng 7,8).",
+          "NH dang giu TSBD": "OCB",
+          "NH khoan vay bao lanh": "OCB",
+          "Ngay can dinh gia lai": 1802361600000,
+          "Ngay dang ky GDBD": 1706025600000,
+          "Ngay dinh gia": 1706025600000,
+          "STT": "21",
+          "So DK GDBD": "708",
+          "So GCN/Giay to so huu": "CV 586936",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.95"
+        },
+        "id": "recvgKhk0sRZw9",
+        "record_id": "recvgKhk0sRZw9"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV4rYy176G",
+                "recvgV52KUaOdG"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000587,VAY-TY23-NH-000588",
+              "text_arr": [
+                "VAY-TY23-NH-000587",
+                "VAY-TY23-NH-000588"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "OCB",
+          "Gia tri cho vay toi da": 151125430000,
+          "Gia tri dam bao (theo NH)": "159079400000",
+          "Gia tri dinh gia": "159079400000",
+          "Han muc TSDB theo HMTD": "122694053313",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000022",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": " CT18343",
+          "Mo ta": "QSD Đất 41.861 m2 tại thửa số 3745 tờ bản đồ số 3, xã Nhựt Chánh, H.Bến Lức, L.An, GCN số BO 614345, Số vào sổ cấp GCN: CT18343 do UBND Tỉnh L.An cấp ngày 13/03/2014",
+          "NH dang giu TSBD": "OCB",
+          "NH khoan vay bao lanh": "OCB",
+          "Ngay can dinh gia lai": 1802361600000,
+          "Ngay dang ky GDBD": 1706025600000,
+          "Ngay dinh gia": 1706025600000,
+          "STT": "22",
+          "So DK GDBD": "708",
+          "So GCN/Giay to so huu": "BO 614345",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.95"
+        },
+        "id": "recvgKif6Zl2Id",
+        "record_id": "recvgKif6Zl2Id"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV4rYy176G",
+                "recvgV52KUaOdG"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000587,VAY-TY23-NH-000588",
+              "text_arr": [
+                "VAY-TY23-NH-000587",
+                "VAY-TY23-NH-000588"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "OCB",
+          "Gia tri cho vay toi da": 30833010000,
+          "Gia tri dam bao (theo NH)": "32455800000",
+          "Gia tri dinh gia": "32455800000",
+          "Han muc TSDB theo HMTD": "25032365319",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000023",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CT18342",
+          "Mo ta": "QSD Đất 8.541 m2 tại thửa số 3747 tờ bản đồ số 3.xã Nhựt Chánh, H.Bến Lức, L.An, GCN số BO614346, Số vào sổ cấp GCN: CT18342 do UBND Tỉnh L.An cấp ngày 13/03/2014",
+          "NH dang giu TSBD": "OCB",
+          "NH khoan vay bao lanh": "OCB",
+          "Ngay can dinh gia lai": 1802361600000,
+          "Ngay dang ky GDBD": 1706025600000,
+          "Ngay dinh gia": 1706025600000,
+          "STT": "23",
+          "So DK GDBD": "708",
+          "So GCN/Giay to so huu": "BO 614346",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.95"
+        },
+        "id": "recvgKiWUxc1cp",
+        "record_id": "recvgKiWUxc1cp"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvgV4rYy176G",
+                "recvgV52KUaOdG"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000587,VAY-TY23-NH-000588",
+              "text_arr": [
+                "VAY-TY23-NH-000587",
+                "VAY-TY23-NH-000588"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "OCB",
+          "Gia tri cho vay toi da": 16639060000,
+          "Gia tri dam bao (theo NH)": "17514800000",
+          "Gia tri dinh gia": "17514800000",
+          "Han muc TSDB theo HMTD": "13508737178",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Hình thành tương lai",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000024",
+              "type": "text"
+            }
+          ],
+          "Mo ta": "Phần công trình , diện tích cải tạo, đầu tư, xây dựng thêm và các tài sản khác gắn liền với thửa đất",
+          "NH dang giu TSBD": "OCB",
+          "NH khoan vay bao lanh": "OCB",
+          "Ngay can dinh gia lai": 1802361600000,
+          "Ngay dang ky GDBD": 1706025600000,
+          "Ngay dinh gia": 1706025600000,
+          "STT": "24",
+          "So DK GDBD": "708",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.95"
+        },
+        "id": "recvgKjRXcvQiP",
+        "record_id": "recvgKjRXcvQiP"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvhjjNzm21Nx"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000599",
+              "text_arr": [
+                "VAY-TY23-NH-000599"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "MB",
+          "Gia tri cho vay toi da": 520100000,
+          "Gia tri dam bao (theo NH)": "743000000",
+          "Gia tri dinh gia": "743000000",
+          "Han muc TSDB theo HMTD": "520100000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Phương tiện vận tải",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000025",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "62C-16920",
+          "Mo ta": "Xe ô tô bán tải -số khung: MP2TFR87JNT000261-Số máy:RZ4EWL8438-Biển số: 62C-16920",
+          "NH dang giu TSBD": "MB",
+          "NH khoan vay bao lanh": "MB",
+          "Ngay dinh gia": 1650902400000,
+          "STT": "25",
+          "So GCN/Giay to so huu": "62C-16920",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.7"
+        },
+        "id": "recvgVQl8LQMvp",
+        "record_id": "recvgVQl8LQMvp"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [
+                "recvhi0misWI5m"
+              ],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text": "VAY-TY23-NH-000598",
+              "text_arr": [
+                "VAY-TY23-NH-000598"
+              ],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "VPB",
+          "Gia tri cho vay toi da": 701821817.95,
+          "Gia tri dam bao (theo NH)": "825672727",
+          "Gia tri dinh gia": "825672727",
+          "Han muc TSDB theo HMTD": "701000000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Phương tiện vận tải",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000026",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "62A-035.33",
+          "Mo ta": " Ô tô Nhãn hiệu: VINFAST, số loại: VF 8 ECO, số khung: RLLV1MTC5SH755333, số máy:\nVFBALB253050187, biển kiểm soát: 62A-035.33",
+          "NH dang giu TSBD": "VPB",
+          "NH khoan vay bao lanh": "VPB",
+          "Ngay can dinh gia lai": 1790352000000,
+          "Ngay dinh gia": 1758729600000,
+          "STT": "26",
+          "So GCN/Giay to so huu": "62A-035.33",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.85"
+        },
+        "id": "recvgVS7PONaEl",
+        "record_id": "recvgVS7PONaEl"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKzDaPxOxW"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY02",
+              "text_arr": [
+                "TY02"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 2822400000,
+          "Gia tri dam bao (theo NH)": "3528000000",
+          "Gia tri dinh gia": "3528000000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000027",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CX 852427",
+          "Mo ta": "QSDD số CX 852427, số vào sổ cấp GCN: CT60014 do Sở Tài Nguyên và Môi trường tỉnh Long An cấp ngày 31/12/2020.\nThửa đất 5368 Tờ bản đồ số 3, Khu công nghiệp Nhựt Chánh, Xã Nhựt Chánh, Huyện Bến Lức, Tỉnh Long An\nDiện tích 1.306 m2",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1785168000000,
+          "Ngay dang ky GDBD": 1750262400000,
+          "Ngay dinh gia": 1750262400000,
+          "STT": "27",
+          "So DK GDBD": "4113",
+          "So GCN/Giay to so huu": "CT60014",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgVVTNXesrs",
+        "record_id": "recvgVVTNXesrs"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKzDaPxOxW"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY02",
+              "text_arr": [
+                "TY02"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "BIDV",
+          "Gia tri cho vay toi da": 2489600000,
+          "Gia tri dam bao (theo NH)": "3112000000",
+          "Gia tri dinh gia": "3112000000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000028",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CX 852434",
+          "Mo ta": "QSDD số CX 852434, số vào sổ cấp GCN: CT60484 do Sở Tài Nguyên và Môi trường tỉnh Long An cấp ngày 14/01/2021.\nThửa đất 5369 Tờ bản đồ số 3, Khu công nghiệp Nhựt Chánh, Xã Nhựt Chánh, Huyện Bến Lức, Tỉnh Long An\nDiện tích 1.152 m2",
+          "NH dang giu TSBD": "BIDV",
+          "NH khoan vay bao lanh": "BIDV",
+          "Ngay can dinh gia lai": 1785168000000,
+          "Ngay dang ky GDBD": 1750262400000,
+          "Ngay dinh gia": 1750262400000,
+          "STT": "28",
+          "So DK GDBD": "4113",
+          "So GCN/Giay to so huu": "CT60484 ",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgVWvBb811k",
+        "record_id": "recvgVWvBb811k"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "record_ids": [],
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "record_ids": [
+                "recvgKG3wC5vhi"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY20",
+              "text_arr": [
+                "TY20"
+              ],
+              "type": "text"
+            }
+          ],
+          "Chu ky tham dinh (Year)": "1",
+          "Cong ty so huu TS": [
+            {
+              "record_ids": [
+                "recvgKG3wCStin"
+              ],
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text": "TY23",
+              "text_arr": [
+                "TY23"
+              ],
+              "type": "text"
+            }
+          ],
+          "Don vi dinh gia": "Sea",
+          "Gia tri cho vay toi da": 15068800000,
+          "Gia tri dam bao (theo NH)": "18836000000",
+          "Gia tri dinh gia": "18836000000",
+          "Han muc TSDB theo HMTD": "15068800000",
+          "Loai chu so huu": "COMPANY",
+          "Loai tai san": "Quyen su dung dat",
+          "Ma TSDB": [
+            {
+              "text": "COL-TY23-000029",
+              "type": "text"
+            }
+          ],
+          "Ma tren giay to phap ly": "CQ850482",
+          "Mo ta": "GCN QSDĐ, QSH nhà ở và TS gắn liền với đất CQ850482;số vào sổ cấp GCN CT50607\n Thửa đất số 5367 tờ bản đồ số 3.Địa chỉ: Xã Nhựt Chánh Huyện Bến Lức Tỉnh Long An",
+          "NH dang giu TSBD": "sea",
+          "NH khoan vay bao lanh": "sea",
+          "Ngay can dinh gia lai": 1790006400000,
+          "Ngay dang ky GDBD": 1722528000000,
+          "Ngay dinh gia": 1722528000000,
+          "STT": "29",
+          "So DK GDBD": "6239",
+          "So GCN/Giay to so huu": "CT50607",
+          "Ten chu so huu TSCN": "Công Ty Cổ Phần IBS",
+          "Trang thai": "Đang thế chấp",
+          "Ty le LTV (NH)": "0.8"
+        },
+        "id": "recvgVXSCyPFR4",
+        "record_id": "recvgVXSCyPFR4"
+      },
+      {
+        "fields": {
+          "2.Khoan vay goc": [
+            {
+              "table_id": "tblZnLShVEFPq2GH",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Bao lanh cho cong ty": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Cong ty so huu TS": [
+            {
+              "table_id": "tblSWPWVjrWYcKNw",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Gia tri cho vay toi da": 0,
+          "Ma TSDB": [
+            {
+              "text": "COL--000030",
+              "type": "text"
+            }
+          ],
+          "STT": "30"
+        },
+        "id": "recvh6V4V3yEZG",
+        "record_id": "recvh6V4V3yEZG"
+      }
+    ],
+    "total": 22
+  },
+  "ts": "2026-04-24T10:40:27.579345+00:00"
+}
