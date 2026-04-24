@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treasury Approval Flows — 3-Stage Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --lark-blue: #1456F0;
+  --lark-blue-light: #EEF3FE;
+  --lark-blue-hover: #0E42C4;
+  --lark-green: #00B365;
+  --lark-green-light: #E6F7EF;
+  --lark-red: #F54A45;
+  --lark-red-light: #FEF0EF;
+  --lark-orange: #FF7D00;
+  --lark-orange-light: #FFF3E8;
+  --lark-purple: #7B61FF;
+  --lark-purple-light: #EEEAFF;
+  --lark-gray1: #1F2329;
+  --lark-gray2: #51555A;
+  --lark-gray3: #8F959E;
+  --lark-gray4: #BDC0C4;
+  --lark-gray5: #DEE0E3;
+  --lark-gray6: #F5F6F7;
+  --lark-white: #FFFFFF;
+  --lark-border: #E0E3E8;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+body {
+  font-family: var(--font);
+  background: #ECEEF2;
+  min-height: 100vh;
+  color: var(--lark-gray1);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ─── TOP BAR ─── */
+.top-bar {
+  background: #2D3035;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 12px;
+}
+.top-bar-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.top-bar-title .logo {
+  width: 26px; height: 26px;
+  background: linear-gradient(135deg, #1456F0, #4dd38a);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.top-bar-title small {
+  font-weight: 500;
+  color: #8F959E;
+  font-size: 11px;
+  margin-left: 4px;
+}
+.top-bar-actions { display: flex; gap: 8px; }
+.reset-btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  background: #3a3f48;
+  color: #BDC0C4;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.reset-btn:hover { background: #4a4f5a; color: #fff; }
+
+/* ─── FLOW TABS ─── */
+.flow-tabs {
+  background: #1E2126;
+  padding: 8px 16px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  border-bottom: 1px solid #3a3f48;
+  position: sticky;
+  top: 52px;
+  z-index: 99;
+}
+.flow-tab {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: transparent;
+  color: #8F959E;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  border: 1px solid #3a3f48;
+  white-space: nowrap;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.flow-tab:hover { background: #2a2f38; color: #fff; }
+.flow-tab.active {
+  background: var(--lark-blue);
+  color: #fff;
+  border-color: var(--lark-blue);
+  box-shadow: 0 2px 8px rgba(20,86,240,0.35);
+}
+.flow-tab .tab-icon { font-size: 14px; }
+.flow-tab .tab-num {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  font-size: 10px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow-tab.active .tab-num { background: rgba(255,255,255,0.3); }
+.flow-tab .status-dot {
+  position: absolute;
+  top: 4px; right: 4px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.2s;
+}
+.flow-tab .status-dot.pending { background: var(--lark-orange); animation: pulse-tab-dot 1.6s ease-out infinite; }
+.flow-tab .status-dot.approved { background: var(--lark-green); }
+.flow-tab .status-dot.rejected { background: var(--lark-red); }
+.flow-tab .status-dot.draft { background: var(--lark-gray4); }
+@keyframes pulse-tab-dot {
+  0% { box-shadow: 0 0 0 0 rgba(255,125,0,0.6); }
+  100% { box-shadow: 0 0 0 8px rgba(255,125,0,0); }
+}
+
+/* ─── STAGE INDICATOR (Staff → Approver → Base) ─── */
+.stage-indicator {
+  background: #fff;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--lark-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.stage-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--lark-gray6);
+  color: var(--lark-gray3);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.stage-step.active {
+  background: var(--lark-blue-light);
+  color: var(--lark-blue);
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(20,86,240,0.15);
+  transform: scale(1.03);
+}
+.stage-step.done {
+  background: var(--lark-green-light);
+  color: var(--lark-green);
+}
+.stage-step.rejected {
+  background: var(--lark-red-light);
+  color: var(--lark-red);
+}
+.stage-step .step-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+.stage-step.active .step-num { background: var(--lark-blue); color: #fff; }
+.stage-step.done .step-num { background: var(--lark-green); color: #fff; }
+.stage-step.rejected .step-num { background: var(--lark-red); color: #fff; }
+.stage-arrow { color: var(--lark-gray4); font-size: 14px; }
+
+/* ─── 3-COL SPLIT LAYOUT ─── */
+.split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 170px);
+}
+@media (max-width: 1400px) {
+  .split-container { grid-template-columns: 1fr 1fr; }
+  .split-container .pane.col-3 { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .split-container { grid-template-columns: 1fr; }
+  .split-container .pane.col-3 { grid-column: 1; }
+}
+
+.pane {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--lark-border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.25s, transform 0.25s;
+  min-height: 600px;
+}
+.pane.disabled {
+  opacity: 0.55;
+  background: #FAFBFC;
+}
+.pane.disabled .pane-body {
+  pointer-events: none;
+  filter: grayscale(0.3);
+}
+.pane-header {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--lark-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: linear-gradient(to bottom, #FAFBFC, #fff);
+  min-height: 60px;
+}
+.pane-header .ph-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.pane-header.col-1 .ph-icon { background: var(--lark-blue-light); }
+.pane-header.col-2 .ph-icon { background: var(--lark-orange-light); }
+.pane-header.col-3 .ph-icon { background: var(--lark-green-light); }
+.pane-header .ph-title {
+  flex: 1;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--lark-gray1);
+  min-width: 0;
+}
+.pane-header .ph-title small {
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--lark-gray3);
+  margin-top: 2px;
+}
+.pane-header .ph-badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.col-1-tag { background: var(--lark-blue-light); color: var(--lark-blue); }
+.col-2-tag { background: var(--lark-orange-light); color: var(--lark-orange); }
+.col-3-tag { background: var(--lark-green-light); color: var(--lark-green); }
+.pane-badge-done { background: var(--lark-green-light); color: var(--lark-green); }
+
+.pane-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+}
+
+/* ─── STAFF FORM (Col 1) ─── */
+.form-section {
+  margin-bottom: 14px;
+}
+.form-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--lark-gray3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.form-section-title::before {
+  content: "";
+  width: 3px; height: 12px;
+  background: var(--lark-blue);
+  border-radius: 2px;
+}
+.form-row {
+  margin-bottom: 10px;
+}
+.form-row:last-child { margin-bottom: 0; }
+.form-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--lark-gray2);
+  margin-bottom: 4px;
+  display: block;
+}
+.form-label .req {
+  color: var(--lark-red);
+  margin-left: 2px;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--lark-border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: var(--font);
+  color: var(--lark-gray1);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--lark-blue);
+  box-shadow: 0 0 0 2px rgba(20,86,240,0.12);
+}
+.form-textarea { min-height: 60px; resize: vertical; }
+.form-input-readonly {
+  background: var(--lark-gray6);
+  border-color: transparent;
+  color: var(--lark-gray2);
+}
+.form-input.amount {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  padding-left: 26px;
+  position: relative;
+}
+.amount-wrap {
+  position: relative;
+}
+.amount-wrap .amount-prefix {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lark-gray3);
+  font-weight: 600;
+  pointer-events: none;
+}
+.form-linked-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid var(--lark-border);
+  border-radius: 6px;
+  background: var(--lark-gray6);
+  font-size: 12px;
+}
+.form-linked-chip .chip-code {
+  font-family: SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  padding: 2px 6px;
+  background: var(--lark-blue-light);
+  color: var(--lark-blue);
+  border-radius: 3px;
+  font-weight: 600;
+}
+.form-linked-chip .chip-text {
+  flex: 1;
+  color: var(--lark-gray2);
+}
+.form-linked-chip .chip-auto {
+  font-size: 10px;
+  color: var(--lark-green);
+  font-weight: 600;
+}
+.form-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.auto-calc-box {
+  background: var(--lark-green-light);
+  border: 1px solid #B3E8D1;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+.auto-calc-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #00875A;
+  padding: 3px 0;
+}
+.auto-calc-row .ac-label { flex: 1; }
+.auto-calc-row .ac-value { font-weight: 700; font-variant-numeric: tabular-nums; }
+.form-helper {
+  font-size: 10px;
+  color: var(--lark-gray4);
+  margin-top: 3px;
+}
+
+/* ─── APPROVER REVIEW (Col 2) ─── */
+.req-header {
+  background: linear-gradient(135deg, var(--lark-orange-light), #FFF8EF);
+  border: 1px solid #FFD5A8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+.req-header .rh-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.req-header .rh-id {
+  font-size: 10px;
+  color: var(--lark-orange);
+  font-weight: 700;
+  font-family: SFMono-Regular, Menlo, monospace;
+}
+.req-header .rh-process {
+  font-size: 10px;
+  color: var(--lark-gray2);
+  font-weight: 600;
+  background: #fff;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.req-header .rh-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--lark-gray1);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 2px;
+}
+.req-header .rh-amount .currency {
+  font-size: 14px;
+  color: var(--lark-gray3);
+  font-weight: 500;
+  margin-left: 4px;
+}
+.req-header .rh-meta {
+  font-size: 11px;
+  color: var(--lark-gray2);
+}
+
+/* Submitter */
+.submitter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--lark-gray6);
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.submitter-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1456F0, #6B8CEE);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.submitter-info { flex: 1; min-width: 0; }
+.submitter-name {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--lark-gray1);
+}
+.submitter-meta {
+  font-size: 11px;
+  color: var(--lark-gray3);
+}
+.submitter-time-chip {
+  font-size: 10px;
+  background: #fff;
+  border: 1px solid var(--lark-border);
+  padding: 2px 7px;
+  border-radius: 10px;
+  color: var(--lark-gray3);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Info sections (review) */
+.info-section {
+  margin-bottom: 12px;
+}
+.info-section-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--lark-gray3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.info-section-title::before {
+  content: "";
+  width: 3px; height: 11px;
+  background: var(--lark-orange);
+  border-radius: 2px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 3px 10px;
+  font-size: 11px;
+}
+.info-label {
+  color: var(--lark-gray3);
+  padding: 4px 0;
+}
+.info-value {
+  color: var(--lark-gray1);
+  padding: 4px 0;
+  font-weight: 500;
+  word-break: break-word;
+}
+.info-value.mono {
+  font-family: SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+}
+.info-chip {
+  display: inline-flex;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--lark-blue-light);
+  color: var(--lark-blue);
+  font-family: SFMono-Regular, Menlo, monospace;
+}
+.info-chip.green { background: var(--lark-green-light); color: var(--lark-green); }
+.info-chip.orange { background: var(--lark-orange-light); color: var(--lark-orange); }
+
+.note-box {
+  background: #FFFBE6;
+  border: 1px solid #FFE58F;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 11px;
+  color: #7C5700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Status banner */
+.status-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.status-banner.pending {
+  background: var(--lark-orange-light);
+  color: #D36000;
+  border: 1px solid #FFD5A8;
+}
+.status-banner.approved {
+  background: linear-gradient(135deg, var(--lark-green-light), #CDF5E3);
+  color: var(--lark-green);
+  border: 1px solid #A8E8C8;
+  animation: banner-celebrate 0.6s ease-out;
+}
+.status-banner.rejected {
+  background: var(--lark-red-light);
+  color: var(--lark-red);
+  border: 1px solid #FFB8B5;
+  animation: banner-shake 0.5s ease-out;
+}
+@keyframes banner-celebrate {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes banner-shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+.status-banner-icon { font-size: 16px; }
+.status-banner-text { flex: 1; }
+.status-banner-time { font-size: 10px; font-weight: 500; opacity: 0.8; }
+
+/* Timeline */
+.timeline {
+  padding: 0;
+  margin-bottom: 12px;
+  position: relative;
+}
+.tl-node {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  position: relative;
+}
+.tl-node:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 34px;
+  bottom: 0;
+  width: 2px;
+  background: var(--lark-gray5);
+}
+.tl-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.tl-avatar.done {
+  background: var(--lark-green);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--lark-green-light);
+}
+.tl-avatar.current {
+  background: var(--lark-orange);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--lark-orange-light);
+  animation: pulse-avatar 1.8s ease-in-out infinite;
+}
+.tl-avatar.waiting { background: var(--lark-gray4); }
+.tl-avatar.rejected { background: var(--lark-red); }
+@keyframes pulse-avatar {
+  0%,100% { box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--lark-orange-light); }
+  50%     { box-shadow: 0 0 0 3px #fff, 0 0 0 8px rgba(255,125,0,0.3); }
+}
+.tl-content { flex: 1; min-width: 0; }
+.tl-name { font-size: 12px; font-weight: 600; color: var(--lark-gray1); }
+.tl-role { font-size: 10px; color: var(--lark-gray3); margin-bottom: 2px; }
+.tl-status-chip {
+  font-size: 9px;
+  padding: 1px 7px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+}
+.tl-status-chip.done { background: var(--lark-green-light); color: var(--lark-green); }
+.tl-status-chip.current { background: var(--lark-orange-light); color: var(--lark-orange); }
+.tl-status-chip.waiting { background: var(--lark-gray6); color: var(--lark-gray3); }
+.tl-status-chip.rejected { background: var(--lark-red-light); color: var(--lark-red); }
+.tl-comment {
+  margin-top: 4px;
+  padding: 5px 8px;
+  background: var(--lark-gray6);
+  border-radius: 5px;
+  font-size: 10px;
+  color: var(--lark-gray2);
+  font-style: italic;
+  line-height: 1.4;
+}
+.tl-comment.rejected { background: var(--lark-red-light); color: var(--lark-red); }
+
+.comment-section {
+  margin-bottom: 12px;
+}
+.comment-input {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 10px;
+  border: 1px solid var(--lark-border);
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: var(--font);
+  outline: none;
+  resize: vertical;
+}
+.comment-input:focus {
+  border-color: var(--lark-blue);
+  box-shadow: 0 0 0 2px rgba(20,86,240,0.12);
+}
+
+/* Action bar (shared) */
+.action-bar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--lark-border);
+  background: linear-gradient(to top, #FAFBFC, #fff);
+  flex-shrink: 0;
+}
+.btn-submit-staff {
+  flex: 1;
+  height: 42px;
+  background: linear-gradient(135deg, var(--lark-blue), #4073F5);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: 0 2px 6px rgba(20,86,240,0.25);
+  position: relative;
+  overflow: hidden;
+}
+.btn-submit-staff::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer-btn 2.5s ease-in-out infinite;
+}
+.btn-submit-staff:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(20,86,240,0.35);
+}
+.btn-submit-staff:active { transform: scale(0.97); }
+.btn-submit-staff:disabled { background: var(--lark-gray4); cursor: not-allowed; box-shadow: none; }
+.btn-submit-staff:disabled::before { display: none; }
+.btn-draft {
+  height: 42px;
+  padding: 0 18px;
+  background: #fff;
+  color: var(--lark-gray2);
+  border: 1px solid var(--lark-border);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+}
+.btn-draft:hover { background: var(--lark-gray6); }
+
+.btn-reject {
+  height: 42px;
+  padding: 0 18px;
+  background: #fff;
+  color: var(--lark-red);
+  border: 1.5px solid var(--lark-red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-reject:hover:not(:disabled) { background: var(--lark-red-light); }
+.btn-reject:active { transform: scale(0.97); }
+.btn-reject:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-approve {
+  flex: 1;
+  height: 42px;
+  background: linear-gradient(135deg, var(--lark-green), #4dd38a);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: 0 2px 6px rgba(0,179,101,0.25);
+  position: relative;
+  overflow: hidden;
+}
+.btn-approve::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer-btn 2.5s ease-in-out infinite;
+}
+@keyframes shimmer-btn { to { left: 100%; } }
+.btn-approve:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0,179,101,0.35);
+}
+.btn-approve:active { transform: scale(0.97); }
+.btn-approve:disabled { background: var(--lark-gray4); cursor: not-allowed; box-shadow: none; }
+.btn-approve:disabled::before { display: none; }
+
+/* Waiting state (empty approver/base) */
+.waiting-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  height: 100%;
+  gap: 10px;
+}
+.waiting-state .ws-icon {
+  font-size: 40px;
+  opacity: 0.4;
+}
+.waiting-state .ws-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--lark-gray2);
+}
+.waiting-state .ws-desc {
+  font-size: 11px;
+  color: var(--lark-gray3);
+  line-height: 1.5;
+  max-width: 280px;
+}
+.waiting-state .ws-arrow {
+  font-size: 20px;
+  color: var(--lark-blue);
+  animation: arrow-point 1.4s ease-in-out infinite;
+}
+@keyframes arrow-point {
+  0%,100% { transform: translateX(-6px); }
+  50% { transform: translateX(0); }
+}
+
+/* Decision result */
+.decision-result {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  animation: slide-in-result 0.4s ease-out;
+}
+@keyframes slide-in-result {
+  from { transform: translateY(-8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.decision-result.approved {
+  background: var(--lark-green-light);
+  border: 1px solid #A8E8C8;
+}
+.decision-result.rejected {
+  background: var(--lark-red-light);
+  border: 1px solid #FFB8B5;
+}
+.decision-result .dr-icon { font-size: 22px; flex-shrink: 0; line-height: 1; }
+.decision-result .dr-body { flex: 1; min-width: 0; }
+.decision-result .dr-title {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.decision-result .dr-title.approved-t { color: var(--lark-green); }
+.decision-result .dr-title.rejected-t { color: var(--lark-red); }
+.decision-result .dr-meta { font-size: 10px; color: var(--lark-gray2); }
+
+/* ─── LARK BASE (Col 3) ─── */
+.base-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 0 10px;
+  border-bottom: 1px solid var(--lark-border);
+  background: #FAFBFC;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+.base-tab-item {
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--lark-gray3);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.base-tab-item:hover { color: var(--lark-gray1); }
+.base-tab-item.active {
+  color: var(--lark-green);
+  border-bottom-color: var(--lark-green);
+  font-weight: 600;
+}
+.base-tab-item .tab-count {
+  background: var(--lark-gray6);
+  color: var(--lark-gray3);
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.base-tab-item.active .tab-count {
+  background: var(--lark-green-light);
+  color: var(--lark-green);
+}
+.base-tab-item .tab-count.new {
+  background: var(--lark-green);
+  color: #fff;
+  animation: pulse-count 1.4s ease-out 3;
+}
+@keyframes pulse-count {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.base-toolbar {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--lark-gray6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.base-toolbar-btn {
+  padding: 3px 8px;
+  background: #fff;
+  border: 1px solid var(--lark-border);
+  border-radius: 5px;
+  font-size: 10px;
+  color: var(--lark-gray2);
+  font-family: var(--font);
+  cursor: pointer;
+}
+.base-toolbar-btn:hover { background: var(--lark-gray6); }
+.base-count-label {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--lark-gray3);
+}
+.base-table-wrap {
+  overflow: auto;
+  flex: 1;
+}
+.base-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+.base-table th {
+  background: #FAFBFC;
+  padding: 7px 8px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--lark-gray2);
+  font-size: 10px;
+  border-bottom: 1px solid var(--lark-border);
+  border-right: 1px solid var(--lark-gray6);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.base-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--lark-gray6);
+  border-right: 1px solid var(--lark-gray6);
+  white-space: nowrap;
+  color: var(--lark-gray1);
+}
+.base-table tr:hover td { background: var(--lark-gray6); }
+.base-table .cell-code {
+  font-family: SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  padding: 1px 5px;
+  background: var(--lark-blue-light);
+  color: var(--lark-blue);
+  border-radius: 3px;
+  font-weight: 600;
+}
+.base-table .cell-num {
+  font-variant-numeric: tabular-nums;
+}
+.chip-status {
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  display: inline-block;
+}
+.chip-status.active { background: var(--lark-green-light); color: var(--lark-green); }
+.chip-status.plan { background: var(--lark-blue-light); color: var(--lark-blue); }
+.chip-status.pending { background: var(--lark-orange-light); color: var(--lark-orange); }
+.chip-status.done { background: var(--lark-gray6); color: var(--lark-gray2); }
+.new-row-badge {
+  display: inline-flex;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: var(--lark-green);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  animation: blink-badge 2s ease-in-out infinite;
+}
+@keyframes blink-badge {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.updated-badge {
+  display: inline-flex;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: var(--lark-orange);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+}
+.base-table tr.new-row {
+  background: linear-gradient(90deg, #E6F7EF 0%, transparent 100%);
+  animation: row-flash 1.2s ease-out;
+}
+@keyframes row-flash {
+  0% { background: var(--lark-green); color: #fff; }
+  30% { background: #CDF5E3; }
+  100% { background: linear-gradient(90deg, #E6F7EF 0%, transparent 100%); }
+}
+.base-table td.updated-cell {
+  background: #FFF3E8;
+  animation: cell-flash 1.2s ease-out;
+}
+@keyframes cell-flash {
+  0% { background: var(--lark-orange); color: #fff; }
+  100% { background: #FFF3E8; }
+}
+.empty-state {
+  padding: 30px 15px;
+  text-align: center;
+  color: var(--lark-gray3);
+  font-size: 11px;
+}
+.empty-state .es-icon { font-size: 28px; margin-bottom: 6px; opacity: 0.4; }
+
+/* Changes summary */
+.changes-summary {
+  background: linear-gradient(135deg, #FFF8E1, #FFFBF0);
+  border: 1px solid #FFE082;
+  border-radius: 7px;
+  padding: 9px 12px;
+  margin: 10px;
+  font-size: 11px;
+  color: #7C5700;
+  line-height: 1.5;
+  display: none;
+}
+.changes-summary.show { display: block; animation: slide-in-result 0.4s ease-out; }
+.changes-summary.success {
+  background: linear-gradient(135deg, var(--lark-green-light), #CDF5E3);
+  border-color: #A8E8C8;
+  color: #004D2A;
+}
+.changes-summary strong { display: block; margin-bottom: 3px; font-weight: 700; }
+
+/* ─── Toast ─── */
+.toast-container {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+.toast {
+  background: #fff;
+  border-left: 4px solid var(--lark-green);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  font-size: 12px;
+  color: var(--lark-gray1);
+  min-width: 260px;
+  max-width: 320px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  pointer-events: auto;
+  animation: toast-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+             toast-out 0.4s ease-in 3.2s forwards;
+}
+.toast.error { border-left-color: var(--lark-red); }
+.toast.info { border-left-color: var(--lark-blue); }
+.toast-icon { font-size: 18px; flex-shrink: 0; line-height: 1; }
+.toast-title { font-weight: 700; font-size: 12px; margin-bottom: 2px; }
+.toast-msg { color: var(--lark-gray2); font-size: 11px; line-height: 1.4; }
+@keyframes toast-in {
+  from { transform: translateX(calc(100% + 20px)); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes toast-out {
+  to { transform: translateX(calc(100% + 20px)); opacity: 0; }
+}
+
+/* Reject modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 10002;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.show { display: flex; animation: fade-in 0.2s; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 100%;
+  padding: 24px;
+  animation: modal-zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes modal-zoom {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.modal-title { font-weight: 700; font-size: 16px; margin-bottom: 6px; }
+.modal-sub { font-size: 12px; color: var(--lark-gray3); margin-bottom: 14px; }
+.modal-textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  border: 1px solid var(--lark-border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: var(--font);
+  outline: none;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.modal-btn {
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+}
+.modal-btn-cancel { background: var(--lark-gray6); color: var(--lark-gray2); }
+.modal-btn-confirm { background: var(--lark-red); color: #fff; }
+
+/* Confetti */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+  display: none;
+}
+.confetti-container.show { display: block; }
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  top: -20px;
+  animation: fall-confetti 2.4s ease-in forwards;
+}
+@keyframes fall-confetti {
+  0% { opacity: 1; transform: translateY(-20px) rotate(0); }
+  100% { opacity: 0; transform: translateY(105vh) rotate(720deg); }
+}
+
+/* Flow arrow */
+.flow-arrow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  pointer-events: none;
+  display: none;
+}
+.flow-arrow.show { display: block; animation: arrow-dash 1.2s ease-out; }
+@keyframes arrow-dash {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+  30% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+.flow-arrow-box {
+  background: var(--lark-green);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0,179,101,0.35);
+  white-space: nowrap;
+}
+.flow-arrow-box.blue { background: var(--lark-blue); box-shadow: 0 8px 24px rgba(20,86,240,0.35); }
+.flow-arrow-box.error { background: var(--lark-red); box-shadow: 0 8px 24px rgba(245,74,69,0.35); }
+
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP BAR ═══ -->
+<div class="top-bar">
+  <div class="top-bar-title">
+    <div class="logo">⚡</div>
+    Treasury Management — Approval Flows
+    <small>Staff → Approver → Lark Base</small>
+  </div>
+  <div class="top-bar-actions">
+    <button class="reset-btn" onclick="resetCurrentFlow()">↺ Reset flow</button>
+    <button class="reset-btn" onclick="resetAll()">🔄 Reset tất cả</button>
+  </div>
+</div>
+
+<!-- ═══ FLOW TABS ═══ -->
+<div class="flow-tabs" id="flow-tabs"></div>
+
+<!-- ═══ STAGE INDICATOR ═══ -->
+<div class="stage-indicator" id="stage-indicator"></div>
+
+<!-- ═══ 3-COL SPLIT ═══ -->
+<div class="split-container">
+
+  <!-- COL 1: STAFF -->
+  <div class="pane col-1" id="pane-staff">
+    <div class="pane-header col-1">
+      <div class="ph-icon">💼</div>
+      <div class="ph-title">
+        <span>1. Staff — Tạo yêu cầu</span>
+        <small>Điền form và gửi phê duyệt</small>
+      </div>
+      <div class="ph-badge col-1-tag" id="badge-staff">DRAFT</div>
+    </div>
+    <div class="pane-body" id="staff-body"></div>
+    <div class="action-bar" id="staff-action-bar">
+      <button class="btn-draft">Lưu nháp</button>
+      <button class="btn-submit-staff" id="btn-submit" onclick="doSubmit()">
+        📤 Gửi phê duyệt
+      </button>
+    </div>
+  </div>
+
+  <!-- COL 2: APPROVER -->
+  <div class="pane col-2 disabled" id="pane-approver">
+    <div class="pane-header col-2">
+      <div class="ph-icon">🔑</div>
+      <div class="ph-title">
+        <span>2. Approver — Phê duyệt</span>
+        <small>Duyệt hoặc từ chối yêu cầu</small>
+      </div>
+      <div class="ph-badge col-2-tag" id="badge-approver">CHỜ</div>
+    </div>
+    <div class="pane-body" id="approver-body"></div>
+    <div class="action-bar" id="approver-action-bar" style="display:none">
+      <button class="btn-reject" id="btn-reject" onclick="openRejectModal()">✕ Từ chối</button>
+      <button class="btn-approve" id="btn-approve" onclick="doApprove()">✓ Phê duyệt</button>
+    </div>
+  </div>
+
+  <!-- COL 3: LARK BASE -->
+  <div class="pane col-3" id="pane-base">
+    <div class="pane-header col-3">
+      <div class="ph-icon">📊</div>
+      <div class="ph-title">
+        <span>3. Lark Base — Ghi dữ liệu</span>
+        <small id="base-subtitle">Dữ liệu hiện tại</small>
+      </div>
+      <div class="ph-badge col-3-tag" id="badge-base">LIVE</div>
+    </div>
+    <div class="changes-summary" id="changes-summary"></div>
+    <div class="base-tabs" id="base-tabs"></div>
+    <div class="base-toolbar">
+      <button class="base-toolbar-btn">🔍 Filter</button>
+      <button class="base-toolbar-btn">↕ Sort</button>
+      <button class="base-toolbar-btn">👁 Hide</button>
+      <div class="base-count-label" id="base-count-label">— records</div>
+    </div>
+    <div class="base-table-wrap" id="base-table-wrap"></div>
+  </div>
+
+</div>
+
+<!-- Flow arrow -->
+<div class="flow-arrow" id="flow-arrow">
+  <div class="flow-arrow-box" id="flow-arrow-box">
+    ⚡ Đang xử lý...
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- Confetti -->
+<div class="confetti-container" id="confetti-container"></div>
+
+<!-- Reject modal -->
+<div class="modal-overlay" id="reject-modal">
+  <div class="modal-box">
+    <div class="modal-title">Từ chối phê duyệt</div>
+    <div class="modal-sub" id="reject-modal-sub">Yêu cầu sẽ được gửi lại Staff</div>
+    <textarea class="modal-textarea" id="reject-reason" placeholder="Nhập lý do từ chối..."></textarea>
+    <div class="modal-actions">
+      <button class="modal-btn modal-btn-cancel" onclick="closeRejectModal()">Huỷ</button>
+      <button class="modal-btn modal-btn-confirm" onclick="doReject()">Xác nhận từ chối</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════════════════
+const FLOWS = {"loan": {"icon": "🏦", "title": "Tạo Khoản Vay", "subtitle": "Ghi nhận HĐ tín dụng mới · Sheet 2", "process": "Quy trình Tạo khoản vay", "requestId": "REQ-LOAN-2604-001", "highlightId": "VAY-TY26-NH-000700", "highlightLabel": "Hạn mức khoản vay", "highlightAmount": "30,000,000,000", "highlightCurrency": "₫", "highlightMeta": "Ngắn hạn · VCB · Công ty Mock Alpha", "submitter": {"name": "Nguyễn Thị Hoa", "initial": "H", "role": "Treasury Officer", "dept": "Finance Dept"}, "approvers": [{"name": "Lê Minh Khoa", "initial": "K", "role": "Chief Financial Officer · Duyệt bước 1"}, {"name": "Lê Anh Tuấn", "initial": "T", "role": "Chief Executive Officer · Duyệt bước 2"}], "sections": [{"title": "Công ty vay", "rows": [["Mã công ty", "<span class=\"info-chip\">TY26</span> Mock Alpha"], ["MST", "<span class=\"info-value mono\">4100999001</span>"], ["Người đại diện", "Nguyễn Văn Mock"]]}, {"title": "Hợp đồng tín dụng", "rows": [["Bên cho vay", "Ngân hàng VCB · Quận 1"], ["Loại vay", "Ngắn hạn"], ["Số HĐ", "<span class=\"info-value mono\">001/2025/HĐTD/VCB-MALPHA</span>"], ["Ngày ký", "15/07/2025"], ["Mục đích", "Bổ sung vốn lưu động Q3/2025"]]}, {"title": "Hạn mức & lãi suất", "rows": [["Hạn mức HĐ", "<span class=\"info-chip\">30,000,000,000 ₫</span>"], ["Lãi suất", "<span class=\"info-value mono\">8.5% / năm · Thả nổi</span>"], ["Kỳ hạn", "365 ngày (20/07/2025 → 19/07/2026)"], ["Lãi phạt quá hạn", "<span class=\"info-value mono\">15% / năm</span>"]]}, {"title": "Tài sản đảm bảo", "rows": [["Mã TSDB", "<span class=\"info-chip\">COL-TY26-000031</span>"], ["Giá trị định giá", "<span class=\"info-value mono\">50,000,000,000 ₫</span>"], ["LTV → Hạn mức", "<span class=\"info-chip green\">35,000,000,000 ₫</span> (70%)"]]}], "note": "HĐ tín dụng mới với VCB để bổ sung vốn lưu động Q3/2025. HĐQT đã thông qua ngày 10/07. TSDB đã được VCB định giá.", "baseTabs": [{"id": "2", "icon": "🏦", "label": "2. Khoản vay gốc", "cols": ["Mã khoản vay", "Công ty", "Ngân hàng", "Loại", "Hạn mức", "Lãi suất", "Đáo hạn", "Trạng thái"]}, {"id": "3", "icon": "🔒", "label": "3. TSDB", "cols": ["Mã TSDB", "Loại", "Giá trị", "LTV", "Hạn mức tối đa", "Khoản vay link", "Trạng thái"]}], "initialRows": {"2": [["<span class=\"cell-code\">VAY-TY23-NH-000586</span>", "TY23 IBS", "VTB", "Ngắn hạn", "<span class=\"cell-num\">20,000,000,000</span>", "8.2%", "31/12/2026", "<span class=\"chip-status active\">Đang vay</span>"], ["<span class=\"cell-code\">VAY-TY23-NH-000599</span>", "TY23 IBS", "MB", "Trung hạn", "<span class=\"cell-num\">15,000,000,000</span>", "9.5%", "30/06/2027", "<span class=\"chip-status active\">Đang vay</span>"]], "3": [["<span class=\"cell-code\">COL-TY26-000031</span>", "QSDĐ", "<span class=\"cell-num\">50,000,000,000</span>", "70%", "<span class=\"cell-num\">35,000,000,000</span>", "<span style=\"color:var(--lark-gray4)\">—</span>", "<span class=\"chip-status plan\">Sẵn sàng</span>"]]}, "onApprove": {"2": {"insert": [["<span class=\"cell-code\">VAY-TY26-NH-000700</span> <span class=\"new-row-badge\">MỚI</span>", "TY26 Mock Alpha", "VCB · Q1", "Ngắn hạn", "<span class=\"cell-num\" style=\"color:#1456F0;font-weight:700\">30,000,000,000</span>", "8.5%", "19/07/2026", "<span class=\"chip-status active\">Đang vay</span>"]]}, "3": {"update": {"0": {"5": "<span class=\"cell-code\">VAY-TY26-NH-000700</span> <span class=\"updated-badge\">LINK</span>"}}}}, "summary": "2 thay đổi: Khoản vay mới VAY-TY26-NH-000700 tạo · TSDB COL-TY26-000031 link với khoản vay", "staffForm": [{"title": "Công ty vay", "fields": [{"type": "linked", "label": "Công ty vay", "required": true, "code": "TY26", "text": "CÔNG TY CP ĐẦU TƯ MOCK ALPHA"}, {"type": "readonly", "label": "MST", "value": "4100999001"}, {"type": "readonly", "label": "Người đại diện", "value": "Nguyễn Văn Mock"}]}, {"title": "Hợp đồng tín dụng", "fields": [{"type": "select", "label": "Bên cho vay", "required": true, "options": ["Ngân hàng", "Công ty (vay nội bộ)"], "value": "Ngân hàng"}, {"type": "select", "label": "Loại vay", "required": true, "options": ["Ngắn hạn", "Trung hạn", "Dài hạn", "LC", "BL"], "value": "Ngắn hạn"}, {"type": "select", "label": "Ngân hàng cho vay", "required": true, "options": ["VCB", "ACB", "TCB", "BIDV", "OCB", "MB"], "value": "VCB"}, {"type": "text", "label": "Chi nhánh", "value": "Quận 1"}, {"type": "text", "label": "Số HĐ", "required": true, "value": "001/2025/HĐTD/VCB-MALPHA"}, {"type": "text", "label": "Ngày ký HĐ", "required": true, "value": "15/07/2025"}, {"type": "text", "label": "Mục đích vay", "required": true, "value": "Bổ sung vốn lưu động Q3/2025"}]}, {"title": "Hạn mức và lãi suất", "fields": [{"type": "amount", "label": "Hạn mức HĐ", "required": true, "value": "30,000,000,000", "helper": "Ba mươi tỷ đồng"}, {"type": "select", "label": "Tiền tệ", "options": ["VND", "USD"], "value": "VND"}, {"type": "select", "label": "Loại lãi suất", "options": ["Thả nổi", "Cố định"], "value": "Thả nổi"}, {"type": "text", "label": "Lãi suất tại thời điểm ký", "required": true, "value": "8.5% / năm"}, {"type": "text", "label": "Lãi suất phạt quá hạn", "value": "15% / năm"}, {"type": "text", "label": "Ngày bắt đầu vay", "value": "20/07/2025"}, {"type": "text", "label": "Ngày đáo hạn", "value": "19/07/2026"}]}, {"title": "Tài sản đảm bảo", "fields": [{"type": "linked", "label": "Mã TSDB", "required": true, "code": "COL-TY26-000031", "text": "QSDĐ 12 Lê Lợi, Q1 · 50 tỷ", "helper": "LTV tự áp 70%"}, {"type": "autoCalc", "rows": [{"icon": "🧮", "label": "Hạn mức tối đa (LTV × định giá)", "value": "35,000,000,000 ₫"}, {"icon": "📋", "label": "Mã khoản vay (auto)", "value": "VAY-TY26-NH-000700"}]}]}, {"title": "Ghi chú & phê duyệt nội bộ", "fields": [{"type": "text", "label": "Số QĐ phê duyệt nội bộ", "value": "QD-2025-001"}, {"type": "text", "label": "Người ký bên vay", "value": "Nguyễn Văn Mock"}, {"type": "textarea", "label": "Ghi chú", "value": "HĐ tín dụng mới với VCB để bổ sung vốn lưu động Q3/2025. HĐQT đã thông qua ngày 10/07. TSDB đã được VCB định giá."}]}]}, "col": {"icon": "📜", "title": "Đăng ký TSDB", "subtitle": "Ghi nhận tài sản đảm bảo mới · Sheet 3", "process": "Quy trình Đăng ký TSDB", "requestId": "REQ-COL-2604-002", "highlightId": "COL-TY27-000032", "highlightLabel": "Giá trị TSDB", "highlightAmount": "25,000,000,000", "highlightCurrency": "₫", "highlightMeta": "QSDĐ · ACB · Công ty Demo Beta", "submitter": {"name": "Nguyễn Thị Hoa", "initial": "H", "role": "Treasury Officer", "dept": "Finance Dept"}, "approvers": [{"name": "Trần Văn Pháp", "initial": "P", "role": "Legal Manager · Kiểm tra pháp lý"}, {"name": "Lê Minh Khoa", "initial": "K", "role": "Chief Financial Officer · Duyệt cuối"}], "sections": [{"title": "Chủ sở hữu", "rows": [["Loại", "COMPANY (Công ty)"], ["Công ty sở hữu", "<span class=\"info-chip\">TY27</span> Demo Beta"], ["Bảo lãnh cho", "<span class=\"info-chip\">TY27</span> Demo Beta"]]}, {"title": "Tài sản", "rows": [["Loại tài sản", "Quyền sử dụng đất"], ["Số GCN", "<span class=\"info-value mono\">CD789012</span>"], ["Mô tả", "QSDĐ tại KCN Tân Tạo, Bình Tân — 1,500m²"]]}, {"title": "Định giá", "rows": [["Giá trị", "<span class=\"info-chip\">25,000,000,000 ₫</span>"], ["Đơn vị định giá", "ACB · 10/09/2025"], ["LTV", "<span class=\"info-value mono\">75%</span>"], ["Hạn mức cho vay tối đa", "<span class=\"info-chip green\">18,750,000,000 ₫</span>"], ["Định giá lại", "10/09/2026 <span class=\"info-chip orange\">Tự nhắc</span>"]]}, {"title": "Đăng ký GDBĐ", "rows": [["NH giữ TSBD", "ACB"], ["Số ĐK GDBĐ", "<span class=\"info-value mono\">7002</span>"], ["Ngày đăng ký", "15/09/2025"]]}, {"title": "Hồ sơ", "rows": [["Files đính kèm", "📄 GCN_QSDD.pdf · Biên bản định giá · HĐ thế chấp (3 files)"]]}], "note": "TSDB mới cho khoản vay trung hạn 15 tỷ với ACB — dự án nhà xưởng KCN Tân Tạo. Giấy tờ đã verify với Phòng TN&MT.", "baseTabs": [{"id": "3", "icon": "🔒", "label": "3. Tài sản thế chấp", "cols": ["Mã TSDB", "Loại", "Giá trị định giá", "LTV", "Hạn mức", "NH giữ", "Chủ SH", "Trạng thái"]}], "initialRows": {"3": [["<span class=\"cell-code\">COL-TY26-000031</span>", "QSDĐ", "<span class=\"cell-num\">50,000,000,000</span>", "70%", "<span class=\"cell-num\">35,000,000,000</span>", "VCB", "TY26", "<span class=\"chip-status active\">Đang thế chấp</span>"], ["<span class=\"cell-code\">COL-TY28-000033</span>", "Máy móc", "<span class=\"cell-num\">15,000,000,000</span>", "60%", "<span class=\"cell-num\">9,000,000,000</span>", "TCB", "TY28", "<span class=\"chip-status active\">Đang thế chấp</span>"]]}, "onApprove": {"3": {"insert": [["<span class=\"cell-code\">COL-TY27-000032</span> <span class=\"new-row-badge\">MỚI</span>", "QSDĐ", "<span class=\"cell-num\" style=\"color:#1456F0;font-weight:700\">25,000,000,000</span>", "75%", "<span class=\"cell-num\">18,750,000,000</span>", "ACB", "TY27", "<span class=\"chip-status plan\">Sẵn sàng</span>"]]}}, "summary": "1 TSDB mới tạo · Auto-calc hạn mức tối đa 18.75 tỷ · Lên lịch nhắc định giá lại 10/09/2026", "staffForm": [{"title": "Chủ sở hữu tài sản", "fields": [{"type": "select", "label": "Loại chủ sở hữu", "required": true, "options": ["COMPANY (Công ty)", "INDIVIDUAL (Cá nhân)"], "value": "COMPANY (Công ty)"}, {"type": "linked", "label": "Công ty sở hữu", "code": "TY27", "text": "Demo Beta"}, {"type": "linked", "label": "Bảo lãnh cho", "required": true, "code": "TY27", "text": "CÔNG TY TNHH DEMO BETA"}]}, {"title": "Thông tin tài sản", "fields": [{"type": "select", "label": "Loại tài sản", "required": true, "options": ["Quyền sử dụng đất (QSDĐ)", "Bất động sản", "Máy móc thiết bị", "Phương tiện vận tải", "Hàng tồn kho", "Chứng khoán"], "value": "Quyền sử dụng đất (QSDĐ)"}, {"type": "text", "label": "Số trên giấy tờ pháp lý", "required": true, "value": "CD 789012"}, {"type": "text", "label": "Số GCN/Giấy tờ sở hữu", "value": "CD789012"}, {"type": "textarea", "label": "Mô tả chi tiết", "required": true, "value": "QSDĐ tại KCN Tân Tạo, Bình Tân — diện tích 1,500m²"}]}, {"title": "Định giá", "fields": [{"type": "amount", "label": "Giá trị định giá", "required": true, "value": "25,000,000,000", "helper": "Hai mươi lăm tỷ đồng"}, {"type": "select", "label": "Đơn vị định giá", "required": true, "options": ["ACB", "VCB", "TCB", "BIDV", "Công ty độc lập"], "value": "ACB"}, {"type": "text", "label": "Ngày định giá", "value": "10/09/2025"}, {"type": "text", "label": "Tỷ lệ LTV (%)", "required": true, "value": "75"}, {"type": "text", "label": "Chu kỳ thẩm định lại (năm)", "value": "1"}]}, {"title": "Đăng ký GDBĐ", "fields": [{"type": "select", "label": "NH đang giữ TSBD", "required": true, "options": ["ACB", "VCB", "TCB", "BIDV"], "value": "ACB"}, {"type": "text", "label": "Số ĐK GDBĐ", "required": true, "value": "7002"}, {"type": "text", "label": "Ngày đăng ký", "value": "15/09/2025"}, {"type": "autoCalc", "rows": [{"icon": "🧮", "label": "Hạn mức cho vay tối đa (LTV × giá trị)", "value": "18,750,000,000 ₫"}, {"icon": "📅", "label": "Ngày nhắc định giá lại", "value": "10/09/2026"}, {"icon": "📋", "label": "Mã TSDB (auto)", "value": "COL-TY27-000032"}]}]}, {"title": "Hồ sơ & ghi chú", "fields": [{"type": "readonly", "label": "Files đính kèm", "value": "📄 GCN_QSDD.pdf · Biên bản định giá ACB · HĐ thế chấp (3 files)"}, {"type": "textarea", "label": "Ghi chú", "value": "TSDB mới cho khoản vay trung hạn 15 tỷ với ACB — dự án nhà xưởng KCN Tân Tạo. Giấy tờ đã verify với Phòng TN&MT."}]}]}, "disb": {"icon": "💸", "title": "Yêu cầu Giải Ngân", "subtitle": "Giải ngân từ hạn mức · Sheet 5", "process": "Quy trình Giải ngân", "requestId": "REQ-DISB-2604-003", "highlightId": "GN-2604-000686 · VAY-TY26-NH-000700", "highlightLabel": "Số tiền giải ngân", "highlightAmount": "5,000,000,000", "highlightCurrency": "₫", "highlightMeta": "VCB · Thanh toán NCC · Đợt 3", "submitter": {"name": "Nguyễn Thị Hoa", "initial": "H", "role": "Treasury Officer", "dept": "Finance Dept"}, "approvers": [{"name": "Lê Minh Khoa", "initial": "K", "role": "Chief Financial Officer · Duyệt"}], "sections": [{"title": "Khoản vay gốc", "rows": [["Mã khoản vay", "<span class=\"info-chip\">VAY-TY26-NH-000700</span>"], ["Ngân hàng", "VCB — Quận 1"], ["Loại vay", "Ngắn hạn"], ["Lãi suất", "<span class=\"info-value mono\">8.5% / năm · Thả nổi</span>"], ["Hạn mức còn lại", "<span class=\"info-chip green\">10,000,000,000 ₫</span> / 30 tỷ"]]}, {"title": "Chi tiết giải ngân", "rows": [["Mục đích", "Thanh toán NCC nguyên vật liệu"], ["TK nhận tiền", "<span class=\"info-value mono\">TK-TY26-000026 · VCB · 0071000111222</span>"], ["Ngày giải ngân", "10/04/2026"], ["Lãi kỳ đầu (est.)", "<span class=\"info-value mono\">35,616,438 ₫</span> (30 ngày)"], ["Kỳ trả nợ đầu", "10/05/2026 <span class=\"info-chip orange\">Tự tạo</span>"]]}], "note": "Giải ngân đợt 3 — thanh toán NCC nguyên vật liệu, hạn TT 15/04/2026. UNC đã chuẩn bị.", "baseTabs": [{"id": "5", "icon": "📤", "label": "5. Giải ngân", "cols": ["Mã GN", "Khoản vay", "Ngày", "Số tiền", "Dư nợ", "STK", "Trạng thái"]}, {"id": "9", "icon": "📅", "label": "9. Trả nợ", "cols": ["Mã kỳ", "Mã GN", "Kỳ", "Ngày DK", "Dư nợ", "Lãi", "Tổng", "Trạng thái"]}, {"id": "2", "icon": "🏦", "label": "2. Khoản vay", "cols": ["Mã KV", "Hạn mức", "Đã GN", "Còn lại", "Dư nợ", "Trạng thái"]}], "initialRows": {"5": [["<span class=\"cell-code\">GN-2607-000680</span>", "<span class=\"cell-code\">VAY-TY26-NH-000700</span>", "25/07/2025", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-code\">TK-TY26-000026</span>", "<span class=\"chip-status active\">Đã GN</span>"], ["<span class=\"cell-code\">GN-2608-000681</span>", "<span class=\"cell-code\">VAY-TY26-NH-000700</span>", "15/08/2025", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-num\">20,000,000,000</span>", "<span class=\"cell-code\">TK-TY26-000026</span>", "<span class=\"chip-status active\">Đã GN</span>"]], "9": [["<span class=\"cell-code\">TN-2508-000344</span>", "<span class=\"cell-code\">GN-2607-000680</span>", "1", "25/08/2025", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-num\">72,186,301</span>", "<span class=\"cell-num\">72,186,301</span>", "<span class=\"chip-status done\">Đã trả</span>"], ["<span class=\"cell-code\">TN-2509-000345</span>", "<span class=\"cell-code\">GN-2607-000680</span>", "2", "25/09/2025", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-num\">69,863,014</span>", "<span class=\"cell-num\">69,863,014</span>", "<span class=\"chip-status done\">Đã trả</span>"]], "2": [["<span class=\"cell-code\">VAY-TY26-NH-000700</span>", "<span class=\"cell-num\">30,000,000,000</span>", "<span class=\"cell-num\">20,000,000,000</span>", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-num\">20,000,000,000</span>", "<span class=\"chip-status active\">Đang vay</span>"]]}, "onApprove": {"5": {"insert": [["<span class=\"cell-code\">GN-2604-000686</span> <span class=\"new-row-badge\">MỚI</span>", "<span class=\"cell-code\">VAY-TY26-NH-000700</span>", "10/04/2026", "<span class=\"cell-num\" style=\"color:#1456F0;font-weight:700\">5,000,000,000</span>", "<span class=\"cell-num\">25,000,000,000</span>", "<span class=\"cell-code\">TK-TY26-000026</span>", "<span class=\"chip-status active\">Đã GN</span>"]]}, "9": {"insert": [["<span class=\"cell-code\">TN-2605-000352</span> <span class=\"new-row-badge\">MỚI</span>", "<span class=\"cell-code\">GN-2604-000686</span>", "1", "10/05/2026", "<span class=\"cell-num\">5,000,000,000</span>", "<span class=\"cell-num\">35,616,438</span>", "<span class=\"cell-num\">35,616,438</span>", "<span class=\"chip-status plan\">Chưa đến hạn</span>"]]}, "2": {"update": {"0": {"2": "<span class=\"cell-num\" style=\"color:#00B365;font-weight:700\">25,000,000,000</span> <span class=\"updated-badge\">+5B</span>", "3": "<span class=\"cell-num\" style=\"color:#1456F0;font-weight:700\">5,000,000,000</span> <span class=\"updated-badge\">-5B</span>", "4": "<span class=\"cell-num\" style=\"color:#1456F0;font-weight:700\">25,000,000,000</span> <span class=\"updated-badge\">+5B</span>"}}}}, "summary": "3 thay đổi: GN-2604-000686 tạo · Kỳ trả nợ TN-2605-000352 tự tạo · Khoản vay VAY-TY26-NH-000700 cập nhật dư nợ +5 tỷ", "staffForm": [{"title": "Chọn khoản vay", "fields": [{"type": "linked", "label": "Khoản vay gốc", "required": true, "code": "VAY-TY26-NH-000700", "text": "VCB Q1 · Hạn mức 30 tỷ · Ngắn hạn"}, {"type": "readonly", "label": "Ngân hàng", "value": "Vietcombank — Quận 1"}, {"type": "readonly", "label": "Loại vay", "value": "Ngắn hạn"}, {"type": "readonly", "label": "Lãi suất", "value": "8.5% / năm · Thả nổi"}, {"type": "readonly", "label": "Hạn mức còn lại", "value": "10,000,000,000 ₫"}]}, {"title": "Thông tin giải ngân", "fields": [{"type": "select", "label": "Mục đích giải ngân", "required": true, "options": ["Vốn vay kinh doanh", "Thanh toán nhà cung cấp", "Mở rộng kinh doanh", "Đảo nợ nội bộ"], "value": "Thanh toán nhà cung cấp"}, {"type": "amount", "label": "Số tiền giải ngân", "required": true, "value": "5,000,000,000", "helper": "Năm tỷ đồng"}, {"type": "linked", "label": "TK ngân hàng nhận", "required": true, "code": "TK-TY26-000026", "text": "VCB · 0071000111222 · Mock Alpha"}, {"type": "text", "label": "Ngày giải ngân dự kiến", "required": true, "value": "10/04/2026"}, {"type": "text", "label": "Số Khế ước nhận nợ", "placeholder": "KU-2604-...", "value": ""}, {"type": "autoCalc", "rows": [{"icon": "🧮", "label": "Tiền lãi kỳ đầu (30 ngày)", "value": "35,616,438 ₫"}, {"icon": "📅", "label": "Ngày trả nợ đầu tiên", "value": "10/05/2026"}, {"icon": "📋", "label": "Mã giải ngân (auto)", "value": "GN-2604-000686"}]}]}, {"title": "Ghi chú", "fields": [{"type": "textarea", "label": "Ghi chú", "value": "Giải ngân đợt 3 — thanh toán NCC nguyên vật liệu, hạn TT 15/04/2026. UNC đã chuẩn bị."}]}]}, "repay": {"icon": "📅", "title": "Yêu cầu Trả Nợ", "subtitle": "Thanh toán kỳ trả nợ · Sheet 9", "process": "Quy trình Trả nợ", "requestId": "REQ-REPAY-2604-004", "highlightId": "TN--2605-000346 · Kỳ 6 · VAY-TY26-NH-000700", "highlightLabel": "Lãi phải trả", "highlightAmount": "69,863,014", "highlightCurrency": "₫", "highlightMeta": "Kỳ 6 · Đến hạn 25/05/2026 · TK-TY26-000026", "submitter": {"name": "Nguyễn Thị Hoa", "initial": "H", "role": "Treasury Officer", "dept": "Finance Dept"}, "approvers": [{"name": "Lê Minh Khoa", "initial": "K", "role": "Chief Financial Officer · Duyệt"}], "sections": [{"title": "Kỳ trả nợ", "rows": [["Mã kỳ", "<span class=\"info-chip\">TN--2605-000346</span>"], ["Khoản vay", "<span class=\"info-value mono\">VAY-TY26-NH-000700</span>"], ["Mã GN", "<span class=\"info-value mono\">GN-2607-000680</span>"], ["Kỳ số", "6"]]}, {"title": "Dư nợ & lãi", "rows": [["Dư nợ đầu kỳ", "<span class=\"info-value mono\">10,000,000,000 ₫</span>"], ["Lãi suất", "<span class=\"info-value mono\">8.5% / năm</span>"], ["Số ngày", "30 ngày"]]}, {"title": "Thanh toán", "rows": [["Loại TT", "Trả lãi định kỳ"], ["Ngày TT", "25/05/2026 <span class=\"info-chip green\">Đúng hạn</span>"], ["Gốc trả", "<span class=\"info-value mono\">0 ₫</span>"], ["Lãi trả", "<span class=\"info-value mono\">69,863,014 ₫</span>"], ["Tổng", "<span class=\"info-chip\">69,863,014 ₫</span>"]]}, {"title": "Tài khoản & chứng từ", "rows": [["TK trả nợ", "<span class=\"info-value mono\">TK-TY26-000026 · Số dư 13.5 tỷ</span>"], ["Số chứng từ", "<span class=\"info-value mono\">CT-2605-010</span>"], ["Dư nợ cuối kỳ", "<span class=\"info-chip green\">10,000,000,000 ₫</span> (không đổi)"]]}], "note": "Thanh toán lãi kỳ 6 đúng hạn. UNC đã upload đầy đủ.", "baseTabs": [{"id": "9", "icon": "📅", "label": "9. Trả nợ", "cols": ["Mã kỳ", "Mã GN", "Kỳ", "Ngày DK", "Ngày TT", "Gốc", "Lãi", "Tổng", "Trạng thái"]}, {"id": "2", "icon": "🏦", "label": "2. Khoản vay", "cols": ["Mã KV", "Dư nợ", "Lãi YTD", "Kỳ tiếp", "Trạng thái"]}, {"id": "4", "icon": "💳", "label": "4. Tồn quỹ", "cols": ["Mã TK", "Ngày", "Số dư đầu", "Tiền ra", "Số dư cuối"]}], "initialRows": {"9": [["<span class=\"cell-code\">TN--2504-000343</span>", "<span class=\"cell-code\">GN-2607-000680</span>", "5", "25/04/2026", "25/04/2026", "<span class=\"cell-num\">0</span>", "<span class=\"cell-num\">72,186,301</span>", "<span class=\"cell-num\">72,186,301</span>", "<span class=\"chip-status done\">Đã trả</span>"], ["<span class=\"cell-code\">TN--2605-000346</span>", "<span class=\"cell-code\">GN-2607-000680</span>", "6", "25/05/2026", "<span style=\"color:var(--lark-gray4)\">—</span>", "<span class=\"cell-num\">0</span>", "<span class=\"cell-num\">69,863,014</span>", "<span class=\"cell-num\">69,863,014</span>", "<span class=\"chip-status pending\">Đến hạn</span>"]], "2": [["<span class=\"cell-code\">VAY-TY26-NH-000700</span>", "<span class=\"cell-num\">10,000,000,000</span>", "<span class=\"cell-num\">352,054,795</span>", "25/05/2026", "<span class=\"chip-status active\">Đang vay</span>"]], "4": [["<span class=\"cell-code\">TK-TY26-000026</span>", "24/05/2026", "<span class=\"cell-num\">13,500,000,000</span>", "<span class=\"cell-num\">0</span>", "<span class=\"cell-num\">13,500,000,000</span>"]]}, "onApprove": {"9": {"update": {"1": {"4": "<span style=\"color:#00B365;font-weight:700\">25/05/2026</span> <span class=\"updated-badge\">↑</span>", "8": "<span class=\"chip-status active\">Đã trả</span> <span class=\"updated-badge\">UPDATED</span>"}}, "insert": [["<span class=\"cell-code\">TN-2606-000352</span> <span class=\"new-row-badge\">MỚI</span>", "<span class=\"cell-code\">GN-2607-000680</span>", "7", "25/06/2026", "<span style=\"color:var(--lark-gray4)\">—</span>", "<span class=\"cell-num\">0</span>", "<span class=\"cell-num\">69,863,014</span>", "<span class=\"cell-num\">69,863,014</span>", "<span class=\"chip-status plan\">Chưa đến hạn</span>"]]}, "2": {"update": {"0": {"2": "<span class=\"cell-num\" style=\"color:#00B365;font-weight:700\">421,917,809</span> <span class=\"updated-badge\">+69.86M</span>", "3": "<span style=\"color:#FF7D00;font-weight:700\">25/06/2026</span> <span class=\"updated-badge\">↑</span>"}}}, "4": {"update": {"0": {"3": "<span class=\"cell-num\" style=\"color:#F54A45;font-weight:700\">69,863,014</span> <span class=\"updated-badge\">↑</span>", "4": "<span class=\"cell-num\" style=\"color:#1456F0;font-weight:700\">13,430,136,986</span> <span class=\"updated-badge\">↑</span>"}}}}, "summary": "4 thay đổi: Kỳ 6 → \"Đã trả\" · Kỳ 7 tự tạo (25/06/2026) · Lãi YTD tăng 69.86M · Tồn quỹ TK giảm 69.86M", "staffForm": [{"title": "Chọn kỳ trả nợ", "fields": [{"type": "linked", "label": "Kỳ trả nợ", "required": true, "code": "TN--2605-000346", "text": "Kỳ 6 · VAY-TY26-NH-000700 · Đến hạn 25/05/2026", "helper": "Chọn kỳ \"Đến hạn\" hoặc \"Quá hạn\""}, {"type": "readonly", "label": "Mã khoản vay", "value": "VAY-TY26-NH-000700"}, {"type": "readonly", "label": "Mã giải ngân", "value": "GN-2607-000680"}]}, {"title": "Thông tin kỳ (auto)", "fields": [{"type": "readonly", "label": "Dư nợ đầu kỳ", "value": "10,000,000,000 ₫"}, {"type": "readonly", "label": "Lãi suất áp dụng", "value": "8.5% / năm"}, {"type": "readonly", "label": "Số ngày tính lãi", "value": "30 ngày"}, {"type": "readonly", "label": "Ngày trả dự kiến", "value": "25/05/2026"}]}, {"title": "Thanh toán thực tế", "fields": [{"type": "select", "label": "Loại thanh toán", "required": true, "options": ["Trả lãi định kỳ", "Trả gốc + lãi", "Trả gốc trước hạn", "Tất toán khoản vay"], "value": "Trả lãi định kỳ"}, {"type": "text", "label": "Ngày thanh toán thực tế", "required": true, "value": "25/05/2026"}, {"type": "amount", "label": "Số tiền gốc trả", "required": true, "value": "0", "helper": "Kỳ này chỉ trả lãi"}, {"type": "amount", "label": "Số tiền lãi trả", "required": true, "value": "69,863,014"}, {"type": "amount", "label": "Phí khác", "value": "0"}]}, {"title": "Tài khoản & chứng từ", "fields": [{"type": "linked", "label": "TK trả nợ", "required": true, "code": "TK-TY26-000026", "text": "VCB · Số dư 13.5 tỷ"}, {"type": "text", "label": "Số chứng từ thanh toán", "value": "CT-2605-010"}, {"type": "autoCalc", "rows": [{"icon": "🧮", "label": "Tổng phải trả kỳ này", "value": "69,863,014 ₫"}, {"icon": "📉", "label": "Dư nợ cuối kỳ (không đổi)", "value": "10,000,000,000 ₫"}, {"icon": "📅", "label": "Kỳ kế tiếp (auto tạo)", "value": "25/06/2026 — Kỳ 7"}]}]}, {"title": "Ghi chú", "fields": [{"type": "readonly", "label": "UNC đính kèm", "value": "📄 UNC_CT-2605-010.pdf"}, {"type": "textarea", "label": "Ghi chú", "value": "Thanh toán lãi kỳ 6 đúng hạn. UNC đã upload đầy đủ."}]}]}};
+const FLOW_IDS = Object.keys(FLOWS);
+
+// Per-flow state — status: 'draft' | 'submitted' | 'approved' | 'rejected'
+const state = {};
+FLOW_IDS.forEach(f => {
+  state[f] = {
+    status: 'draft',
+    submittedAt: null,
+    decidedAt: null,
+    comment: null,
+    rejectReason: null,
+    currentBaseTab: FLOWS[f].baseTabs[0].id,
+    tables: JSON.parse(JSON.stringify(FLOWS[f].initialRows)),
+  };
+});
+
+let currentFlow = FLOW_IDS[0];
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER: Flow tabs
+// ═══════════════════════════════════════════════════════════════
+function renderFlowTabs() {
+  const container = document.getElementById('flow-tabs');
+  container.innerHTML = '';
+  FLOW_IDS.forEach((f, i) => {
+    const flow = FLOWS[f];
+    const st = state[f].status;
+    const dotCls = st === 'draft' ? 'draft'
+                 : st === 'submitted' ? 'pending'
+                 : st === 'approved' ? 'approved' : 'rejected';
+    const btn = document.createElement('button');
+    btn.className = 'flow-tab' + (f === currentFlow ? ' active' : '');
+    btn.onclick = () => switchFlow(f);
+    btn.innerHTML = `
+      <span class="tab-num">${i + 1}</span>
+      <span class="tab-icon">${flow.icon}</span>
+      <span>${flow.title}</span>
+      <span class="status-dot ${dotCls}"></span>
+    `;
+    container.appendChild(btn);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER: Stage indicator
+// ═══════════════════════════════════════════════════════════════
+function renderStageIndicator() {
+  const st = state[currentFlow].status;
+  const container = document.getElementById('stage-indicator');
+
+  let s1Cls = 'active', s2Cls = '', s3Cls = '';
+  if (st === 'submitted') { s1Cls = 'done'; s2Cls = 'active'; }
+  if (st === 'approved')  { s1Cls = 'done'; s2Cls = 'done'; s3Cls = 'done'; }
+  if (st === 'rejected')  { s1Cls = 'done'; s2Cls = 'rejected'; }
+
+  container.innerHTML = `
+    <div class="stage-step ${s1Cls}">
+      <div class="step-num">1</div>
+      <span>💼 Staff tạo yêu cầu</span>
+    </div>
+    <div class="stage-arrow">→</div>
+    <div class="stage-step ${s2Cls}">
+      <div class="step-num">2</div>
+      <span>🔑 Approver duyệt</span>
+    </div>
+    <div class="stage-arrow">→</div>
+    <div class="stage-step ${s3Cls}">
+      <div class="step-num">3</div>
+      <span>📊 Ghi vào Lark Base</span>
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER: Staff form (col 1)
+// ═══════════════════════════════════════════════════════════════
+function renderStaffPane() {
+  const flow = FLOWS[currentFlow];
+  const st = state[currentFlow];
+  const body = document.getElementById('staff-body');
+  const actionBar = document.getElementById('staff-action-bar');
+  const badge = document.getElementById('badge-staff');
+  const pane = document.getElementById('pane-staff');
+
+  // Badge
+  if (st.status === 'draft') {
+    badge.className = 'ph-badge col-1-tag';
+    badge.textContent = 'ĐANG NHẬP';
+    pane.classList.remove('disabled');
+    actionBar.style.display = 'flex';
+  } else if (st.status === 'submitted') {
+    badge.className = 'ph-badge pane-badge-done';
+    badge.textContent = '✓ ĐÃ GỬI';
+    pane.classList.add('disabled');
+    actionBar.style.display = 'none';
+  } else if (st.status === 'approved') {
+    badge.className = 'ph-badge pane-badge-done';
+    badge.textContent = '✓ ĐÃ DUYỆT';
+    pane.classList.add('disabled');
+    actionBar.style.display = 'none';
+  } else if (st.status === 'rejected') {
+    badge.className = 'ph-badge';
+    badge.style.background = 'var(--lark-red-light)';
+    badge.style.color = 'var(--lark-red)';
+    badge.textContent = '✕ BỊ TỪ CHỐI';
+    pane.classList.remove('disabled');
+    actionBar.style.display = 'flex';
+  }
+
+  // Build form
+  let html = '';
+
+  // Process header
+  html += `
+    <div style="padding:10px 12px;background:var(--lark-blue-light);border-radius:8px;margin-bottom:14px;display:flex;align-items:center;gap:10px">
+      <div style="font-size:18px">${flow.icon}</div>
+      <div style="flex:1">
+        <div style="font-size:12px;font-weight:700;color:var(--lark-blue)">${flow.process}</div>
+        <div style="font-size:10px;color:var(--lark-gray3)">${flow.subtitle}</div>
+      </div>
+    </div>
+  `;
+
+  // Help tip for draft state
+  if (st.status === 'draft') {
+    html += `
+      <div style="background:#F5F8FF;border:1px dashed #BBD1FF;border-radius:7px;padding:10px 12px;margin-bottom:14px;font-size:11px;color:var(--lark-gray2);line-height:1.5">
+        💡 <strong>Bước 1:</strong> Bạn đang ở vai trò <strong>Finance Staff</strong>. Form đã được điền sẵn dữ liệu mẫu để demo — bạn chỉ cần kiểm tra rồi bấm <strong style="color:var(--lark-blue)">"Gửi phê duyệt"</strong> ở dưới.
+      </div>
+    `;
+  }
+
+  if (st.status === 'rejected') {
+    html += `
+      <div style="background:var(--lark-red-light);border:1px solid #FFB8B5;border-radius:7px;padding:10px 12px;margin-bottom:14px;font-size:11px;color:var(--lark-red);line-height:1.5">
+        ⚠️ <strong>Yêu cầu bị từ chối.</strong> Bạn có thể chỉnh sửa form và gửi lại.
+      </div>
+    `;
+  }
+
+  // Form sections
+  flow.staffForm.forEach(section => {
+    html += `<div class="form-section">
+      <div class="form-section-title">${section.title}</div>`;
+    section.fields.forEach(field => {
+      html += renderFormField(field);
+    });
+    html += `</div>`;
+  });
+
+  body.innerHTML = html;
+}
+
+function renderFormField(f) {
+  const req = f.required ? '<span class="req">*</span>' : '';
+  const label = f.label ? `<label class="form-label">${f.label}${req}</label>` : '';
+  const helper = f.helper ? `<div class="form-helper">${f.helper}</div>` : '';
+
+  if (f.type === 'text') {
+    return `<div class="form-row">${label}
+      <input class="form-input" type="text" value="${escapeHtml(f.value || '')}" placeholder="${f.placeholder || ''}" />
+      ${helper}
+    </div>`;
+  }
+  if (f.type === 'textarea') {
+    return `<div class="form-row">${label}
+      <textarea class="form-textarea">${escapeHtml(f.value || '')}</textarea>
+      ${helper}
+    </div>`;
+  }
+  if (f.type === 'select') {
+    const opts = f.options.map(o =>
+      `<option ${o === f.value ? 'selected' : ''}>${o}</option>`
+    ).join('');
+    return `<div class="form-row">${label}
+      <select class="form-select">${opts}</select>
+      ${helper}
+    </div>`;
+  }
+  if (f.type === 'readonly') {
+    return `<div class="form-row">${label}
+      <input class="form-input form-input-readonly" type="text" value="${escapeHtml(f.value || '')}" readonly />
+      ${helper}
+    </div>`;
+  }
+  if (f.type === 'amount') {
+    return `<div class="form-row">${label}
+      <div class="amount-wrap">
+        <span class="amount-prefix">₫</span>
+        <input class="form-input amount" type="text" value="${escapeHtml(f.value || '')}" />
+      </div>
+      ${helper}
+    </div>`;
+  }
+  if (f.type === 'linked') {
+    return `<div class="form-row">${label}
+      <div class="form-linked-chip">
+        <span class="chip-code">${f.code}</span>
+        <span class="chip-text">${escapeHtml(f.text || '')}</span>
+        <span class="chip-auto">🔗 linked</span>
+      </div>
+      ${helper}
+    </div>`;
+  }
+  if (f.type === 'autoCalc') {
+    const rows = f.rows.map(r =>
+      `<div class="auto-calc-row">
+        <span>${r.icon}</span>
+        <span class="ac-label">${r.label}</span>
+        <span class="ac-value">${r.value}</span>
+      </div>`
+    ).join('');
+    return `<div class="form-row">
+      <div class="auto-calc-box">${rows}</div>
+    </div>`;
+  }
+  return '';
+}
+
+function escapeHtml(str) {
+  if (typeof str !== 'string') return String(str || '');
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER: Approver (col 2)
+// ═══════════════════════════════════════════════════════════════
+function renderApproverPane() {
+  const flow = FLOWS[currentFlow];
+  const st = state[currentFlow];
+  const body = document.getElementById('approver-body');
+  const actionBar = document.getElementById('approver-action-bar');
+  const badge = document.getElementById('badge-approver');
+  const pane = document.getElementById('pane-approver');
+
+  // Badge + pane state
+  if (st.status === 'draft') {
+    badge.className = 'ph-badge col-2-tag';
+    badge.style.cssText = '';
+    badge.textContent = 'CHỜ';
+    pane.classList.add('disabled');
+    actionBar.style.display = 'none';
+    body.innerHTML = `
+      <div class="waiting-state">
+        <div class="ws-icon">📭</div>
+        <div class="ws-title">Chưa có yêu cầu nào</div>
+        <div class="ws-desc">
+          Đang chờ Staff gửi yêu cầu từ cột bên trái<br>
+          <span class="ws-arrow">←</span>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  if (st.status === 'submitted') {
+    badge.className = 'ph-badge';
+    badge.style.cssText = 'background:var(--lark-orange-light);color:var(--lark-orange)';
+    badge.textContent = '⏳ ĐANG CHỜ';
+    pane.classList.remove('disabled');
+    actionBar.style.display = 'flex';
+    document.getElementById('btn-approve').disabled = false;
+    document.getElementById('btn-reject').disabled = false;
+  } else if (st.status === 'approved') {
+    badge.className = 'ph-badge pane-badge-done';
+    badge.style.cssText = '';
+    badge.textContent = '✓ ĐÃ DUYỆT';
+    pane.classList.remove('disabled');
+    actionBar.style.display = 'none';
+  } else if (st.status === 'rejected') {
+    badge.className = 'ph-badge';
+    badge.style.cssText = 'background:var(--lark-red-light);color:var(--lark-red)';
+    badge.textContent = '✕ TỪ CHỐI';
+    pane.classList.remove('disabled');
+    actionBar.style.display = 'none';
+  }
+
+  // Build review content
+  let html = '';
+
+  // Help tip for pending state
+  if (st.status === 'submitted') {
+    html += `
+      <div style="background:#FFF8EF;border:1px dashed #FFD5A8;border-radius:7px;padding:10px 12px;margin-bottom:12px;font-size:11px;color:#7C5700;line-height:1.5">
+        🔑 <strong>Bước 2:</strong> Bạn đang ở vai trò <strong>Approver</strong>. Đọc thông tin và bấm <strong style="color:var(--lark-green)">✓ Phê duyệt</strong> hoặc <strong style="color:var(--lark-red)">✕ Từ chối</strong> ở dưới.
+      </div>
+    `;
+  }
+
+  // Status banner
+  if (st.status === 'submitted') {
+    html += `<div class="status-banner pending">
+      <span class="status-banner-icon">⏳</span>
+      <span class="status-banner-text">Đang chờ phê duyệt</span>
+      <span class="status-banner-time">Nhận lúc ${st.submittedAt}</span>
+    </div>`;
+  } else if (st.status === 'approved') {
+    html += `<div class="status-banner approved">
+      <span class="status-banner-icon">✅</span>
+      <span class="status-banner-text">Đã phê duyệt</span>
+      <span class="status-banner-time">${st.decidedAt}</span>
+    </div>`;
+  } else if (st.status === 'rejected') {
+    html += `<div class="status-banner rejected">
+      <span class="status-banner-icon">❌</span>
+      <span class="status-banner-text">Đã từ chối</span>
+      <span class="status-banner-time">${st.decidedAt}</span>
+    </div>`;
+  }
+
+  // Request header
+  html += `
+    <div class="req-header">
+      <div class="rh-top">
+        <div class="rh-id">${flow.requestId}</div>
+        <div class="rh-process">${flow.process}</div>
+      </div>
+      <div class="rh-amount">${flow.highlightAmount}<span class="currency">${flow.highlightCurrency}</span></div>
+      <div class="rh-meta">${flow.highlightLabel} · ${flow.highlightMeta}</div>
+    </div>
+  `;
+
+  // Submitter
+  html += `
+    <div class="submitter-row">
+      <div class="submitter-avatar">${flow.submitter.initial}</div>
+      <div class="submitter-info">
+        <div class="submitter-name">${flow.submitter.name}</div>
+        <div class="submitter-meta">${flow.submitter.role}</div>
+      </div>
+      <div class="submitter-time-chip">${st.submittedAt} hôm nay</div>
+    </div>
+  `;
+
+  // Info sections
+  flow.sections.forEach(sec => {
+    html += `<div class="info-section">
+      <div class="info-section-title">${sec.title}</div>
+      <div class="info-grid">`;
+    sec.rows.forEach(([l, v]) => {
+      html += `<div class="info-label">${l}</div><div class="info-value">${v}</div>`;
+    });
+    html += `</div></div>`;
+  });
+
+  html += `<div class="note-box"><strong>📝 Ghi chú:</strong><br>${flow.note}</div>`;
+
+  // Timeline
+  html += `<div class="info-section">
+    <div class="info-section-title">Luồng phê duyệt</div>
+    <div class="timeline">
+      <div class="tl-node">
+        <div class="tl-avatar done">${flow.submitter.initial}</div>
+        <div class="tl-content">
+          <div class="tl-name">${flow.submitter.name}</div>
+          <div class="tl-role">${flow.submitter.role} · Người tạo</div>
+          <span class="tl-status-chip done">✓ Đã gửi · ${st.submittedAt}</span>
+        </div>
+      </div>`;
+
+  flow.approvers.forEach((ap, i) => {
+    let avatarCls = 'waiting', chipCls = 'waiting', chipText = '○ Chờ duyệt';
+    let commentHtml = '';
+    if (st.status === 'approved') {
+      avatarCls = 'done';
+      chipCls = 'done';
+      chipText = `✓ Đã duyệt · ${st.decidedAt}`;
+      if (i === 0 && st.comment) {
+        commentHtml = `<div class="tl-comment">"${escapeHtml(st.comment)}"</div>`;
+      }
+    } else if (st.status === 'rejected' && i === 0) {
+      avatarCls = 'rejected';
+      chipCls = 'rejected';
+      chipText = `✕ Từ chối · ${st.decidedAt}`;
+      commentHtml = `<div class="tl-comment rejected">"${escapeHtml(st.rejectReason)}"</div>`;
+    } else if (st.status === 'submitted' && i === 0) {
+      avatarCls = 'current';
+      chipCls = 'current';
+      chipText = '⏳ Đang xem xét';
+    }
+    html += `
+      <div class="tl-node">
+        <div class="tl-avatar ${avatarCls}">${ap.initial}</div>
+        <div class="tl-content">
+          <div class="tl-name">${ap.name}</div>
+          <div class="tl-role">${ap.role}</div>
+          <span class="tl-status-chip ${chipCls}">${chipText}</span>
+          ${commentHtml}
+        </div>
+      </div>`;
+  });
+
+  html += `</div></div>`;
+
+  // Comment section (only when submitted)
+  if (st.status === 'submitted') {
+    html += `
+      <div class="comment-section">
+        <div class="info-section-title">Ý kiến phê duyệt (tùy chọn)</div>
+        <textarea class="comment-input" id="approval-comment" placeholder="Nhập ý kiến, điều kiện kèm theo..."></textarea>
+      </div>
+    `;
+  }
+
+  // Decision result
+  if (st.status === 'approved') {
+    html += `<div class="decision-result approved">
+      <div class="dr-icon">🎉</div>
+      <div class="dr-body">
+        <div class="dr-title approved-t">Phê duyệt thành công</div>
+        <div class="dr-meta">${flow.approvers[0].name} · ${st.decidedAt}</div>
+        ${st.comment ? `<div style="margin-top:4px;padding:5px 8px;background:rgba(255,255,255,0.6);border-radius:5px;font-size:10px;font-style:italic;color:var(--lark-gray1)">"${escapeHtml(st.comment)}"</div>` : ''}
+      </div>
+    </div>`;
+  } else if (st.status === 'rejected') {
+    html += `<div class="decision-result rejected">
+      <div class="dr-icon">❌</div>
+      <div class="dr-body">
+        <div class="dr-title rejected-t">Yêu cầu bị từ chối</div>
+        <div class="dr-meta">${flow.approvers[0].name} · ${st.decidedAt}</div>
+        <div style="margin-top:4px;padding:5px 8px;background:rgba(255,255,255,0.6);border-radius:5px;font-size:10px;font-style:italic;color:var(--lark-gray1)">"${escapeHtml(st.rejectReason)}"</div>
+      </div>
+    </div>`;
+  }
+
+  body.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER: Lark Base (col 3)
+// ═══════════════════════════════════════════════════════════════
+function renderBasePane(highlightFresh) {
+  const flow = FLOWS[currentFlow];
+  const st = state[currentFlow];
+  const activeTab = st.currentBaseTab;
+  const pane = document.getElementById('pane-base');
+  const badge = document.getElementById('badge-base');
+  const subtitle = document.getElementById('base-subtitle');
+
+  // Badge
+  if (st.status === 'approved') {
+    badge.className = 'ph-badge pane-badge-done';
+    badge.style.cssText = '';
+    badge.textContent = '✓ ĐÃ GHI';
+    subtitle.textContent = 'Dữ liệu đã được ghi vào Lark Base';
+    pane.classList.remove('disabled');
+  } else if (st.status === 'rejected') {
+    badge.className = 'ph-badge col-3-tag';
+    badge.style.cssText = '';
+    badge.textContent = 'LIVE';
+    subtitle.textContent = 'Không có thay đổi (yêu cầu bị từ chối)';
+    pane.classList.remove('disabled');
+  } else if (st.status === 'submitted') {
+    badge.className = 'ph-badge col-3-tag';
+    badge.style.cssText = 'opacity:0.6';
+    badge.textContent = 'CHỜ';
+    subtitle.textContent = 'Dữ liệu sẽ được ghi khi Approver duyệt';
+    pane.classList.add('disabled');
+  } else {
+    badge.className = 'ph-badge col-3-tag';
+    badge.style.cssText = 'opacity:0.6';
+    badge.textContent = 'CHỜ';
+    subtitle.textContent = 'Dữ liệu hiện tại (chưa có yêu cầu)';
+    pane.classList.add('disabled');
+  }
+
+  // Tabs
+  const tabsEl = document.getElementById('base-tabs');
+  tabsEl.innerHTML = flow.baseTabs.map(tab => {
+    const rows = st.tables[tab.id] || [];
+    const count = rows.length;
+    const hasNew = st.status === 'approved' && flow.onApprove[tab.id] && flow.onApprove[tab.id].insert;
+    const countCls = hasNew ? 'new' : '';
+    return `
+      <div class="base-tab-item ${tab.id === activeTab ? 'active' : ''}" onclick="switchBaseTab('${tab.id}')">
+        <span>${tab.icon}</span>
+        <span>${tab.label}</span>
+        <span class="tab-count ${countCls}">${count}</span>
+      </div>
+    `;
+  }).join('');
+
+  // Active tab content
+  const activeTabCfg = flow.baseTabs.find(t => t.id === activeTab);
+  const rows = st.tables[activeTab] || [];
+  const tableWrap = document.getElementById('base-table-wrap');
+
+  if (rows.length === 0) {
+    tableWrap.innerHTML = `<div class="empty-state"><div class="es-icon">📋</div>Chưa có dữ liệu</div>`;
+  } else {
+    let tableHtml = `<table class="base-table"><thead><tr>`;
+    activeTabCfg.cols.forEach(c => tableHtml += `<th>${c}</th>`);
+    tableHtml += `</tr></thead><tbody>`;
+    rows.forEach(row => {
+      const isNew = highlightFresh && row.some(cell => String(cell).includes('new-row-badge'));
+      tableHtml += `<tr class="${isNew ? 'new-row' : ''}">`;
+      row.forEach(cell => {
+        const isUpdated = highlightFresh && String(cell).includes('updated-badge');
+        tableHtml += `<td class="${isUpdated ? 'updated-cell' : ''}">${cell}</td>`;
+      });
+      tableHtml += `</tr>`;
+    });
+    tableHtml += `</tbody></table>`;
+    tableWrap.innerHTML = tableHtml;
+  }
+
+  document.getElementById('base-count-label').textContent = `${rows.length} records`;
+
+  // Summary box
+  const summary = document.getElementById('changes-summary');
+  if (st.status === 'approved') {
+    summary.classList.add('show', 'success');
+    summary.innerHTML = `<strong>✅ Đã ghi dữ liệu thành công</strong>⚡ ${flow.summary}`;
+  } else if (st.status === 'rejected') {
+    summary.classList.add('show');
+    summary.classList.remove('success');
+    summary.innerHTML = `<strong>ℹ️ Yêu cầu bị từ chối</strong>Không có thay đổi trong Lark Base. Records chỉ được tạo khi phê duyệt.`;
+  } else {
+    summary.classList.remove('show', 'success');
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACTIONS
+// ═══════════════════════════════════════════════════════════════
+function switchFlow(f) {
+  currentFlow = f;
+  render();
+}
+
+function switchBaseTab(tabId) {
+  state[currentFlow].currentBaseTab = tabId;
+  renderBasePane(false);
+}
+
+function doSubmit() {
+  const st = state[currentFlow];
+  if (st.status !== 'draft' && st.status !== 'rejected') return;
+
+  const flow = FLOWS[currentFlow];
+  st.status = 'submitted';
+  st.submittedAt = nowTime();
+  // Clear rejection for resubmit
+  if (st.rejectReason) {
+    st.rejectReason = null;
+    st.decidedAt = null;
+  }
+
+  showFlowArrow('📤 Đang gửi yêu cầu đến Approver...', 'blue');
+
+  setTimeout(() => {
+    render();
+    showToast('Đã gửi phê duyệt', `Yêu cầu ${flow.requestId} đã được gửi đến ${flow.approvers[0].name}`, 'info');
+  }, 700);
+}
+
+function doApprove() {
+  const st = state[currentFlow];
+  if (st.status !== 'submitted') return;
+
+  const commentEl = document.getElementById('approval-comment');
+  const comment = commentEl ? commentEl.value.trim() : '';
+  const flow = FLOWS[currentFlow];
+
+  // Apply data changes
+  const onApprove = flow.onApprove || {};
+  Object.keys(onApprove).forEach(tabId => {
+    const changes = onApprove[tabId];
+    if (!st.tables[tabId]) st.tables[tabId] = [];
+    if (changes.update) {
+      Object.keys(changes.update).forEach(rowIdxStr => {
+        const rowIdx = parseInt(rowIdxStr, 10);
+        const row = st.tables[tabId][rowIdx];
+        if (row) {
+          Object.keys(changes.update[rowIdxStr]).forEach(colIdxStr => {
+            row[parseInt(colIdxStr, 10)] = changes.update[rowIdxStr][colIdxStr];
+          });
+        }
+      });
+    }
+    if (changes.insert) {
+      changes.insert.forEach(row => st.tables[tabId].push(row));
+    }
+  });
+
+  st.status = 'approved';
+  st.decidedAt = nowTime();
+  st.comment = comment;
+
+  showFlowArrow('⚡ Đang ghi dữ liệu vào Lark Base...', '');
+
+  const firstNewTab = Object.keys(flow.onApprove).find(tab => flow.onApprove[tab].insert);
+  if (firstNewTab) st.currentBaseTab = firstNewTab;
+
+  setTimeout(() => {
+    render(true);
+    fireConfetti();
+    const changes = summarizeChanges(flow);
+    changes.forEach((c, i) => {
+      setTimeout(() => showToast(c.title, c.msg, c.type), 400 + i * 550);
+    });
+  }, 700);
+}
+
+function openRejectModal() {
+  const flow = FLOWS[currentFlow];
+  document.getElementById('reject-modal-sub').textContent = `${flow.requestId} · ${flow.highlightId}`;
+  const defaults = {
+    loan: 'Cần bổ sung biên bản HĐQT phê duyệt và hồ sơ TSDB trước khi tạo khoản vay.',
+    col: 'GCN cần công chứng lại. Biên bản định giá chưa có đủ chữ ký.',
+    disb: 'Cần bổ sung hợp đồng NCC và phiếu đề xuất mua hàng trước khi giải ngân.',
+    repay: 'UNC chưa đúng mẫu. Vui lòng upload lại chứng từ hợp lệ.',
+  };
+  const ta = document.getElementById('reject-reason');
+  if (!ta.value) ta.value = defaults[currentFlow] || '';
+  document.getElementById('reject-modal').classList.add('show');
+}
+
+function closeRejectModal() {
+  document.getElementById('reject-modal').classList.remove('show');
+}
+
+function doReject() {
+  const st = state[currentFlow];
+  if (st.status !== 'submitted') return;
+  const reason = document.getElementById('reject-reason').value.trim() || 'Không đủ điều kiện phê duyệt';
+
+  st.status = 'rejected';
+  st.decidedAt = nowTime();
+  st.rejectReason = reason;
+
+  closeRejectModal();
+  showFlowArrow('❌ Trả lại Staff — không có thay đổi', 'error');
+
+  setTimeout(() => {
+    render(true);
+    showToast('Yêu cầu bị từ chối', 'Staff có thể chỉnh sửa và gửi lại ở cột 1', 'error');
+  }, 700);
+}
+
+function resetCurrentFlow() {
+  const f = currentFlow;
+  state[f] = {
+    status: 'draft',
+    submittedAt: null,
+    decidedAt: null,
+    comment: null,
+    rejectReason: null,
+    currentBaseTab: FLOWS[f].baseTabs[0].id,
+    tables: JSON.parse(JSON.stringify(FLOWS[f].initialRows)),
+  };
+  render();
+  showToast('Đã reset', `Flow "${FLOWS[f].title}" đã về trạng thái Draft`, 'info');
+}
+
+function resetAll() {
+  FLOW_IDS.forEach(f => {
+    state[f] = {
+      status: 'draft',
+      submittedAt: null,
+      decidedAt: null,
+      comment: null,
+      rejectReason: null,
+      currentBaseTab: FLOWS[f].baseTabs[0].id,
+      tables: JSON.parse(JSON.stringify(FLOWS[f].initialRows)),
+    };
+  });
+  render();
+  showToast('Đã reset tất cả', '4 flows đã được đặt lại', 'info');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// UTILITIES
+// ═══════════════════════════════════════════════════════════════
+function nowTime() {
+  const d = new Date();
+  return d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
+}
+
+function render(highlightFresh) {
+  renderFlowTabs();
+  renderStageIndicator();
+  renderStaffPane();
+  renderApproverPane();
+  renderBasePane(highlightFresh);
+}
+
+function showFlowArrow(text, cls) {
+  const arrow = document.getElementById('flow-arrow');
+  const box = document.getElementById('flow-arrow-box');
+  box.textContent = text;
+  box.className = 'flow-arrow-box' + (cls ? ' ' + cls : '');
+  arrow.classList.add('show');
+  setTimeout(() => arrow.classList.remove('show'), 1200);
+}
+
+function showToast(title, msg, type) {
+  type = type || 'success';
+  const container = document.getElementById('toast-container');
+  const toast = document.createElement('div');
+  toast.className = 'toast ' + type;
+  const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
+  toast.innerHTML = `
+    <div class="toast-icon">${icon}</div>
+    <div>
+      <div class="toast-title">${escapeHtml(title)}</div>
+      <div class="toast-msg">${escapeHtml(msg)}</div>
+    </div>
+  `;
+  container.appendChild(toast);
+  setTimeout(() => toast.remove(), 3700);
+}
+
+function fireConfetti() {
+  const container = document.getElementById('confetti-container');
+  container.innerHTML = '';
+  container.classList.add('show');
+  const colors = ['#1456F0','#00B365','#FF7D00','#F54A45','#F5C518','#4dd38a'];
+  for (let i = 0; i < 40; i++) {
+    const p = document.createElement('div');
+    p.className = 'confetti-piece';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.background = colors[i % colors.length];
+    p.style.animationDelay = (Math.random() * 0.4) + 's';
+    p.style.animationDuration = (1.8 + Math.random() * 1.2) + 's';
+    p.style.transform = `rotate(${Math.random() * 360}deg)`;
+    if (Math.random() > 0.5) {
+      p.style.borderRadius = '50%';
+      p.style.width = '8px';
+      p.style.height = '8px';
+    }
+    container.appendChild(p);
+  }
+  setTimeout(() => { container.classList.remove('show'); container.innerHTML = ''; }, 3200);
+}
+
+function summarizeChanges(flow) {
+  const results = [];
+  Object.keys(flow.onApprove || {}).forEach(tabId => {
+    const tabCfg = flow.baseTabs.find(t => t.id === tabId);
+    const label = tabCfg ? tabCfg.label : 'Bảng ' + tabId;
+    const changes = flow.onApprove[tabId];
+    if (changes.insert && changes.insert.length > 0) {
+      results.push({
+        title: `${changes.insert.length} record mới trong ${label}`,
+        msg: 'Đã ghi vào Lark Base',
+        type: 'success',
+      });
+    }
+    if (changes.update) {
+      const n = Object.keys(changes.update).length;
+      results.push({
+        title: `${n} record cập nhật trong ${label}`,
+        msg: 'Dữ liệu liên kết tự động cập nhật',
+        type: 'info',
+      });
+    }
+  });
+  return results;
+}
+
+document.getElementById('reject-modal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('reject-modal')) closeRejectModal();
+});
+
+// INIT
+render();
+</script>
+</body>
+</html>
