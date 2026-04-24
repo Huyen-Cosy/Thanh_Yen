@@ -485,4 +485,50 @@ Agent đọc toàn bộ project-brain + scope + task tracker, tạo summary theo
 
 ---
 
-*Version: 2.0 | Cập nhật: 23/04/2026*
+## 15. LARK BASE MCP SERVER
+
+Agent có kết nối trực tiếp với Lark Base của dự án qua MCP server `lark-thanh-yen`.
+
+**File:** `lark_mcp_server.py` tại root repo  
+**Config:** `.claude/settings.json` (committed) — credentials trong `.claude/settings.local.json` (gitignored)  
+**Credentials cần thiết** (set trong `settings.local.json`):
+```
+LARK_APP_ID     = cli_a963520899e15e15
+LARK_APP_SECRET = (xem settings.local.json)
+LARK_BASE_ID    = L4s5bXSMiaJCxxsFuTCjZnDnpgh
+```
+
+### Tools có sẵn
+
+| Tool | Mô tả |
+|---|---|
+| `lark_get_base_info` | Thông tin tổng quan về Base |
+| `lark_list_tables` | Liệt kê tất cả tables |
+| `lark_get_fields(table)` | Xem cấu trúc field của 1 table |
+| `lark_get_records(table, filter, page_size)` | Đọc records |
+| `lark_search_records(table, filter_formula)` | Tìm kiếm nâng cao |
+| `lark_create_record(table, fields)` | Tạo record mới |
+| `lark_update_record(table, record_id, fields)` | Cập nhật record |
+| `lark_batch_create_records(table, records)` | Tạo nhiều records cùng lúc |
+| `lark_validate_business_rules(table)` | Kiểm tra BR-001 đến BR-004 tự động |
+
+### Quyền hạn
+- ✅ Đọc tất cả tables
+- ✅ Ghi / tạo record mới
+- ❌ Không được xóa record
+
+### Tables trong Base
+- **Company** — 14 công ty thành viên
+- **Loan Master** — Hợp đồng vay
+- **Loan Activity** — Giao dịch phát sinh (rút vốn, trả gốc, trả lãi)
+- **Collateral Assets** — Tài sản đảm bảo
+
+### Cách dùng
+Chỉ cần gõ tên tool hoặc mô tả bằng lời, agent sẽ gọi đúng tool:
+- "Xem danh sách bảng trong Lark" → `lark_list_tables`
+- "Kiểm tra dữ liệu Loan Master" → `lark_get_records` + `lark_validate_business_rules`
+- "Thêm khoản vay mới cho CTY01" → `lark_create_record`
+
+---
+
+*Version: 2.1 | Cập nhật: 24/04/2026*
