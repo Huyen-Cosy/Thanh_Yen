@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lark Approval — Yêu cầu Giải Ngân</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --lark-blue: #1456F0;
+  --lark-blue-light: #EEF3FE;
+  --lark-blue-hover: #0E42C4;
+  --lark-green: #00B365;
+  --lark-green-light: #E6F7EF;
+  --lark-red: #F54A45;
+  --lark-red-light: #FEF0EF;
+  --lark-orange: #FF7D00;
+  --lark-orange-light: #FFF3E8;
+  --lark-gray1: #1F2329;
+  --lark-gray2: #51555A;
+  --lark-gray3: #8F959E;
+  --lark-gray4: #BDC0C4;
+  --lark-gray5: #DEE0E3;
+  --lark-gray6: #F5F6F7;
+  --lark-white: #FFFFFF;
+  --lark-border: #E0E3E8;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+body {
+  font-family: var(--font);
+  background: #ECEEF2;
+  min-height: 100vh;
+  color: var(--lark-gray1);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── DEVICE CHROME ── */
+.device-bar {
+  background: #2D3035;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.device-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.view-toggle {
+  display: flex;
+  background: #1E2126;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.view-btn {
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8F959E;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: var(--font);
+  transition: all 0.15s;
+}
+.view-btn.active {
+  background: var(--lark-blue);
+  color: #fff;
+  border-radius: 5px;
+}
+.device-bar-label {
+  font-size: 11px;
+  color: #5a5f6a;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.device-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-indicators {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.step-ind {
+  height: 3px;
+  border-radius: 2px;
+  background: #3a3f48;
+  transition: all 0.3s;
+}
+.step-ind.s1 { width: 24px; }
+.step-ind.s2 { width: 24px; }
+.step-ind.s3 { width: 24px; }
+.step-ind.active { background: var(--lark-blue); }
+.step-ind.done { background: var(--lark-green); }
+.reset-btn-top {
+  padding: 4px 12px;
+  border-radius: 5px;
+  background: #3a3f48;
+  color: #8F959E;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.reset-btn-top:hover { background: #4a4f5a; color: #fff; }
+
+/* ── MAIN CONTAINER ── */
+.main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+/* ── LARK APP SHELL ── */
+.lark-shell {
+  background: var(--lark-white);
+  min-height: calc(100vh - 44px);
+}
+
+/* ── LARK TOP NAV ── */
+.lark-nav {
+  background: var(--lark-white);
+  border-bottom: 1px solid var(--lark-border);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 0;
+  position: sticky;
+  top: 44px;
+  z-index: 50;
+}
+.lark-nav-back {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--lark-gray2);
+  font-size: 18px;
+  transition: background 0.15s;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+.lark-nav-back:hover { background: var(--lark-gray6); }
+.lark-nav-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lark-gray1);
+  flex: 1;
+}
+.lark-nav-subtitle {
+  font-size: 12px;
+  color: var(--lark-gray3);
+  font-weight: 400;
+}
+.lark-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-icon-btn {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--lark-gray2);
+  font-size: 16px;
+  transition: background 0.15s;
+  border: none;
+  background: transparent;
+}
+.nav-icon-btn:hover { background: var(--lark-gray6); }
+
+/* ── VIEWS ── */
+.view { display: none; }
+.view.active { display: block; }
+
+/* ═══════════════════════════════════
+   STAFF VIEW — APPROVAL FORM
+═══════════════════════════════════ */
+.approval-form-wrap {
+  padding: 0 0 80px;
+}
+
+/* Process header */
+.process-header {
+  padding: 16px 16px 0;
+  margin-bottom: 4px;
+}
+.process-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--lark-gray2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.process-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--lark-blue-light);
+  color: var(--lark-blue);
+}
+
+/* Section card */
+.form-section {
+  margin: 0 0 2px;
+  background: var(--lark-white);
+}
+.section-title {
+  padding: 14px 16px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--lark-gray2);
+  border-bottom: 1px solid var(--lark-gray6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.section-title .s-icon {
+  width: 20px; height: 20px;
+  border-radius: 5px;
+  background: var(--lark-blue-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+}
+
+/* Form fields */
+.form-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--lark-gray6);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-item:last-child { border-bottom: none; }
+.form-item.row {
+  flex-direction: row;
+  align-items: center;
+}
+.fi-label {
+  font-size: 13px;
+  color: var(--lark-gray2);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.fi-required {
+  color: var(--lark-red);
+  font-size: 12px;
+}
+.fi-hint {
+  font-size: 11px;
+  color: var(--lark-gray4);
+  margin-top: -2px;
+}
+
+/* Input styles */
+.fi-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--lark-border);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--lark-gray1);
+  background: var(--lark-white);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  -webkit-appearance: none;
+}
+.fi-input:focus {
+  border-color: var(--lark-blue);
+  box-shadow: 0 0 0 2px rgba(20,86,240,0.12);
+}
+.fi-input.prefilled {
+  background: var(--lark-gray6);
+  color: var(--lark-gray2);
+  cursor: default;
+}
+select.fi-input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238F959E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+
+/* Linked field chip */
+.linked-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid var(--lark-border);
+  border-radius: 6px;
+  background: var(--lark-gray6);
+  cursor: default;
+}
+.link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--lark-blue-light);
+  color: var(--lark-blue);
+  white-space: nowrap;
+}
+.link-chip-text {
+  font-size: 12px;
+  color: var(--lark-gray2);
+  flex: 1;
+}
+.link-auto-tag {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--lark-green);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Amount field */
+.amount-wrap { position: relative; }
+.amount-prefix {
+  position: absolute;
+  left: 10px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--lark-gray3);
+  pointer-events: none;
+}
+.amount-wrap .fi-input { padding-left: 24px; font-variant-numeric: tabular-nums; }
+.amount-text {
+  font-size: 11px;
+  color: var(--lark-blue);
+  font-weight: 500;
+  margin-top: 2px;
+  min-height: 14px;
+}
+
+/* Auto-calc badge */
+.auto-calc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  background: var(--lark-green-light);
+  border: 1px solid #B3E8D1;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #00875A;
+}
+.auto-calc .ac-icon { font-size: 13px; }
+.auto-calc .ac-label { color: #00875A; font-weight: 400; }
+.auto-calc .ac-value { font-weight: 700; margin-left: auto; }
+
+/* 2-col row */
+.form-item-2col {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--lark-gray6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.form-item-2col:last-child { border-bottom: none; }
+.form-col { display: flex; flex-direction: column; gap: 6px; }
+
+/* Separator */
+.form-separator {
+  height: 8px;
+  background: var(--lark-gray6);
+}
+
+/* Approval flow preview */
+.approval-flow-section {
+  padding: 12px 16px;
+  background: var(--lark-white);
+  border-bottom: 1px solid var(--lark-gray6);
+}
+.af-title {
+  font-size: 12px;
+  color: var(--lark-gray3);
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.af-nodes {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.af-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.af-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.af-avatar.submitter { background: #6366F1; }
+.af-avatar.approver { background: var(--lark-blue); }
+.af-avatar.notify { background: var(--lark-gray4); }
+.af-node-name {
+  font-size: 10px;
+  color: var(--lark-gray3);
+  font-weight: 500;
+  text-align: center;
+  max-width: 60px;
+  line-height: 1.2;
+}
+.af-node-role {
+  font-size: 9px;
+  color: var(--lark-gray4);
+  text-align: center;
+}
+.af-arrow {
+  flex: 1;
+  height: 1px;
+  background: var(--lark-border);
+  margin: -22px 4px 0;
+  position: relative;
+}
+.af-arrow::after {
+  content: '›';
+  position: absolute;
+  right: -4px; top: -8px;
+  font-size: 14px;
+  color: var(--lark-gray4);
+}
+
+/* Bottom submit bar */
+.form-submit-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 840px;
+  background: var(--lark-white);
+  border-top: 1px solid var(--lark-border);
+  padding: 10px 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 50;
+}
+.btn-submit-lark {
+  flex: 1;
+  height: 40px;
+  background: var(--lark-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-submit-lark:hover { background: var(--lark-blue-hover); }
+.btn-save-draft {
+  height: 40px;
+  padding: 0 16px;
+  background: var(--lark-white);
+  color: var(--lark-gray2);
+  border: 1px solid var(--lark-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.btn-save-draft:hover { background: var(--lark-gray6); }
+
+/* ═══════════════════════════════════
+   TRANSITION OVERLAY
+═══════════════════════════════════ */
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.95);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.transition-overlay.show { opacity: 1; pointer-events: all; }
+.to-spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--lark-gray5);
+  border-top-color: var(--lark-blue);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.to-text { font-size: 14px; color: var(--lark-gray2); font-weight: 500; }
+
+/* ═══════════════════════════════════
+   CFO VIEW — APPROVAL REVIEW
+═══════════════════════════════════ */
+.approval-review-wrap { padding: 0 0 100px; }
+
+/* Status banner */
+.status-banner {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--lark-border);
+}
+.status-banner.pending { background: var(--lark-orange-light); color: var(--lark-orange); }
+.status-banner.approved { background: var(--lark-green-light); color: var(--lark-green); }
+.status-banner.rejected { background: var(--lark-red-light); color: var(--lark-red); }
+.status-banner-icon { font-size: 16px; }
+.status-banner-text { flex: 1; }
+.status-banner-time { font-size: 11px; font-weight: 400; color: var(--lark-gray3); }
+
+/* Review info grid */
+.review-section {
+  background: var(--lark-white);
+  margin-bottom: 2px;
+}
+.review-section-title {
+  padding: 12px 16px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lark-gray3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--lark-gray6);
+}
+.review-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--lark-gray6);
+  gap: 12px;
+  min-height: 40px;
+}
+.review-row:last-child { border-bottom: none; }
+.rr-label {
+  font-size: 13px;
+  color: var(--lark-gray3);
+  flex-shrink: 0;
+  width: 140px;
+  padding-top: 1px;
+}
+.rr-value {
+  font-size: 13px;
+  color: var(--lark-gray1);
+  font-weight: 500;
+  flex: 1;
+}
+.rr-value.amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--lark-blue);
+}
+.rr-value.mono {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--lark-gray2);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+.rr-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.rr-chip.blue { background: var(--lark-blue-light); color: var(--lark-blue); }
+.rr-chip.green { background: var(--lark-green-light); color: var(--lark-green); }
+.rr-chip.orange { background: var(--lark-orange-light); color: var(--lark-orange); }
+
+/* Highlight box */
+.review-highlight {
+  margin: 0 16px;
+  padding: 10px 14px;
+  background: var(--lark-blue-light);
+  border-radius: 8px;
+  border: 1px solid #C5D6FD;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+.rh-label { font-size: 12px; color: var(--lark-blue); }
+.rh-value { font-size: 20px; font-weight: 700; color: var(--lark-blue); margin-left: auto; }
+
+/* Submitter info */
+.submitter-row {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--lark-gray6);
+}
+.submitter-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #6366F1;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.submitter-name { font-size: 13px; font-weight: 600; color: var(--lark-gray1); }
+.submitter-time { font-size: 11px; color: var(--lark-gray3); margin-top: 1px; }
+.submitter-dept {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--lark-gray3);
+  background: var(--lark-gray6);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Note box */
+.note-box {
+  margin: 0 16px 2px;
+  padding: 10px 14px;
+  background: var(--lark-orange-light);
+  border-radius: 8px;
+  border-left: 3px solid var(--lark-orange);
+  font-size: 12px;
+  color: #7C3A00;
+  line-height: 1.5;
+}
+.note-box strong { color: #7C3A00; }
+
+/* Approval timeline */
+.approval-timeline {
+  padding: 12px 16px;
+}
+.at-node {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+.at-node + .at-node { margin-top: 2px; }
+.at-node::before {
+  content: '';
+  position: absolute;
+  left: 17px; top: 36px;
+  width: 2px;
+  height: calc(100% + 2px);
+  background: var(--lark-gray5);
+}
+.at-node:last-child::before { display: none; }
+.at-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.at-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.at-avatar.done { background: var(--lark-green); }
+.at-avatar.current { background: var(--lark-blue); }
+.at-avatar.waiting { background: var(--lark-gray4); }
+.at-content { padding: 6px 0 16px; flex: 1; }
+.at-name { font-size: 13px; font-weight: 600; color: var(--lark-gray1); }
+.at-role { font-size: 11px; color: var(--lark-gray3); margin-top: 1px; }
+.at-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.at-status.submitted { background: var(--lark-blue-light); color: var(--lark-blue); }
+.at-status.pending { background: var(--lark-orange-light); color: var(--lark-orange); }
+.at-status.approved { background: var(--lark-green-light); color: var(--lark-green); }
+.at-status.rejected { background: var(--lark-red-light); color: var(--lark-red); }
+.at-status.waiting { background: var(--lark-gray6); color: var(--lark-gray3); }
+
+/* Action bar — CFO */
+.cfo-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 840px;
+  background: var(--lark-white);
+  border-top: 1px solid var(--lark-border);
+  padding: 10px 16px;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+}
+.btn-approve {
+  flex: 1;
+  height: 44px;
+  background: var(--lark-green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-approve:hover { background: #00994F; }
+.btn-approve:disabled { background: var(--lark-gray4); cursor: not-allowed; }
+.btn-reject {
+  height: 44px;
+  padding: 0 20px;
+  background: var(--lark-white);
+  color: var(--lark-red);
+  border: 1px solid var(--lark-red);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-reject:hover { background: var(--lark-red-light); }
+.btn-reject:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-transfer {
+  height: 44px;
+  padding: 0 16px;
+  background: var(--lark-white);
+  color: var(--lark-gray2);
+  border: 1px solid var(--lark-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.btn-transfer:hover { background: var(--lark-gray6); }
+
+/* Comment input */
+.comment-area {
+  padding: 0 16px;
+  margin-bottom: 2px;
+}
+.comment-input-wrap {
+  border: 1px solid var(--lark-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.comment-input-label {
+  padding: 8px 12px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--lark-gray3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.comment-textarea {
+  width: 100%;
+  padding: 6px 12px 10px;
+  border: none;
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--lark-gray1);
+  resize: none;
+  outline: none;
+  min-height: 60px;
+  background: var(--lark-white);
+}
+.comment-textarea::placeholder { color: var(--lark-gray4); }
+
+/* Decision result */
+.decision-result {
+  margin: 0 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.decision-result.approved { background: var(--lark-green-light); border: 1px solid #B3E8D1; }
+.decision-result.rejected { background: var(--lark-red-light); border: 1px solid #FECACA; }
+.dr-icon { font-size: 20px; flex-shrink: 0; }
+.dr-title { font-size: 14px; font-weight: 700; }
+.dr-title.approved-t { color: var(--lark-green); }
+.dr-title.rejected-t { color: var(--lark-red); }
+.dr-meta { font-size: 11px; color: var(--lark-gray3); margin-top: 2px; }
+.dr-comment {
+  margin-top: 6px;
+  padding: 6px 10px;
+  background: rgba(0,0,0,0.04);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--lark-gray2);
+  font-style: italic;
+}
+
+/* Reject modal */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 300;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modal-overlay.show { opacity: 1; pointer-events: all; }
+.modal-sheet {
+  width: 840px;
+  background: var(--lark-white);
+  border-radius: 16px 16px 0 0;
+  padding: 20px 16px 32px;
+  animation: slideUp 0.25s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.modal-handle {
+  width: 36px; height: 4px;
+  background: var(--lark-gray5);
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+.modal-title-m { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+.modal-sub-m { font-size: 12px; color: var(--lark-gray3); margin-bottom: 14px; }
+.modal-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--lark-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--lark-gray1);
+  resize: none;
+  outline: none;
+  height: 90px;
+  margin-bottom: 14px;
+}
+.modal-textarea:focus { border-color: var(--lark-red); box-shadow: 0 0 0 2px rgba(245,74,69,0.12); }
+.modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.modal-btn-cancel {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--lark-border);
+  background: var(--lark-white);
+  color: var(--lark-gray2);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+}
+.modal-btn-confirm {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: var(--lark-red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.modal-btn-confirm:hover { background: #D93025; }
+
+/* utils */
+.mt2 { margin-top: 2px; }
+.mt8 { margin-top: 8px; }
+.hidden { display: none !important; }
+.pb80 { padding-bottom: 80px; }
+
+/* ═══════════════════════════════════
+   RECORDS PREVIEW DRAWER (CFO side)
+═══════════════════════════════════ */
+.records-drawer {
+  position: fixed;
+  bottom: 64px;
+  left: 50%; transform: translateX(-50%);
+  width: 840px;
+  background: var(--lark-white);
+  border: 1px solid var(--lark-border);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
+  z-index: 60;
+  max-height: 60vh;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transform: translateX(-50%) translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.records-drawer.open { transform: translateX(-50%) translateY(0); }
+.drawer-handle-row {
+  padding: 10px 16px 6px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid var(--lark-gray6);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.drawer-handle { width: 36px; height: 4px; background: var(--lark-gray5); border-radius: 2px; margin: 0 auto 0 0; }
+.drawer-title { font-size: 13px; font-weight: 600; color: var(--lark-gray1); flex:1; }
+.drawer-badge {
+  padding: 2px 8px; border-radius: 4px;
+  font-size: 11px; font-weight: 600;
+  background: var(--lark-orange-light); color: var(--lark-orange);
+}
+.drawer-badge.confirmed { background: var(--lark-green-light); color: var(--lark-green); }
+.drawer-close {
+  width: 24px; height: 24px;
+  border-radius: 50%; background: var(--lark-gray6);
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--lark-gray3);
+}
+.drawer-body { overflow-y: auto; padding: 12px 16px 16px; flex:1; display: flex; flex-direction: column; gap: 12px; }
+
+/* record table inside drawer */
+.rec-table-wrap { }
+.rec-table-label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 700;
+  color: var(--lark-gray3);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+.rec-table-label .rtl-icon {
+  width: 18px; height: 18px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+}
+.rtl-icon.new { background: var(--lark-blue-light); }
+.rtl-icon.update { background: var(--lark-orange-light); }
+.rec-action-tag {
+  margin-left: auto; padding: 1px 7px; border-radius: 3px;
+  font-size: 10px; font-weight: 700;
+}
+.rec-action-tag.new-rec { background: var(--lark-blue-light); color: var(--lark-blue); }
+.rec-action-tag.update-rec { background: var(--lark-orange-light); color: var(--lark-orange); }
+.rec-table {
+  width: 100%; border: 1px solid var(--lark-border);
+  border-radius: 8px; overflow: hidden;
+  font-size: 12px;
+}
+.rec-table thead tr { background: var(--lark-gray6); }
+.rec-table th {
+  padding: 6px 10px; text-align: left;
+  font-size: 10px; font-weight: 700; color: var(--lark-gray3);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  border-bottom: 1px solid var(--lark-border);
+}
+.rec-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--lark-gray6);
+  color: var(--lark-gray1); vertical-align: top;
+}
+.rec-table tr:last-child td { border-bottom: none; }
+.rec-table tr.highlight-row td { background: #FFFBF0; }
+.cell-code {
+  font-family: 'SF Mono','Fira Code',monospace;
+  font-size: 11px; color: var(--lark-blue); font-weight: 600;
+}
+.cell-auto {
+  font-size: 10px; color: var(--lark-green); font-weight: 600;
+  background: var(--lark-green-light); padding: 1px 5px; border-radius: 3px;
+}
+.cell-formula {
+  font-size: 10px; color: var(--lark-orange); font-weight: 600;
+  background: var(--lark-orange-light); padding: 1px 5px; border-radius: 3px;
+}
+.cell-changed {
+  background: #FFFBF0;
+  padding: 2px 5px; border-radius: 3px;
+  border-left: 2px solid var(--lark-orange);
+}
+.cell-num { font-variant-numeric: tabular-nums; font-size: 11px; font-family: 'SF Mono','Fira Code',monospace; }
+.del-val { text-decoration: line-through; color: var(--lark-gray4); font-size: 11px; }
+.new-val { color: var(--lark-green); font-weight: 700; font-size: 11px; }
+
+/* ═══════════════════════════════════
+   LARK BASE VIEW (tab 3)
+═══════════════════════════════════ */
+.lark-base-wrap {
+  background: var(--lark-white);
+  min-height: calc(100vh - 100px);
+  padding-bottom: 40px;
+}
+.base-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--lark-border);
+  padding: 0 16px;
+  overflow-x: auto;
+  gap: 0;
+  background: var(--lark-white);
+  position: sticky; top: 100px; z-index: 30;
+}
+.base-tab {
+  padding: 10px 14px;
+  font-size: 12px; font-weight: 500;
+  color: var(--lark-gray3);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.15s;
+  display: flex; align-items: center; gap: 5px;
+}
+.base-tab:hover { color: var(--lark-gray1); }
+.base-tab.active { color: var(--lark-blue); border-color: var(--lark-blue); font-weight: 600; }
+.base-tab .tab-count {
+  background: var(--lark-blue-light); color: var(--lark-blue);
+  font-size: 10px; font-weight: 700;
+  padding: 0 5px; border-radius: 10px; min-width: 18px; text-align: center;
+}
+.base-tab .tab-count.new-badge {
+  background: var(--lark-green-light); color: var(--lark-green);
+  animation: pulse-badge 1.5s ease infinite;
+}
+@keyframes pulse-badge { 0%,100%{opacity:0.7} 50%{opacity:1;transform:scale(1.05)} }
+
+.base-table-view { padding: 0; }
+.base-toolbar {
+  padding: 8px 16px; display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid var(--lark-gray6);
+  background: var(--lark-white);
+}
+.base-toolbar-btn {
+  padding: 4px 10px; border-radius: 5px;
+  border: 1px solid var(--lark-border);
+  background: var(--lark-white);
+  font-size: 11px; font-weight: 500;
+  color: var(--lark-gray2); cursor: pointer; font-family: var(--font);
+  display: flex; align-items: center; gap: 4px;
+}
+.new-record-row {
+  background: #F0FFF8;
+  animation: highlightIn 0.6s ease;
+}
+@keyframes highlightIn {
+  from { background: #C6F6E0; }
+  to { background: #F0FFF8; }
+}
+.updated-record-row { background: #FFFBF0; }
+
+/* full base table */
+.full-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.full-table th {
+  padding: 7px 12px; text-align: left;
+  background: var(--lark-gray6);
+  font-size: 10px; font-weight: 700; color: var(--lark-gray3);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  border-bottom: 1px solid var(--lark-border);
+  border-right: 1px solid var(--lark-gray6);
+  white-space: nowrap; position: sticky; top: 0;
+}
+.full-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--lark-gray6);
+  border-right: 1px solid var(--lark-gray6);
+  white-space: nowrap; color: var(--lark-gray1);
+}
+.full-table tr:hover td { background: var(--lark-gray6); }
+.full-table tr.new-record-row:hover td { background: #E6FFF3; }
+.full-table tr.updated-record-row:hover td { background: #FFF5E0; }
+.new-row-badge {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 1px 6px; border-radius: 3px;
+  background: var(--lark-green-light); color: var(--lark-green);
+  font-size: 10px; font-weight: 700;
+}
+.updated-badge {
+  display: inline-flex; align-items: center;
+  padding: 1px 6px; border-radius: 3px;
+  background: var(--lark-orange-light); color: var(--lark-orange);
+  font-size: 10px; font-weight: 700;
+}
+.chip-status {
+  padding: 2px 7px; border-radius: 4px;
+  font-size: 10px; font-weight: 600; white-space: nowrap;
+}
+.chip-status.active { background: var(--lark-green-light); color: var(--lark-green); }
+.chip-status.plan { background: var(--lark-blue-light); color: var(--lark-blue); }
+.chip-status.pending { background: var(--lark-orange-light); color: var(--lark-orange); }
+.empty-state {
+  padding: 40px; text-align: center;
+  color: var(--lark-gray3); font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<!-- DEVICE BAR -->
+<div class="device-bar">
+  <div class="device-bar-left">
+    <div class="view-toggle">
+      <button class="view-btn active" id="btn-staff" onclick="switchView('staff')">💼 Finance Staff</button>
+      <button class="view-btn" id="btn-cfo" onclick="switchView('cfo')">🔑 CFO</button>
+      <button class="view-btn" id="btn-base" onclick="switchView('base')" style="position:relative">📊 Lark Base<span id="base-notif" class="hidden" style="position:absolute;top:4px;right:4px;width:6px;height:6px;border-radius:50%;background:#00B365;display:none"></span></button>
+    </div>
+    <span class="device-bar-label" id="view-label">Đang điền form giải ngân</span>
+  </div>
+  <div class="device-bar-right">
+    <div class="step-indicators">
+      <div class="step-ind s1 active" id="ind1"></div>
+      <div class="step-ind s2" id="ind2"></div>
+      <div class="step-ind s3" id="ind3"></div>
+    </div>
+    <button class="reset-btn-top" onclick="resetAll()">↺ Reset</button>
+  </div>
+</div>
+
+<!-- LARK SHELL -->
+<div class="main">
+<div class="lark-shell">
+
+  <!-- LARK NAV -->
+  <div class="lark-nav">
+    <div class="lark-nav-back">‹</div>
+    <div style="flex:1">
+      <div class="lark-nav-title" id="nav-title">Yêu cầu Giải Ngân</div>
+      <div class="lark-nav-subtitle" id="nav-sub">Tạo mới · Phê duyệt</div>
+    </div>
+    <div class="lark-nav-actions">
+      <button class="nav-icon-btn">⋯</button>
+    </div>
+  </div>
+
+  <!-- ═══════ STAFF VIEW ═══════ -->
+  <div class="view active" id="view-staff">
+    <div class="approval-form-wrap">
+
+      <!-- Process header -->
+      <div class="process-header">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0 8px">
+          <div class="process-name">
+            <div style="width:28px;height:28px;border-radius:7px;background:var(--lark-blue-light);display:flex;align-items:center;justify-content:center;font-size:14px">💸</div>
+            Quy trình Giải Ngân · Treasury
+          </div>
+          <div class="process-badge">📋 Tạo mới</div>
+        </div>
+      </div>
+
+      <div class="form-separator"></div>
+
+      <!-- SECTION 1: Khoản vay -->
+      <div class="form-section">
+        <div class="section-title">
+          <div class="s-icon">🔗</div>
+          Thông tin khoản vay
+        </div>
+
+        <div class="form-item">
+          <div class="fi-label">Khoản vay gốc <span class="fi-required">*</span></div>
+          <div class="linked-field">
+            <div class="link-chip">VAY-TYG-NH-000012</div>
+            <span class="link-chip-text">Vietcombank CN Hà Nội · Hạn mức 50 tỷ VND</span>
+            <span class="link-auto-tag">🔗 linked</span>
+          </div>
+          <div class="fi-hint">Chọn từ danh sách khoản vay đang hoạt động</div>
+        </div>
+
+        <div class="form-item">
+          <div class="fi-label">Ngân hàng cho vay</div>
+          <div class="linked-field">
+            <span class="link-chip-text" style="color:var(--lark-gray2)">Vietcombank — Chi nhánh Hà Nội</span>
+            <span class="link-auto-tag">⚡ auto</span>
+          </div>
+        </div>
+
+        <div class="form-item-2col">
+          <div class="form-col">
+            <div class="fi-label">Loại vay</div>
+            <div class="linked-field" style="background:#fff">
+              <span class="link-chip-text">Ngắn hạn</span>
+              <span class="link-auto-tag">⚡ auto</span>
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="fi-label">Lãi suất áp dụng</div>
+            <div class="linked-field" style="background:#fff">
+              <span class="link-chip-text">7.8% / năm (Cố định)</span>
+              <span class="link-auto-tag">⚡ auto</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item-2col">
+          <div class="form-col">
+            <div class="fi-label">Hạn mức HĐ</div>
+            <div class="linked-field" style="background:#fff">
+              <span class="link-chip-text" style="font-variant-numeric:tabular-nums">50,000,000,000 ₫</span>
+              <span class="link-auto-tag">⚡ auto</span>
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="fi-label">Hạn mức còn lại</div>
+            <div class="linked-field" style="background:#fff">
+              <span class="link-chip-text" style="color:var(--lark-blue);font-weight:700;font-variant-numeric:tabular-nums">35,000,000,000 ₫</span>
+              <span class="link-auto-tag">⚡ calc</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-separator"></div>
+
+      <!-- SECTION 2: Giải ngân -->
+      <div class="form-section">
+        <div class="section-title">
+          <div class="s-icon">💰</div>
+          Thông tin giải ngân
+        </div>
+
+        <div class="form-item">
+          <div class="fi-label">Mục đích giải ngân <span class="fi-required">*</span></div>
+          <select class="fi-input" id="mucdich">
+            <option>Vốn vay kinh doanh</option>
+            <option>Thanh toán nhà cung cấp</option>
+            <option>Mở rộng kinh doanh</option>
+            <option>Đảo nợ nội bộ</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <div class="fi-label">Số tiền giải ngân <span class="fi-required">*</span></div>
+          <div class="amount-wrap">
+            <span class="amount-prefix">₫</span>
+            <input class="fi-input" id="sotien" type="text" value="15,000,000,000" oninput="fmtAmt(this)" />
+          </div>
+          <div class="amount-text" id="amt-text">Mười lăm tỷ đồng</div>
+        </div>
+
+        <div class="form-item">
+          <div class="fi-label">TK ngân hàng nhận tiền <span class="fi-required">*</span></div>
+          <div class="linked-field">
+            <div class="link-chip">TK-TYG-000003</div>
+            <span class="link-chip-text">VCB · 0071004257803 · Thanh Yến Group</span>
+            <span class="link-auto-tag">🔗 linked</span>
+          </div>
+        </div>
+
+        <div class="form-item-2col">
+          <div class="form-col">
+            <div class="fi-label">Ngày giải ngân dự kiến <span class="fi-required">*</span></div>
+            <input class="fi-input" type="text" value="25/04/2025" />
+          </div>
+          <div class="form-col">
+            <div class="fi-label">Số Khế ước nhận nợ</div>
+            <input class="fi-input" type="text" placeholder="KU-2504-..." />
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="fi-label">Ghi chú</div>
+          <input class="fi-input" type="text" value="Giải ngân đợt 1 — dự án kho Bắc Ninh, hạn TT NCC 28/04" />
+        </div>
+
+        <!-- Auto calc -->
+        <div class="form-item" style="background:var(--lark-gray6)">
+          <div class="fi-label" style="color:var(--lark-gray3);font-size:12px">Tính toán tự động</div>
+          <div class="auto-calc">
+            <span class="ac-icon">🧮</span>
+            <span class="ac-label">Tiền lãi kỳ đầu (ước tính 30 ngày)</span>
+            <span class="ac-value">97,500,000 ₫</span>
+          </div>
+          <div class="auto-calc mt2" style="margin-top:6px">
+            <span class="ac-icon">📅</span>
+            <span class="ac-label">Ngày trả nợ đầu tiên (tự tạo kỳ)</span>
+            <span class="ac-value">25/05/2025</span>
+          </div>
+          <div class="auto-calc mt2" style="margin-top:6px">
+            <span class="ac-icon">📋</span>
+            <span class="ac-label">Mã giải ngân (auto generate)</span>
+            <span class="ac-value" style="font-size:12px">GN-2504-000001</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-separator"></div>
+
+      <!-- Approval flow -->
+      <div class="form-section">
+        <div class="section-title">
+          <div class="s-icon">✅</div>
+          Luồng phê duyệt
+        </div>
+        <div class="approval-flow-section">
+          <div class="af-nodes">
+            <div class="af-node">
+              <div class="af-avatar submitter">H</div>
+              <div class="af-node-name">Thị Hoa</div>
+              <div class="af-node-role">Người tạo</div>
+            </div>
+            <div class="af-arrow"></div>
+            <div class="af-node">
+              <div class="af-avatar approver">K</div>
+              <div class="af-node-name">Minh Khoa</div>
+              <div class="af-node-role">CFO · Duyệt</div>
+            </div>
+            <div class="af-arrow"></div>
+            <div class="af-node">
+              <div class="af-avatar notify">T</div>
+              <div class="af-node-name">Treasury</div>
+              <div class="af-node-role">Thông báo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-separator"></div>
+      <div style="height:70px"></div>
+    </div>
+
+    <!-- Submit bar -->
+    <div class="form-submit-bar">
+      <button class="btn-save-draft">Lưu nháp</button>
+      <button class="btn-submit-lark" onclick="doSubmit()">
+        <span>📤</span> Gửi phê duyệt
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════ CFO VIEW ═══════ -->
+  <div class="view" id="view-cfo">
+    <div class="approval-review-wrap" id="cfo-content">
+
+      <!-- Default: waiting -->
+      <div id="cfo-waiting-msg" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px;gap:14px;color:var(--lark-gray3);text-align:center">
+        <div style="font-size:40px">📭</div>
+        <div style="font-size:14px;font-weight:600;color:var(--lark-gray2)">Chưa có yêu cầu nào</div>
+        <div style="font-size:12px">Finance Staff cần submit trước.<br>Hãy quay lại tab <strong>Finance Staff</strong> và bấm <strong>Gửi phê duyệt</strong>.</div>
+      </div>
+
+      <!-- Review content (hidden until submitted) -->
+      <div id="cfo-review" class="hidden">
+
+        <!-- Status banner -->
+        <div class="status-banner pending" id="status-banner">
+          <span class="status-banner-icon">⏳</span>
+          <span class="status-banner-text">Đang chờ phê duyệt</span>
+          <span class="status-banner-time" id="status-time">Nhận lúc 10:32</span>
+        </div>
+
+        <!-- Submitter -->
+        <div class="review-section" style="margin-top:2px">
+          <div class="submitter-row">
+            <div class="submitter-avatar">H</div>
+            <div>
+              <div class="submitter-name">Nguyễn Thị Hoa</div>
+              <div class="submitter-time">Treasury Officer · 10:32 hôm nay</div>
+            </div>
+            <div class="submitter-dept">Finance Dept</div>
+          </div>
+        </div>
+
+        <div class="form-separator"></div>
+
+        <!-- Key highlight -->
+        <div class="review-highlight">
+          <div>
+            <div class="rh-label">Số tiền giải ngân</div>
+            <div style="font-size:10px;color:var(--lark-blue);margin-top:1px">GN-2504-000001 · VAY-TYG-NH-000012</div>
+          </div>
+          <div class="rh-value">15,000,000,000 ₫</div>
+        </div>
+
+        <div class="form-separator" style="height:4px"></div>
+
+        <!-- Info grid -->
+        <div class="review-section">
+          <div class="review-section-title">Thông tin khoản vay</div>
+          <div class="review-row">
+            <div class="rr-label">Khoản vay gốc</div>
+            <div class="rr-value"><span class="rr-chip blue">VAY-TYG-NH-000012</span></div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Ngân hàng</div>
+            <div class="rr-value">Vietcombank — CN Hà Nội</div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Loại vay</div>
+            <div class="rr-value">Ngắn hạn</div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Lãi suất</div>
+            <div class="rr-value mono">7.8% / năm · Cố định</div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Hạn mức còn lại</div>
+            <div class="rr-value"><span class="rr-chip green">35,000,000,000 ₫</span></div>
+          </div>
+        </div>
+
+        <div class="review-section">
+          <div class="review-section-title">Chi tiết giải ngân</div>
+          <div class="review-row">
+            <div class="rr-label">Mục đích</div>
+            <div class="rr-value">Vốn vay kinh doanh</div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">TK nhận tiền</div>
+            <div class="rr-value mono">VCB · 0071004257803</div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Ngày giải ngân</div>
+            <div class="rr-value">25/04/2025</div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Lãi kỳ đầu (est.)</div>
+            <div class="rr-value mono">97,500,000 ₫ <span style="color:var(--lark-gray3);font-weight:400">(30 ngày)</span></div>
+          </div>
+          <div class="review-row">
+            <div class="rr-label">Kỳ trả nợ đầu</div>
+            <div class="rr-value">25/05/2025 <span class="rr-chip orange" style="margin-left:6px">Tự tạo</span></div>
+          </div>
+        </div>
+
+        <div class="form-separator" style="height:4px"></div>
+
+        <!-- Note -->
+        <div class="note-box">
+          <strong>📝 Ghi chú từ Finance Staff:</strong><br>
+          Giải ngân đợt 1 — dự án kho Bắc Ninh, hạn thanh toán NCC 28/04
+        </div>
+
+        <div class="form-separator" style="height:4px"></div>
+
+        <!-- Comment area -->
+        <div class="review-section" id="comment-section">
+          <div class="review-section-title">Ý kiến phê duyệt</div>
+          <div class="comment-area" style="padding:10px 16px">
+            <div class="comment-input-wrap">
+              <div class="comment-input-label">Bình luận (tùy chọn)</div>
+              <textarea class="comment-textarea" id="cfo-comment" placeholder="Nhập ý kiến, điều kiện kèm theo..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-separator" style="height:4px"></div>
+
+        <!-- Approval timeline -->
+        <div class="review-section">
+          <div class="review-section-title">Trạng thái phê duyệt</div>
+          <div class="approval-timeline">
+            <div class="at-node">
+              <div class="at-avatar-wrap">
+                <div class="at-avatar done">H</div>
+              </div>
+              <div class="at-content">
+                <div class="at-name">Nguyễn Thị Hoa</div>
+                <div class="at-role">Treasury Officer · Người tạo</div>
+                <div class="at-status submitted">✓ Đã gửi · 10:32</div>
+              </div>
+            </div>
+            <div class="at-node">
+              <div class="at-avatar-wrap">
+                <div class="at-avatar current" id="cfo-avatar">K</div>
+              </div>
+              <div class="at-content">
+                <div class="at-name">Lê Minh Khoa</div>
+                <div class="at-role">Chief Financial Officer · Người duyệt</div>
+                <div class="at-status pending" id="cfo-tl-status">⏳ Đang xem xét</div>
+                <div id="cfo-tl-comment" class="hidden" style="margin-top:6px;font-size:12px;color:var(--lark-gray2);background:var(--lark-gray6);padding:6px 10px;border-radius:6px;font-style:italic"></div>
+              </div>
+            </div>
+            <div class="at-node">
+              <div class="at-avatar-wrap">
+                <div class="at-avatar waiting">T</div>
+              </div>
+              <div class="at-content">
+                <div class="at-name">Treasury Team</div>
+                <div class="at-role">Thông báo kết quả</div>
+                <div class="at-status waiting" id="notify-status">○ Chờ kết quả</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decision result (hidden until decided) -->
+        <div id="decision-result-wrap" class="hidden" style="padding:0 0 2px">
+          <div class="decision-result" id="decision-result-box">
+            <div class="dr-icon" id="dr-icon"></div>
+            <div>
+              <div class="dr-title" id="dr-title"></div>
+              <div class="dr-meta" id="dr-meta"></div>
+              <div class="dr-comment hidden" id="dr-comment"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:80px"></div>
+      </div>
+    </div>
+
+    <!-- CFO Action Bar -->
+    <div class="cfo-action-bar" id="cfo-action-bar">
+      <button class="btn-reject" id="btn-reject" onclick="openRejectModal()">✕ Từ chối</button>
+      <button class="btn-approve" id="btn-approve" onclick="doApprove()">✓ Phê duyệt</button>
+    </div>
+  </div>
+
+</div><!-- lark-shell -->
+</div><!-- main -->
+
+<!-- Transition overlay -->
+<div class="transition-overlay" id="trans-overlay">
+  <div class="to-spinner"></div>
+  <div class="to-text" id="trans-text">Đang gửi yêu cầu...</div>
+</div>
+
+<!-- RECORDS PREVIEW DRAWER (shown on CFO screen) -->
+<div class="records-drawer" id="records-drawer">
+  <div class="drawer-handle-row" onclick="toggleDrawer()">
+    <div class="drawer-handle"></div>
+    <div class="drawer-title" id="drawer-title">⚡ Records sẽ được tạo khi duyệt</div>
+    <div class="drawer-badge" id="drawer-badge">Preview</div>
+    <button class="drawer-close">×</button>
+  </div>
+  <div class="drawer-body" id="drawer-body">
+    <!-- injected by JS -->
+  </div>
+</div>
+
+<!-- LARK BASE VIEW -->
+<div class="view" id="view-base">
+  <div class="lark-base-wrap">
+    <div class="base-tabs">
+      <div class="base-tab active" id="basetab-5" onclick="switchBaseTab('5')">
+        <span>📤</span> 5. Hoạt động Giải ngân
+        <span class="tab-count new-badge" id="count-5">0</span>
+      </div>
+      <div class="base-tab" id="basetab-9" onclick="switchBaseTab('9')">
+        <span>📅</span> 9. Trả nợ
+        <span class="tab-count new-badge" id="count-9">0</span>
+      </div>
+      <div class="base-tab" id="basetab-2" onclick="switchBaseTab('2')">
+        <span>🏦</span> 2. Khoản vay gốc
+        <span class="tab-count" id="count-2">—</span>
+      </div>
+    </div>
+
+    <!-- TABLE 5 -->
+    <div id="base-content-5">
+      <div class="base-toolbar">
+        <button class="base-toolbar-btn">🔍 Filter</button>
+        <button class="base-toolbar-btn">↕ Sort</button>
+        <button class="base-toolbar-btn">👁 Hide fields</button>
+        <div style="margin-left:auto;font-size:11px;color:var(--lark-gray3)" id="t5-count-label">0 records</div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="full-table">
+          <thead>
+            <tr>
+              <th>Mã giải ngân</th>
+              <th>Mã khoản vay</th>
+              <th>Ngày GN thực tế</th>
+              <th>Ngày trả nợ KU</th>
+              <th>Số tiền GN (VND)</th>
+              <th>Tiền tệ</th>
+              <th>Dư nợ hiện tại</th>
+              <th>Lãi suất</th>
+              <th>STK nhận</th>
+              <th>Người phê duyệt</th>
+              <th>Tiền lãi (est.)</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="table5-body">
+            <tr><td colspan="12" class="empty-state">Chưa có giao dịch nào.<br>CFO duyệt để tạo record.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TABLE 9 -->
+    <div id="base-content-9" style="display:none">
+      <div class="base-toolbar">
+        <button class="base-toolbar-btn">🔍 Filter</button>
+        <button class="base-toolbar-btn">↕ Sort</button>
+        <div style="margin-left:auto;font-size:11px;color:var(--lark-gray3)" id="t9-count-label">0 records</div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="full-table">
+          <thead>
+            <tr>
+              <th>Mã kỳ trả nợ</th>
+              <th>Mã giải ngân</th>
+              <th>Kỳ trả nợ số</th>
+              <th>Mã khoản vay gốc</th>
+              <th>Gốc phải trả</th>
+              <th>Ngày trả dự kiến</th>
+              <th>Ngày trả thực tế</th>
+              <th>Dư nợ đầu kỳ</th>
+              <th>Lãi suất áp dụng</th>
+              <th>Số ngày tính lãi</th>
+              <th>Tiền lãi phải trả</th>
+              <th>Tổng phải trả</th>
+              <th>Dư nợ cuối kỳ</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="table9-body">
+            <tr><td colspan="14" class="empty-state">Kỳ trả nợ tự động tạo khi giải ngân được duyệt.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TABLE 2 -->
+    <div id="base-content-2" style="display:none">
+      <div class="base-toolbar">
+        <button class="base-toolbar-btn">🔍 Filter</button>
+        <button class="base-toolbar-btn">↕ Sort</button>
+        <div style="margin-left:auto;font-size:11px;color:var(--lark-gray3)">1 record (cập nhật dư nợ)</div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="full-table">
+          <thead>
+            <tr>
+              <th>Mã khoản vay</th>
+              <th>Công ty vay</th>
+              <th>Ngân hàng</th>
+              <th>Hạn mức HĐ</th>
+              <th>Số tiền đã GN</th>
+              <th>Hạn mức còn lại</th>
+              <th>Dư nợ gốc</th>
+              <th>Lãi suất</th>
+              <th>Ngày đáo hạn</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="table2-body">
+            <tr>
+              <td><span class="cell-code">VAY-TYG-NH-000012</span></td>
+              <td>Thanh Yến Group</td>
+              <td>Vietcombank CN HN</td>
+              <td><span class="cell-num">50,000,000,000</span></td>
+              <td class="updated-record-row" id="t2-dagn"><span class="cell-num">0</span></td>
+              <td class="updated-record-row" id="t2-conlai"><span class="cell-num">50,000,000,000</span></td>
+              <td class="updated-record-row" id="t2-duno"><span class="cell-num">0</span></td>
+              <td><span class="cell-num">7.8%/năm</span></td>
+              <td>31/12/2025</td>
+              <td><span class="chip-status active">Đang vay</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="padding:10px 16px">
+        <div id="t2-update-note" style="font-size:11px;color:var(--lark-gray3);padding:8px 12px;background:var(--lark-gray6);border-radius:6px">
+          ℹ️ Các ô màu vàng sẽ tự cập nhật khi giải ngân được duyệt (formula lookup từ bảng 5).
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reject modal -->
+<div class="modal-overlay" id="modal-reject">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title-m">Từ chối phê duyệt</div>
+    <div class="modal-sub-m">GN-2504-000001 · 15,000,000,000 ₫</div>
+    <textarea class="modal-textarea" id="reject-reason" placeholder="Nhập lý do từ chối (sẽ thông báo cho Finance Staff)...">Cần bổ sung hợp đồng NCC và phiếu đề xuất mua hàng trước khi giải ngân. Vui lòng upload chứng từ và tạo lại yêu cầu.</textarea>
+    <div class="modal-actions">
+      <button class="modal-btn-cancel" onclick="closeRejectModal()">Huỷ</button>
+      <button class="modal-btn-confirm" onclick="doReject()">Xác nhận từ chối</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let appState = 'idle';
+let drawerOpen = false;
+let activeBaseTab = '5';
+
+// ── VIEW SWITCHING ──
+function switchView(v) {
+  ['staff','cfo','base'].forEach(x => {
+    document.getElementById('view-'+x).classList.toggle('active', x===v);
+    document.getElementById('btn-'+x).classList.toggle('active', x===v);
+  });
+  const labels = { staff:'Đang điền form giải ngân', cfo: appState==='idle'?'CFO — Chưa có yêu cầu':'CFO — Đang xem xét', base:'Lark Base — Records sinh ra' };
+  document.getElementById('view-label').textContent = labels[v];
+
+  if (v==='staff') {
+    document.getElementById('nav-title').textContent = 'Yêu cầu Giải Ngân';
+    document.getElementById('nav-sub').textContent = 'Tạo mới · Phê duyệt';
+    document.getElementById('records-drawer').classList.remove('open');
+  } else if (v==='cfo') {
+    document.getElementById('nav-title').textContent = appState==='idle'?'Hộp thư phê duyệt':'GN-2504-000001';
+    document.getElementById('nav-sub').textContent = appState==='idle'?'Phê duyệt · Treasury':'Yêu cầu giải ngân · 15 tỷ ₫';
+    if (appState==='submitted') setTimeout(()=>showDrawer(false), 500);
+  } else {
+    document.getElementById('nav-title').textContent = 'Lark Base — Treasury';
+    document.getElementById('nav-sub').textContent = 'Xem records sinh ra từ giao dịch';
+    document.getElementById('records-drawer').classList.remove('open');
+  }
+}
+
+// ── BASE TAB SWITCHING ──
+function switchBaseTab(t) {
+  ['5','9','2'].forEach(x => {
+    document.getElementById('basetab-'+x).classList.toggle('active', x===t);
+    document.getElementById('base-content-'+x).style.display = x===t?'block':'none';
+  });
+  activeBaseTab = t;
+}
+
+// ── DRAWER ──
+function showDrawer(confirmed) {
+  const drawer = document.getElementById('records-drawer');
+  const title = document.getElementById('drawer-title');
+  const badge = document.getElementById('drawer-badge');
+  title.textContent = confirmed ? '✅ Records đã được tạo & cập nhật' : '⚡ Records sẽ được tạo khi duyệt';
+  badge.textContent = confirmed ? 'Đã confirmed' : 'Preview';
+  badge.className = confirmed ? 'drawer-badge confirmed' : 'drawer-badge';
+  renderDrawerContent(confirmed);
+  drawer.classList.add('open');
+  drawerOpen = true;
+}
+function toggleDrawer() {
+  const drawer = document.getElementById('records-drawer');
+  drawerOpen = !drawerOpen;
+  drawer.classList.toggle('open', drawerOpen);
+}
+
+function renderDrawerContent(confirmed) {
+  const tag = confirmed
+    ? `<span class="new-row-badge">✓ Đã tạo</span>`
+    : `<span style="background:#EEF3FE;color:#1456F0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px">Preview</span>`;
+  const updateTag = confirmed
+    ? `<span class="updated-badge">↑ Đã cập nhật</span>`
+    : `<span style="background:#FFF3E8;color:#FF7D00;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px">Sẽ cập nhật</span>`;
+
+  document.getElementById('drawer-body').innerHTML = `
+    <!-- BẢNG 5 -->
+    <div class="rec-table-wrap">
+      <div class="rec-table-label">
+        <div class="rtl-icon new">📤</div>
+        5. Hoạt động Giải ngân &nbsp;<span class="rec-action-tag new-rec">NEW RECORD</span>
+        ${tag}
+      </div>
+      <table class="rec-table">
+        <thead><tr>
+          <th>Mã giải ngân</th><th>Mã khoản vay</th><th>Ngày GN</th>
+          <th>Số tiền GN (VND)</th><th>Dư nợ hiện tại</th><th>Lãi suất</th>
+          <th>STK nhận</th><th>Người phê duyệt</th><th>Trạng thái</th>
+        </tr></thead>
+        <tbody><tr class="highlight-row">
+          <td><span class="cell-code">GN-2504-000001</span> <span class="cell-auto">auto</span></td>
+          <td><span class="cell-code">VAY-TYG-NH-000012</span></td>
+          <td>25/04/2025</td>
+          <td><span class="cell-num" style="color:#1456F0;font-weight:700">15,000,000,000</span></td>
+          <td><span class="cell-num cell-formula">15,000,000,000</span> <span class="cell-formula">formula</span></td>
+          <td><span class="cell-num">7.8%</span></td>
+          <td><span class="cell-code">TK-TYG-000003</span></td>
+          <td>Lê Minh Khoa</td>
+          <td><span class="chip-status active">Đã giải ngân</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    <!-- BẢNG 9 -->
+    <div class="rec-table-wrap">
+      <div class="rec-table-label">
+        <div class="rtl-icon new">📅</div>
+        9. Trả nợ — Kỳ 1 (tự tạo) &nbsp;<span class="rec-action-tag new-rec">NEW RECORD</span>
+        ${tag}
+      </div>
+      <table class="rec-table">
+        <thead><tr>
+          <th>Mã kỳ trả nợ</th><th>Mã giải ngân</th><th>Kỳ số</th>
+          <th>Gốc phải trả</th><th>Ngày trả dự kiến</th><th>Dư nợ đầu kỳ</th>
+          <th>Lãi suất</th><th>Số ngày</th><th>Tiền lãi phải trả</th><th>Tổng phải trả</th><th>Trạng thái</th>
+        </tr></thead>
+        <tbody><tr class="highlight-row">
+          <td><span class="cell-code">TN-2505-000001</span> <span class="cell-auto">auto</span></td>
+          <td><span class="cell-code">GN-2504-000001</span></td>
+          <td>1</td>
+          <td><span class="cell-num">15,000,000,000</span></td>
+          <td style="color:#FF7D00;font-weight:600">25/05/2025</td>
+          <td><span class="cell-num">15,000,000,000</span></td>
+          <td><span class="cell-num">7.8%</span></td>
+          <td>30</td>
+          <td><span class="cell-num cell-formula">97,500,000</span> <span class="cell-formula">formula</span></td>
+          <td><span class="cell-num" style="font-weight:700">15,097,500,000</span></td>
+          <td><span class="chip-status plan">Chưa đến hạn</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    <!-- BẢNG 2 UPDATE -->
+    <div class="rec-table-wrap">
+      <div class="rec-table-label">
+        <div class="rtl-icon update">🏦</div>
+        2. Khoản vay gốc — Cập nhật dư nợ &nbsp;<span class="rec-action-tag update-rec">UPDATE</span>
+        ${updateTag}
+      </div>
+      <table class="rec-table">
+        <thead><tr>
+          <th>Mã khoản vay</th><th>Hạn mức HĐ</th>
+          <th>Số tiền đã GN</th><th>Hạn mức còn lại</th><th>Dư nợ gốc</th>
+        </tr></thead>
+        <tbody><tr>
+          <td><span class="cell-code">VAY-TYG-NH-000012</span></td>
+          <td><span class="cell-num">50,000,000,000</span></td>
+          <td class="${confirmed?'':'cell-changed'}">
+            ${confirmed
+              ? `<span class="cell-num" style="color:#00B365;font-weight:700">15,000,000,000</span>`
+              : `<span class="del-val">0</span> → <span class="new-val">15,000,000,000</span>`}
+          </td>
+          <td class="${confirmed?'':'cell-changed'}">
+            ${confirmed
+              ? `<span class="cell-num" style="color:#1456F0;font-weight:700">35,000,000,000</span>`
+              : `<span class="del-val">50,000,000,000</span> → <span class="new-val">35,000,000,000</span>`}
+          </td>
+          <td class="${confirmed?'':'cell-changed'}">
+            ${confirmed
+              ? `<span class="cell-num" style="color:#1456F0;font-weight:700">15,000,000,000</span> <span class="cell-formula">formula</span>`
+              : `<span class="del-val">0</span> → <span class="new-val">15,000,000,000</span> <span class="cell-formula">formula</span>`}
+          </td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    ${!confirmed ? `
+    <div style="padding:10px 12px;background:#FFF8E1;border-radius:8px;border:1px solid #FFE082;font-size:11px;color:#7C5700;line-height:1.6">
+      ⚡ <strong>3 thay đổi sẽ xảy ra ngay khi CFO tap Duyệt:</strong><br>
+      1 record mới ở bảng 5 · 1 kỳ trả nợ tự tạo ở bảng 9 · Dư nợ bảng 2 tự cập nhật qua formula
+    </div>` : `
+    <div style="padding:10px 12px;background:#E6F7EF;border-radius:8px;border:1px solid #B3E8D1;font-size:11px;color:#004D2A;line-height:1.6">
+      ✅ <strong>Đã hoàn thành:</strong> 2 records mới được tạo · Dư nợ khoản vay gốc đã cập nhật · Kỳ nhắc trả nợ 25/05/2025 đã lên lịch
+    </div>`}
+  `;
+}
+
+// ── FORMAT AMOUNT ──
+function fmtAmt(el) {
+  const raw = el.value.replace(/[^\d]/g, '');
+  if (!raw) { el.value = ''; document.getElementById('amt-text').textContent = ''; return; }
+  const n = parseInt(raw);
+  el.value = n.toLocaleString('vi-VN');
+  const words = { '15':'Mười lăm','10':'Mười','20':'Hai mươi','5':'Năm','1':'Một','2':'Hai','3':'Ba' };
+  let t = n >= 1e9 ? (n/1e9).toFixed(n%1e9?1:0).replace('.0','') + ' tỷ đồng' : n.toLocaleString('vi-VN') + ' đồng';
+  const k = String(Math.round(n/1e9));
+  if (words[k] && n%1e9===0) t = words[k] + ' tỷ đồng';
+  document.getElementById('amt-text').textContent = t;
+}
+
+// ── STEP INDICATORS ──
+function setInds(step) {
+  for (let i=1;i<=3;i++) {
+    const el = document.getElementById('ind'+i);
+    el.className = 'step-ind s'+i+(i<step?' done':i===step?' active':'');
+  }
+}
+
+// ── SUBMIT ──
+function doSubmit() {
+  if (appState!=='idle') return;
+  const overlay = document.getElementById('trans-overlay');
+  document.getElementById('trans-text').textContent = 'Đang gửi yêu cầu phê duyệt...';
+  overlay.classList.add('show');
+  setInds(2);
+  setTimeout(()=>{
+    document.getElementById('trans-text').textContent = '✓ Đã gửi thành công!';
+    setTimeout(()=>{
+      overlay.classList.remove('show');
+      appState = 'submitted';
+      document.getElementById('cfo-waiting-msg').classList.add('hidden');
+      document.getElementById('cfo-review').classList.remove('hidden');
+      const now = new Date();
+      document.getElementById('status-time').textContent = `Nhận lúc ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+      setInds(2);
+      // Show base notif dot
+      document.getElementById('base-notif').style.display = 'inline-block';
+      setTimeout(()=>switchView('cfo'), 300);
+    },700);
+  },1600);
+}
+
+// ── APPROVE ──
+function doApprove() {
+  if (appState!=='submitted') return;
+  appState = 'approved';
+  const comment = document.getElementById('cfo-comment').value;
+  const now = new Date();
+  const t = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+
+  // banner
+  const banner = document.getElementById('status-banner');
+  banner.className = 'status-banner approved';
+  banner.innerHTML = `<span class="status-banner-icon">✅</span><span class="status-banner-text">Đã phê duyệt</span><span class="status-banner-time">Duyệt lúc ${t}</span>`;
+
+  // timeline
+  document.getElementById('cfo-avatar').className = 'at-avatar done';
+  document.getElementById('cfo-tl-status').className = 'at-status approved';
+  document.getElementById('cfo-tl-status').textContent = `✓ Đã duyệt · ${t}`;
+  if (comment) { const cc=document.getElementById('cfo-tl-comment'); cc.textContent=`"${comment}"`; cc.classList.remove('hidden'); }
+  document.getElementById('notify-status').className = 'at-status submitted';
+  document.getElementById('notify-status').textContent = '✓ Đã thông báo';
+
+  // decision result
+  document.getElementById('decision-result-wrap').classList.remove('hidden');
+  document.getElementById('decision-result-box').className = 'decision-result approved';
+  document.getElementById('dr-icon').textContent = '✅';
+  document.getElementById('dr-title').className = 'dr-title approved-t';
+  document.getElementById('dr-title').textContent = 'Phê duyệt thành công';
+  document.getElementById('dr-meta').textContent = `Lê Minh Khoa · CFO · ${t} hôm nay`;
+  if (comment) { const dc=document.getElementById('dr-comment'); dc.textContent=`"${comment}"`; dc.classList.remove('hidden'); }
+
+  document.getElementById('btn-approve').disabled = true;
+  document.getElementById('btn-reject').disabled = true;
+  document.getElementById('comment-section').style.display = 'none';
+  setInds(3);
+
+  // Show confirmed drawer
+  setTimeout(()=>showDrawer(true), 400);
+
+  // Populate Lark Base tables
+  setTimeout(()=>populateBaseTables(t), 600);
+}
+
+// ── REJECT ──
+function openRejectModal() { if(appState!=='submitted') return; document.getElementById('modal-reject').classList.add('show'); }
+function closeRejectModal() { document.getElementById('modal-reject').classList.remove('show'); }
+
+function doReject() {
+  if (appState!=='submitted') return;
+  appState = 'rejected';
+  const reason = document.getElementById('reject-reason').value;
+  const now = new Date();
+  const t = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+  closeRejectModal();
+
+  const banner = document.getElementById('status-banner');
+  banner.className = 'status-banner rejected';
+  banner.innerHTML = `<span class="status-banner-icon">❌</span><span class="status-banner-text">Bị từ chối</span><span class="status-banner-time">Từ chối lúc ${t}</span>`;
+
+  const cfAv = document.getElementById('cfo-avatar');
+  cfAv.className = 'at-avatar'; cfAv.style.background = 'var(--lark-red)';
+  document.getElementById('cfo-tl-status').className = 'at-status rejected';
+  document.getElementById('cfo-tl-status').textContent = `✕ Từ chối · ${t}`;
+  const cc = document.getElementById('cfo-tl-comment');
+  cc.textContent = `"${reason}"`; cc.classList.remove('hidden');
+  document.getElementById('notify-status').className = 'at-status submitted';
+  document.getElementById('notify-status').textContent = '✓ Đã thông báo';
+
+  document.getElementById('decision-result-wrap').classList.remove('hidden');
+  document.getElementById('decision-result-box').className = 'decision-result rejected';
+  document.getElementById('dr-icon').textContent = '❌';
+  document.getElementById('dr-title').className = 'dr-title rejected-t';
+  document.getElementById('dr-title').textContent = 'Yêu cầu bị từ chối';
+  document.getElementById('dr-meta').textContent = `Lê Minh Khoa · CFO · ${t} hôm nay`;
+  const dc = document.getElementById('dr-comment'); dc.textContent=`"${reason}"`; dc.classList.remove('hidden');
+
+  document.getElementById('btn-approve').disabled = true;
+  document.getElementById('btn-reject').disabled = true;
+  document.getElementById('comment-section').style.display = 'none';
+  setInds(3);
+}
+
+// ── POPULATE BASE TABLES ──
+function populateBaseTables(timeStr) {
+  // Table 5
+  document.getElementById('count-5').textContent = '1';
+  document.getElementById('t5-count-label').textContent = '1 record';
+  document.getElementById('table5-body').innerHTML = `
+    <tr class="new-record-row">
+      <td><span class="cell-code">GN-2504-000001</span> <span class="new-row-badge">✓ Mới</span></td>
+      <td><span class="cell-code">VAY-TYG-NH-000012</span></td>
+      <td>25/04/2025</td>
+      <td>25/05/2025</td>
+      <td><span class="cell-num" style="color:#1456F0;font-weight:700">15,000,000,000</span></td>
+      <td>VND</td>
+      <td><span class="cell-num cell-formula">15,000,000,000</span></td>
+      <td>7.8%</td>
+      <td><span class="cell-code">TK-TYG-000003</span></td>
+      <td>Lê Minh Khoa · ${timeStr}</td>
+      <td><span class="cell-num cell-formula">97,500,000</span></td>
+      <td><span class="chip-status active">Đã giải ngân</span></td>
+    </tr>`;
+
+  // Table 9
+  document.getElementById('count-9').textContent = '1';
+  document.getElementById('t9-count-label').textContent = '1 record';
+  document.getElementById('table9-body').innerHTML = `
+    <tr class="new-record-row">
+      <td><span class="cell-code">TN-2505-000001</span> <span class="new-row-badge">✓ Mới</span></td>
+      <td><span class="cell-code">GN-2504-000001</span></td>
+      <td>1</td>
+      <td><span class="cell-code">VAY-TYG-NH-000012</span></td>
+      <td><span class="cell-num">15,000,000,000</span></td>
+      <td style="color:#FF7D00;font-weight:600">25/05/2025</td>
+      <td><span style="color:var(--lark-gray4)">—</span></td>
+      <td><span class="cell-num">15,000,000,000</span></td>
+      <td>7.8%</td>
+      <td>30</td>
+      <td><span class="cell-num cell-formula">97,500,000</span></td>
+      <td><span class="cell-num" style="font-weight:700">15,097,500,000</span></td>
+      <td><span class="cell-num cell-formula">15,000,000,000</span></td>
+      <td><span class="chip-status plan">Chưa đến hạn</span></td>
+    </tr>`;
+
+  // Table 2 update
+  document.getElementById('count-2').textContent = '↑';
+  document.getElementById('count-2').className = 'tab-count new-badge';
+  document.getElementById('t2-dagn').innerHTML = `<span class="cell-num" style="color:#00B365;font-weight:700">15,000,000,000</span> <span class="updated-badge">↑</span>`;
+  document.getElementById('t2-conlai').innerHTML = `<span class="cell-num" style="color:#1456F0;font-weight:700">35,000,000,000</span> <span class="updated-badge">↑</span>`;
+  document.getElementById('t2-duno').innerHTML = `<span class="cell-num" style="color:#1456F0;font-weight:700">15,000,000,000</span> <span class="cell-formula">formula</span> <span class="updated-badge">↑</span>`;
+  document.getElementById('t2-update-note').innerHTML = `<span style="color:#00B365">✅ Đã cập nhật lúc ${timeStr} — formula tự tính từ bảng 5.Hoạt động giải ngân</span>`;
+}
+
+function resetAll() { location.reload(); }
+</script>
+</body>
+</html>
