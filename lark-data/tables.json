@@ -57,7 +57,7 @@
         },
         {
           "name": "Phê duyệt khoản vay",
-          "revision": 115,
+          "revision": 117,
           "table_id": "tblYXgAN6BrCeCF8"
         },
         {
@@ -71,5 +71,5 @@
     },
     "msg": "success"
   },
-  "ts": "2026-04-26T16:51:39.487881+00:00"
+  "ts": "2026-04-26T19:02:14.489191+00:00"
 }
