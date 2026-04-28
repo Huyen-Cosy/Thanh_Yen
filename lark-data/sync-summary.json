@@ -1,7 +1,7 @@
 {
   "success": true,
   "data": {
-    "synced_at": "2026-04-28T03:37:28.257569+00:00",
+    "synced_at": "2026-04-28T06:33:01.511241+00:00",
     "tables": {
       "0.Danh muc cong ty (MD - form)": {
         "records": 28,
@@ -48,11 +48,11 @@
         "table_id": "tblYXgAN6BrCeCF8"
       },
       "Bảng": {
-        "records": 0,
+        "records": 5,
         "table_id": "tbltuG917qHUf4t6"
       }
     },
     "total_tables": 12
   },
-  "ts": "2026-04-28T03:37:28.257569+00:00"
+  "ts": "2026-04-28T06:33:01.511241+00:00"
 }
