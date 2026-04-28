@@ -322,6 +322,110 @@ def lark_validate_business_rules(table_name: str) -> str:
     )
 
 
+_FIELD_TYPES = {
+    "text": 1, "number": 2, "single_select": 3, "multi_select": 4,
+    "date": 5, "checkbox": 7, "person": 11, "phone": 13, "url": 15,
+    "attachment": 17, "link": 18, "formula": 20, "auto_number": 1005,
+}
+
+
+def _resolve_field_type(field_type) -> int:
+    if isinstance(field_type, int):
+        return field_type
+    return _FIELD_TYPES.get(str(field_type).lower(), 1)
+
+
+@mcp.tool()
+def lark_create_table(table_name: str, base_id: str = "") -> str:
+    """Create a new table in Lark Base via relay (~45s).
+
+    Args:
+        table_name: Tên table mới
+        base_id: Base ID override — để trống = main base, điền = base test
+    """
+    params = {"table_name": table_name}
+    if base_id:
+        params["base_id"] = base_id
+    return json.dumps(_relay("create_table", params), ensure_ascii=False, indent=2)
+
+
+@mcp.tool()
+def lark_create_field(table_id: str, field_name: str, field_type: str, property_json: str = "{}", base_id: str = "") -> str:
+    """Add a new field (column) to a table in Lark Base via relay (~45s).
+
+    field_type — dùng tên hoặc số:
+      text=1, number=2, single_select=3, multi_select=4, date=5,
+      checkbox=7, person=11, phone=13, url=15, attachment=17,
+      link=18, formula=20, auto_number=1005
+
+    property_json examples:
+      single_select / multi_select : '{"options": [{"name": "A"}, {"name": "B"}]}'
+      number                       : '{"formatter": "0", "decimal_digits": 2}'
+      date                         : '{"date_formatter": "yyyy/MM/dd"}'
+
+    Args:
+        table_id: Table ID (lấy từ lark_list_tables hoặc lark_get_fields)
+        field_name: Tên cột mới
+        field_type: Loại field — tên hoặc số nguyên
+        property_json: JSON string cấu hình thêm (tuỳ loại field)
+        base_id: Base ID override (để trống = main base)
+    """
+    try:
+        prop = json.loads(property_json) if property_json and property_json != "{}" else {}
+    except json.JSONDecodeError:
+        return json.dumps({"error": f"Invalid property_json: {property_json}"})
+    params = {
+        "table_id": table_id,
+        "field_name": field_name,
+        "field_type": _resolve_field_type(field_type),
+    }
+    if prop:
+        params["property"] = prop
+    if base_id:
+        params["base_id"] = base_id
+    return json.dumps(_relay("create_field", params), ensure_ascii=False, indent=2)
+
+
+@mcp.tool()
+def lark_update_field(table_id: str, field_id: str, field_name: str = "", property_json: str = "{}", base_id: str = "") -> str:
+    """Update an existing field in Lark Base via relay (~45s).
+
+    Args:
+        table_id: Table ID
+        field_id: Field ID (lấy từ lark_get_fields)
+        field_name: Tên mới — để trống = giữ nguyên
+        property_json: JSON string cập nhật properties
+        base_id: Base ID override
+    """
+    try:
+        prop = json.loads(property_json) if property_json and property_json != "{}" else {}
+    except json.JSONDecodeError:
+        return json.dumps({"error": f"Invalid property_json: {property_json}"})
+    params = {"table_id": table_id, "field_id": field_id}
+    if field_name:
+        params["field_name"] = field_name
+    if prop:
+        params["property"] = prop
+    if base_id:
+        params["base_id"] = base_id
+    return json.dumps(_relay("update_field", params), ensure_ascii=False, indent=2)
+
+
+@mcp.tool()
+def lark_delete_field(table_id: str, field_id: str, base_id: str = "") -> str:
+    """Delete a field (column) from a table in Lark Base via relay (~45s).
+
+    Args:
+        table_id: Table ID
+        field_id: Field ID cần xoá (lấy từ lark_get_fields)
+        base_id: Base ID override
+    """
+    params = {"table_id": table_id, "field_id": field_id}
+    if base_id:
+        params["base_id"] = base_id
+    return json.dumps(_relay("delete_field", params), ensure_ascii=False, indent=2)
+
+
 @mcp.tool()
 def lark_refresh() -> str:
     """Trigger a full Lark data sync to update the local cache.

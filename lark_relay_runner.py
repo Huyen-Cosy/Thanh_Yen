@@ -42,7 +42,15 @@ def lark_put(path: str, headers: dict, body: dict) -> dict:
     return r.json()
 
 
-def get_all_records(table_id: str, headers: dict) -> list:
+def lark_delete(path: str, headers: dict) -> dict:
+    r = requests.delete(f"{API_BASE}{path}", headers=headers, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def get_all_records(table_id: str, headers: dict, active_base_id: str = None) -> list:
+    if active_base_id is None:
+        active_base_id = LARK_BASE_ID
     records = []
     page_token = None
     while True:
@@ -50,7 +58,7 @@ def get_all_records(table_id: str, headers: dict) -> list:
         if page_token:
             params["page_token"] = page_token
         data = lark_get(
-            f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/records",
+            f"/bitable/v1/apps/{active_base_id}/tables/{table_id}/records",
             headers,
             params,
         )
@@ -73,22 +81,27 @@ def write_output(data: dict):
 
 def run():
     ts = datetime.now(timezone.utc).isoformat()
+    # Allow per-request base_id override (dùng cho base test)
+    ACTIVE_BASE_ID = PARAMS.get("base_id") or LARK_BASE_ID
+
     try:
         token = get_token()
         headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
 
+        # ── Read operations ────────────────────────────────────────────
+
         if OPERATION == "get_base_info":
-            data = lark_get(f"/bitable/v1/apps/{LARK_BASE_ID}", headers)
+            data = lark_get(f"/bitable/v1/apps/{ACTIVE_BASE_ID}", headers)
             write_output({"success": True, "data": data, "ts": ts})
 
         elif OPERATION == "list_tables":
-            data = lark_get(f"/bitable/v1/apps/{LARK_BASE_ID}/tables", headers)
+            data = lark_get(f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables", headers)
             write_output({"success": True, "data": data, "ts": ts})
 
         elif OPERATION == "get_fields":
             table_id = PARAMS["table_id"]
             data = lark_get(
-                f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/fields",
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/fields",
                 headers,
                 {"page_size": 100},
             )
@@ -102,7 +115,7 @@ def run():
             if PARAMS.get("page_token"):
                 params["page_token"] = PARAMS["page_token"]
             data = lark_get(
-                f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/records",
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/records",
                 headers,
                 params,
             )
@@ -114,16 +127,18 @@ def run():
             if PARAMS.get("filter_formula"):
                 params["filter"] = PARAMS["filter_formula"]
             data = lark_get(
-                f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/records",
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/records",
                 headers,
                 params,
             )
             write_output({"success": True, "data": data, "ts": ts})
 
+        # ── Record write operations ────────────────────────────────────
+
         elif OPERATION == "create_record":
             table_id = PARAMS["table_id"]
             data = lark_post(
-                f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/records",
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/records",
                 headers,
                 {"fields": PARAMS["fields"]},
             )
@@ -133,7 +148,7 @@ def run():
             table_id = PARAMS["table_id"]
             record_id = PARAMS["record_id"]
             data = lark_put(
-                f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/records/{record_id}",
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/records/{record_id}",
                 headers,
                 {"fields": PARAMS["fields"]},
             )
@@ -143,7 +158,7 @@ def run():
             table_id = PARAMS["table_id"]
             payload = {"records": [{"fields": r} for r in PARAMS["records"]]}
             data = lark_post(
-                f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/records/batch_create",
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/records/batch_create",
                 headers,
                 payload,
             )
@@ -151,15 +166,13 @@ def run():
 
         elif OPERATION == "validate_business_rules":
             table_id = PARAMS["table_id"]
-            records = get_all_records(table_id, headers)
+            records = get_all_records(table_id, headers, ACTIVE_BASE_ID)
             issues = []
             for rec in records:
                 fields = rec.get("fields", {})
                 rid = rec.get("record_id", "?")
-                # BR-001: Loan must have company link
                 if not fields.get("Tên công ty") and not fields.get("Cong_Ty") and not fields.get("company"):
                     issues.append({"record_id": rid, "rule": "BR-001", "msg": "Thiếu liên kết công ty"})
-                # BR-002: Amount must be positive
                 for amt_field in ["Số tiền", "So_Tien", "amount", "Dư nợ"]:
                     val = fields.get(amt_field)
                     if val is not None and isinstance(val, (int, float)) and val <= 0:
@@ -176,10 +189,61 @@ def run():
                 "ts": ts,
             })
 
+        # ── Schema management (table & field) ─────────────────────────
+
+        elif OPERATION == "create_table":
+            body = {"table": {"name": PARAMS["table_name"]}}
+            if PARAMS.get("fields"):
+                body["table"]["fields"] = PARAMS["fields"]
+            data = lark_post(f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables", headers, body)
+            write_output({"success": True, "data": data, "ts": ts})
+
+        elif OPERATION == "create_field":
+            table_id = PARAMS["table_id"]
+            body = {
+                "field_name": PARAMS["field_name"],
+                "type": PARAMS["field_type"],
+            }
+            if PARAMS.get("property"):
+                body["property"] = PARAMS["property"]
+            data = lark_post(
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/fields",
+                headers,
+                body,
+            )
+            write_output({"success": True, "data": data, "ts": ts})
+
+        elif OPERATION == "update_field":
+            table_id = PARAMS["table_id"]
+            field_id = PARAMS["field_id"]
+            body = {}
+            if PARAMS.get("field_name"):
+                body["field_name"] = PARAMS["field_name"]
+            if PARAMS.get("field_type"):
+                body["type"] = PARAMS["field_type"]
+            if PARAMS.get("property"):
+                body["property"] = PARAMS["property"]
+            data = lark_put(
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/fields/{field_id}",
+                headers,
+                body,
+            )
+            write_output({"success": True, "data": data, "ts": ts})
+
+        elif OPERATION == "delete_field":
+            table_id = PARAMS["table_id"]
+            field_id = PARAMS["field_id"]
+            data = lark_delete(
+                f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/fields/{field_id}",
+                headers,
+            )
+            write_output({"success": True, "data": data, "ts": ts})
+
+        # ── Sync ──────────────────────────────────────────────────────
+
         elif OPERATION == "sync_all":
-            # Sync all tables to lark-data/ directory
-            base_data = lark_get(f"/bitable/v1/apps/{LARK_BASE_ID}", headers)
-            tables_data = lark_get(f"/bitable/v1/apps/{LARK_BASE_ID}/tables", headers)
+            base_data = lark_get(f"/bitable/v1/apps/{ACTIVE_BASE_ID}", headers)
+            tables_data = lark_get(f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables", headers)
             tables = tables_data.get("data", {}).get("items", [])
 
             os.makedirs("lark-data", exist_ok=True)
@@ -195,11 +259,11 @@ def run():
                 safe_name = name.replace("/", "_").replace(" ", "_")
 
                 fields_data = lark_get(
-                    f"/bitable/v1/apps/{LARK_BASE_ID}/tables/{table_id}/fields",
+                    f"/bitable/v1/apps/{ACTIVE_BASE_ID}/tables/{table_id}/fields",
                     headers,
                     {"page_size": 100},
                 )
-                records = get_all_records(table_id, headers)
+                records = get_all_records(table_id, headers, ACTIVE_BASE_ID)
 
                 dir_path = f"lark-data/{safe_name}"
                 os.makedirs(dir_path, exist_ok=True)
