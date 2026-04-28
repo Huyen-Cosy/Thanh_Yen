@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "data": {
+    "code": 1254014,
+    "msg": "FieldNameDuplicated",
+    "error": {
+      "log_id": "202604281234100D5BA88267B359B92D96"
+    }
+  },
+  "ts": "2026-04-28T04:34:09.710194+00:00"
+}
