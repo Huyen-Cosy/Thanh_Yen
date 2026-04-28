@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "records": [
+        {
+          "fields": {
+            "Mã công ty": "CTY01",
+            "Nhóm": "Sản xuất",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty TNHH Sản Xuất Thanh Yến",
+            "Tên viết tắt": "TY-SX"
+          },
+          "id": "recvi41xBsNDPN",
+          "record_id": "recvi41xBsNDPN"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY02",
+            "Nhóm": "Thương mại",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty TNHH Thương Mại Thanh Yến",
+            "Tên viết tắt": "TY-TM"
+          },
+          "id": "recvi41xBs13hJ",
+          "record_id": "recvi41xBs13hJ"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY03",
+            "Nhóm": "Đầu tư",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty CP Đầu Tư Thanh Yến",
+            "Tên viết tắt": "TY-DT"
+          },
+          "id": "recvi41xBsU3CX",
+          "record_id": "recvi41xBsU3CX"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY04",
+            "Nhóm": "Dịch vụ",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty TNHH Dịch Vụ Thanh Yến",
+            "Tên viết tắt": "TY-DV"
+          },
+          "id": "recvi41xBsrJ6n",
+          "record_id": "recvi41xBsrJ6n"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY05",
+            "Nhóm": "Thương mại",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty CP Xuất Nhập Khẩu Thanh Yến",
+            "Tên viết tắt": "TY-XNK"
+          },
+          "id": "recvi41xBs6MjZ",
+          "record_id": "recvi41xBs6MjZ"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY06",
+            "Nhóm": "Đầu tư",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty TNHH Bất Động Sản Thanh Yến",
+            "Tên viết tắt": "TY-BDS"
+          },
+          "id": "recvi41xBsDoWj",
+          "record_id": "recvi41xBsDoWj"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY07",
+            "Nhóm": "Dịch vụ",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty CP Vận Tải Thanh Yến",
+            "Tên viết tắt": "TY-VT"
+          },
+          "id": "recvi41xBsqGiX",
+          "record_id": "recvi41xBsqGiX"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY08",
+            "Nhóm": "Sản xuất",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty TNHH Xây Dựng Thanh Yến",
+            "Tên viết tắt": "TY-XD"
+          },
+          "id": "recvi41xBstfPz",
+          "record_id": "recvi41xBstfPz"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY09",
+            "Nhóm": "Sản xuất",
+            "Trạng thái": "Active",
+            "Tên công ty": "Công ty CP Nông Nghiệp Thanh Yến",
+            "Tên viết tắt": "TY-NN"
+          },
+          "id": "recvi41xBsyvcy",
+          "record_id": "recvi41xBsyvcy"
+        },
+        {
+          "fields": {
+            "Mã công ty": "CTY10",
+            "Nhóm": "Dịch vụ",
+            "Trạng thái": "Inactive",
+            "Tên công ty": "Công ty TNHH Kho Vận Thanh Yến",
+            "Tên viết tắt": "TY-KV"
+          },
+          "id": "recvi41xBsYXcx",
+          "record_id": "recvi41xBsYXcx"
+        }
+      ]
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-28T06:19:24.759714+00:00"
+}
