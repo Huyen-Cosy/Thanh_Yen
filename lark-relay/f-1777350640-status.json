@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "code": 0,
+    "data": {
+      "field": {
+        "field_id": "fldBwwD2zF",
+        "field_name": "Trạng thái",
+        "is_extend": false,
+        "is_primary": false,
+        "is_synced": false,
+        "property": {
+          "options": [
+            {
+              "color": 0,
+              "id": "opthft0uGm",
+              "name": "Active"
+            },
+            {
+              "color": 1,
+              "id": "optf4jhOtA",
+              "name": "Inactive"
+            }
+          ]
+        },
+        "type": 3,
+        "ui_type": "SingleSelect"
+      }
+    },
+    "msg": "success"
+  },
+  "ts": "2026-04-28T04:30:49.569197+00:00"
+}
