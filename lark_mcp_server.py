@@ -321,6 +321,22 @@ def lark_validate_business_rules(table_name: str) -> str:
         indent=2,
     )
 
+@mcp.tool()
+def lark_send_notification(message: str, title: str = "", color: str = "blue") -> str:
+    """Send a notification message to the PM's private Lark group (Treasury AI PM).
+
+    Args:
+        message: Message body. Supports Lark Markdown: **bold**, _italic_, [text](url)
+        title:   Optional title. If set, renders as an interactive card with header.
+        color:   Header color when title is set.
+                 Options: blue (info) | green (success) | red (alert) | orange (warning)
+    """
+    return json.dumps(
+        _relay("send_notification", {"message": message, "title": title, "color": color}),
+        ensure_ascii=False,
+        indent=2,
+    )
+
 
 @mcp.tool()
 def lark_refresh() -> str:
