@@ -217,6 +217,32 @@ def run():
 
             summary = {"synced_at": ts, "tables": synced, "total_tables": len(tables)}
             write_output({"success": True, "data": summary, "ts": ts})
+        elif OPERATION == "send_notification":
+            webhook_url = os.environ.get("LARK_WEBHOOK_URL", "")
+            if not webhook_url:
+                write_output({"success": False, "error": "LARK_WEBHOOK_URL secret not set in GitHub", "ts": ts})
+                exit(1)
+            message = PARAMS.get("message", "")
+            title = PARAMS.get("title", "")
+            color = PARAMS.get("color", "blue")
+            if title:
+                payload = {
+                    "msg_type": "interactive",
+                    "card": {
+                        "header": {
+                            "title": {"tag": "plain_text", "content": title},
+                            "template": color,
+                        },
+                        "elements": [
+                            {"tag": "div", "text": {"tag": "lark_md", "content": message}}
+                        ],
+                    },
+                }
+            else:
+                payload = {"msg_type": "text", "content": {"text": message}}
+            r = requests.post(webhook_url, json=payload, timeout=30)
+            r.raise_for_status()
+            write_output({"success": True, "data": r.json(), "ts": ts})
 
         else:
             write_output({"success": False, "error": f"Unknown operation: {OPERATION}", "ts": ts})
