@@ -40,6 +40,7 @@ jobs:
           LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
           LARK_BASE_ID: ${{ secrets.LARK_BASE_ID }}
           OPERATION: ${{ inputs.operation }}
+          LARK_WEBHOOK_URL: ${{ secrets.LARK_WEBHOOK_URL }}
           PARAMS: ${{ inputs.params }}
           OUTPUT_FILE: lark-relay/${{ inputs.request_id }}.json
         run: python3 lark_relay_runner.py
