@@ -39,7 +39,10 @@
 | FR-D-003 | BR-004 | Dashboard | Tab 3 — Thanh khoản Basic | Hiển thị KPI nhập thủ công | Vân | P1 | Basic | ⬜ Todo | CLR-002 | — |
 | FR-D-005 | BR-005 | Dashboard | Tab 5 — KH/TT Basic | Bảng so sánh KH vs TH, tính chênh lệch | Vân | P1 | Basic | ⬜ Todo | CLR-003 | — |
 | FR-WF-001 | BR-002 | Workflow | Alert đáo hạn | Cảnh báo khoản vay ≤ 30 ngày đến hạn | Dõng | P1 | Current | ⬜ Todo | — | — |
+| FR-WF-002 | BR-001, BR-002, BR-003 | Workflow | 3-bước phê duyệt cho 4 flow | Bổ sung bước Reviewer (Trưởng BP/KT trưởng, open) vào giữa Staff và Approver trong cả 4 quy trình | Dõng | P0 | Current | ⬜ Todo | — | 24/04/2026 |
+| FR-WF-003 | BR-001 | Workflow | Cập nhật trạng thái giải ngân thực tế | Sau khi duyệt nội bộ, Staff cập nhật trạng thái + đính kèm Bank Statement trước khi đổ vào Master Data | Dõng | P0 | Current | ⬜ Todo | — | 24/04/2026 |
+| FR-WF-004 | BR-001 | Workflow | Auto-notification giải ngân | Hệ thống tự gửi thông báo cho Approver khi Staff update status = "Đã giải ngân" — không cần phê duyệt lại | Dõng | P1 | Current | ⬜ Todo | — | 24/04/2026 |
 
 ---
 
-*Cập nhật lần cuối: 23/04/2026*
+*Cập nhật lần cuối: 03/05/2026*

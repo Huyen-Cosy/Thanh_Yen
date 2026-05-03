@@ -163,6 +163,58 @@ Member gõ lệnh ngắn → agent tự biết làm gì:
 | `/blocked` | Liệt kê tất cả item đang bị blocked + lý do |
 | `/pending` | Liệt kê câu hỏi đang chờ trả lời trong clarification-tracker |
 | `/onboard` | Tóm tắt dự án cho member mới theo role |
+| `/sa-review [table\|schema\|flow]` | Review kiến trúc Lark Base theo checklist chuẩn — chạy trước khi Dõng apply bất kỳ schema change nào |
+
+---
+
+## 7.1 WORKFLOW-SA-REVIEW: Review Kiến trúc Lark Base
+
+**Trigger:** `/sa-review [tên bảng / "schema" / "flow"]`
+
+**Mục đích:** Gate kỹ thuật bắt buộc trước khi schema đi vào production. Tài hoặc Huyên chạy lệnh này sau khi Dõng hoàn thiện 1 bảng/flow mới.
+
+Agent đọc field definitions của bảng/schema được chỉ định, rồi chạy **8 checkpoint** sau:
+
+| # | Checkpoint | Câu hỏi kiểm tra |
+|---|---|---|
+| 1 | **Field ID** | Format đúng convention? Null-safe? Không có double-dash hay segment rỗng? |
+| 2 | **Multi-company** | Có `Ma cong ty` (direct hoặc Lookup ≤ 1 hop) để dùng làm permission key không? |
+| 3 | **Relationship depth** | Chuỗi join để ra công ty ≤ 2 hops không? (Power BI constraint) |
+| 4 | **Field types** | Số là Number, ngày là DateTime, mã định danh là Text — không bị nhầm kiểu? |
+| 5 | **Formula null-safety** | IFS/IF có fallback? Field phụ thuộc ngày tháng có thể null khi mới tạo không? |
+| 6 | **Permission key** | Có ít nhất 1 field Text/Select plain (không phải Link) để Lark Advanced Permission filter không? |
+| 7 | **Naming convention** | Tên field nhất quán với các bảng khác (viết tắt, tiếng Việt không dấu, format)? |
+| 8 | **Approval disconnect** | Nếu là bảng Flow: có automation/link từ form phê duyệt → Master Data không? |
+
+**Output format:**
+
+```
+🏗️ SA REVIEW — [Tên bảng/schema]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Ngày review : [ngày]
+Reviewed by : AI Agent (SA mode)
+
+✅ PASS  | ⚠️ WARN | 🔴 FAIL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[1] Field ID        : ✅/⚠️/🔴 [mô tả ngắn]
+[2] Multi-company   : ✅/⚠️/🔴 [mô tả ngắn]
+[3] Relationship    : ✅/⚠️/🔴 [mô tả ngắn]
+[4] Field types     : ✅/⚠️/🔴 [mô tả ngắn]
+[5] Formula safety  : ✅/⚠️/🔴 [mô tả ngắn]
+[6] Permission key  : ✅/⚠️/🔴 [mô tả ngắn]
+[7] Naming          : ✅/⚠️/🔴 [mô tả ngắn]
+[8] Approval link   : ✅/⚠️/🔴 [N/A nếu không phải Flow]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KẾT QUẢ: X/8 pass | X warn | X fail
+
+🔴 PHẢI SỬA TRƯỚC KHI GO-LIVE:
+- [danh sách issue cần fix]
+
+⚠️ NÊN SỬA (không block go-live):
+- [danh sách cải tiến]
+
+👉 Ready to go-live? YES / NO (cần fix [X] issue trước)
+```
 
 ---
 

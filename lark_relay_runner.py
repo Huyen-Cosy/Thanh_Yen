@@ -7,9 +7,9 @@ from datetime import datetime, timezone
 
 LARK_APP_ID = os.environ["LARK_APP_ID"]
 LARK_APP_SECRET = os.environ["LARK_APP_SECRET"]
-LARK_BASE_ID = os.environ["LARK_BASE_ID"]
 OPERATION = os.environ["OPERATION"]
 PARAMS = json.loads(os.environ.get("PARAMS", "{}"))
+LARK_BASE_ID = PARAMS.get("base_id") or os.environ["LARK_BASE_ID"]
 OUTPUT_FILE = os.environ["OUTPUT_FILE"]
 API_BASE = "https://open.larksuite.com/open-apis"
 
