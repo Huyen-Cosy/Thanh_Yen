@@ -1,7 +1,7 @@
 {
   "success": true,
   "data": {
-    "synced_at": "2026-05-04T03:38:31.338781+00:00",
+    "synced_at": "2026-05-04T06:43:33.312513+00:00",
     "tables": {
       "0.Danh muc cong ty (MD - form)": {
         "records": 28,
@@ -24,7 +24,7 @@
         "table_id": "tblh22GKNXUOKMkP"
       },
       "9.Tra no va dong khoan vay (Flow)": {
-        "records": 329,
+        "records": 330,
         "table_id": "tblwaUsFJLmDrxF8"
       },
       "4.Ton Quy (auto sync tool or Excel)": {
@@ -54,5 +54,5 @@
     },
     "total_tables": 12
   },
-  "ts": "2026-05-04T03:38:31.338781+00:00"
+  "ts": "2026-05-04T06:43:33.312513+00:00"
 }

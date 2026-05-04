@@ -32,7 +32,7 @@
         },
         {
           "name": "9.Tra no va dong khoan vay (Flow)",
-          "revision": 629,
+          "revision": 630,
           "table_id": "tblwaUsFJLmDrxF8"
         },
         {
@@ -57,7 +57,7 @@
         },
         {
           "name": "Phê duyệt khoản vay",
-          "revision": 293,
+          "revision": 296,
           "table_id": "tblYXgAN6BrCeCF8"
         },
         {
@@ -71,5 +71,5 @@
     },
     "msg": "success"
   },
-  "ts": "2026-05-04T03:38:31.338781+00:00"
+  "ts": "2026-05-04T06:43:33.312513+00:00"
 }

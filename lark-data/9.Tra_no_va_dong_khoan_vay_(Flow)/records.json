@@ -18292,9 +18292,42 @@
         },
         "id": "recvhBhcvH4uLE",
         "record_id": "recvhBhcvH4uLE"
+      },
+      {
+        "fields": {
+          "Du no cuoi ky": 0,
+          "Du no dau ky": 0,
+          "Lai phat qua han": 0,
+          "Ma giai ngan": [
+            {
+              "table_id": "tblh22GKNXUOKMkP",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Ma ky tra no": [
+            {
+              "text": "TN---000345",
+              "type": "text"
+            }
+          ],
+          "STT": "345",
+          "So ngay qua han": 0,
+          "So tien lai phai tra": 0,
+          "Tk tra no": [
+            {
+              "table_id": "tblJ6ZMsq2x0oNyT",
+              "text_arr": [],
+              "type": "text"
+            }
+          ],
+          "Tong phai tra ky nay": 0
+        },
+        "id": "recviCu62qV5FA",
+        "record_id": "recviCu62qV5FA"
       }
     ],
-    "total": 329
+    "total": 330
   },
-  "ts": "2026-05-04T03:38:31.338781+00:00"
+  "ts": "2026-05-04T06:43:33.312513+00:00"
 }
